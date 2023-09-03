@@ -46,7 +46,7 @@ const Portfolio = () => {
   };
 
   const [data, setData] = useState([]);
-  const [activeButton, setActiveButton] = useState("");
+  const [activeButton, setActiveButton] = useState("event");
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
