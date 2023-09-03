@@ -19,7 +19,7 @@ const Services = () => {
           <div className="w-full h-full px-2 lg:px-20">
             <div className="grid grid-cols-1 gap-4 lg:gap-8 lg:grid-cols-2 py-10 ">
               {/* Event Management */}
-              <Link href={`/projects/events`} >
+              <Link href="/projects/events" >
                   <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
                     <div className="overflow-hidden w-full h-full lg:h-80 relative group">
                       <Image
@@ -56,7 +56,7 @@ const Services = () => {
                   </div>
                 </Link>              
               {/* Production */}
-              <Link href={`/projects/production`} >
+              <Link href="/projects/production" >
                   <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
                     <div className="overflow-hidden w-full h-full lg:h-80 relative group">
                       <Image
@@ -94,7 +94,7 @@ const Services = () => {
               </Link>   
 
               {/* Branding */}
-              <Link href={`/projects/branding`} >
+              <Link href="/projects/branding" >
                   <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
                     <div className="overflow-hidden w-full h-full lg:h-80 relative group">
                       <Image

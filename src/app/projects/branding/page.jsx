@@ -46,6 +46,8 @@ const Branding = () => {
             <Link
               href={`/projects/branding/${event?.slug}`}
               className="group"
+              passHref
+              prefetch={true}
 
             >
               <div
