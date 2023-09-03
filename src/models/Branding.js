@@ -38,5 +38,5 @@ const BrandingSchema = new mongoose.Schema(
 );
 
 mongoose.models = {};
-const Brandings = mongoose.model("Branding", BrandingSchema);
-export default Brandings;
+const Branding = mongoose.model("Branding", BrandingSchema);
+export default Branding;
