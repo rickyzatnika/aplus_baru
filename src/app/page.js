@@ -16,7 +16,7 @@ import "lightgallery/css/lg-thumbnail.css";
 
 export default function Home() {
   const [datas, setDatas] = useState([]);
-  const [activeButton, setActiveButton] = useState("");
+  const [activeButton, setActiveButton] = useState("event**");
   const [isLoading, setIsLoading] = useState(false);
 
   

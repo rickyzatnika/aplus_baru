@@ -29,7 +29,7 @@ const AddBlog = () => {
       setLoading(true);
       const imageUrl = await uploadImage();
 
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/services`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/events`, {
         headers: {
           "Content-Type": "application/json",
         },

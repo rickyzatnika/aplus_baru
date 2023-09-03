@@ -41,7 +41,7 @@ const AddEventPages = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!photo || !title || !category || !desc || !slug || date || content) {
+    if (!photo || !title || !category || !desc || !slug || !date || !content) {
 
       return;
     }
