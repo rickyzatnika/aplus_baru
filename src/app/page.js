@@ -30,8 +30,7 @@ export default function Home() {
 
       try {
         setIsLoading(true);
-        const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_URI}/v1_1/${cloudName}/resources/image?type=upload&prefix=photo/aplus/${activeButton}&max_results=9`,
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URI}/v1_1/${cloudName}/resources/image?type=upload&prefix=photo/aplus/${activeButton}&max_results=9`,
           {
             headers: {
               Authorization: `Basic ${auth}`,

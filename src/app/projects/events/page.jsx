@@ -44,7 +44,7 @@ const Branding = () => {
           <p className='w-full py-4 md:w-96 mx-auto px-4 text-sm md:text-md text-zinc-400'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae id porro magni nobis dicta eaque dolor. Ipsam nobis numquam cum.</p>
           <div className="py-8 md:py-24 md:px-20 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-center justify-center text-white text-center ">
             <Link
-              href={`/projects/branding/${event?.slug}`}
+              href={`/projects/events/${event?.slug}`}
               passHref
               prefetch={true}
 

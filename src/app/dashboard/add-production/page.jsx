@@ -49,7 +49,7 @@ const AddProductionPages = () => {
       setLoading(true);
       const imageUrl = await uploadImage();
 
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/production`, {
+      const res = await fetch("/api/production", {
         headers: {
           "Content-Type": "application/json",
         },
