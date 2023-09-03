@@ -8,6 +8,8 @@ import ContactForm from "./ContactForm"
 
 const Navbar = () => {
 
+ 
+
   const [scroll, setScroll] = useState(false);
 
   const [open, setOpen] = useState(false);
@@ -18,10 +20,13 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 120);
     })
+
   }, []);
+
 
   return (
     <>

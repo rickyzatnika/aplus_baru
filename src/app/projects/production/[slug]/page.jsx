@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-async function getData(id) {
+async function getData(slug) {
     const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API}/api/services/${id}`,
+        `${process.env.NEXT_PUBLIC_DEV}/api/production/${slug}`,
         {
             cache: "no-store", // this will fresh data on every fetch request;
             // next: { revalidate: 10 }, // and this , will be refresh data every 10 seconds;
@@ -16,14 +16,14 @@ async function getData(id) {
 }
 
 
-const ServiceDetails = async ({ params }) => {
+const ProductionDetails = async ({ params }) => {
 
-    const data = await getData(params.id);
+    const event = await getData(params.slug);
 
 
     return (
-        <div className='text-white'>{data?.title}</div>
+        <div className='text-white'>{event?.title}</div>
     )
 }
 
-export default ServiceDetails
+export default ProductionDetails

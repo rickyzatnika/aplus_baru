@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const ServicesSchema = new mongoose.Schema(
+const BrandingSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -11,10 +11,17 @@ const ServicesSchema = new mongoose.Schema(
       required: true,
       min: 6,
     },
+    content: {
+        type: String,
+        required: true,
+      },
+    date : {
+      type: String,
+        required: true,
+    },
     category: {
       type: String,
       required: true,
-      enum: ["Event", "Production", "Branding"],
     },
     slug: {
       type: String,
@@ -31,5 +38,5 @@ const ServicesSchema = new mongoose.Schema(
 );
 
 mongoose.models = {};
-const Services = mongoose.model("Services", ServicesSchema);
-export default Services;
+const Brandings = mongoose.model("Branding", BrandingSchema);
+export default Brandings;

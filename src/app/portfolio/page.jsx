@@ -115,21 +115,7 @@ const Portfolio = () => {
 
       <div className="w-full h-full bg-white py-6 lg:py-14">
         <div className="buttonContainer px-4 flex flex-wrap gap-5 md:gap-8 relative overflow-scroll z-20 w-full py-10 h-full items-center justify-center ">
-          <button
-            onClick={() => setActiveButton("")}
-            className={`group hover:border-[#fd1313] transition-all text-sm  hover:text-[#fd1313] duration-200 ease-linear py-2 px-12 md:px-5 w-52 md:w-32 relative  bg-[#121212] border ${activeButton === ""
-              ? " border-[#ff5050] text-[#ff5050] "
-              : " border-zinc-600 text-zinc-400 "
-              }`}
-          >
-            All
-            <span
-              className={`border-l border-b   group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-br from-orange-500/60 to-red-600/60 w-full h-full absolute -z-20 ${activeButton === ""
-                ? "bg-gradient-to-br from-orange-500/60 to-red-600/60 -bottom-2 -left-2 border-none"
-                : ""
-                } `}
-            ></span>
-          </button>
+          
           <button
             onClick={() => setActiveButton("event")}
             className={`group hover:border-[#fd1313] transition-all text-sm  hover:text-[#fd1313] duration-200 ease-linear py-2 px-12 md:px-5 w-52 md:w-32 relative  bg-[#121212] border ${activeButton === "event"

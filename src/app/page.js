@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import useSWR from "swr";
 import { ImFacebook2 } from "react-icons/im";
 import { GrInstagram } from "react-icons/gr";
 import { FaTiktok } from "react-icons/fa";
@@ -20,11 +19,7 @@ export default function Home() {
   const [activeButton, setActiveButton] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
-  const { data, error } = useSWR(`/api/services`, fetcher);
-
-  useEffect(() => {}, [data]);
+  
 
   useEffect(() => {
     const getGallery = async () => {
@@ -54,26 +49,6 @@ export default function Home() {
     };
     getGallery();
   }, [activeButton]);
-
-  if (error)
-    return (
-      <div className="min-h-screen w-full flex flex-col gap-2 items-center justify-center text-white">
-        <Image src="/logo_merah.png" alt="logo" width={100} height={100} />
-        <div className="flex gap-2 items-center justify-center">
-          <span>Ups sorry something went wrong!</span>
-        </div>
-      </div>
-    );
-  if (!data)
-    return (
-      <div className="min-h-screen w-full flex flex-col gap-2 items-center justify-center text-white">
-        <Image src="/logo_merah.png" alt="logo" width={100} height={100} />
-        <div className="flex gap-2 items-center justify-center">
-          <span>Loading...</span>
-          <span className="loading loading-spinner loading-sm"></span>
-        </div>
-      </div>
-    );
 
   return (
     <>
@@ -316,7 +291,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="bg-white">
+      <section className="bg-white ">
         <div className="w-full h-full lg:min-h-screen px-4 lg:px-8 py-24 lg:py-32 relative z-auto">
           <div className="w-full h-full">
             <span className="text-zinc-500 text-[18px]">02 — Our Projects</span>
@@ -325,62 +300,120 @@ export default function Home() {
               event, production, and branding.
             </p>
           </div>
-          <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-center justify-center text-white text-center pt-12">
-            {data?.map((service, i) => (
-              <Link
-                href={`/projects/${service?._id.toString()}`}
-                className="group"
-                key={i}
-              >
-                <div
-                  className={`relative py-6 px-2 bg-cover w-full h-[350px] rounded-lg flex flex-col items-center justify-between `}
-                >
-                  <Image
-                    src={service?.imageUrl}
-                    alt="images"
-                    width={1200}
-                    height={950}
-                    className="object-fit w-full h-[350px] absolute left-0 top-0"
-                  />
-                  <div className="absolute left-0 top-0 w-full h-full bg-gradient-to-t from-black/80 to-transparent z-5" />
-                  <div>
-                    <h1 className="relative text-3xl">{service?.title}</h1>
-                  </div>
-                  <div></div>
-                  <div className="py-4 flex flex-col gap-2">
-                    <p className="text-sm leading-relaxed relative text-center border-b pb-2">
-                      {service?.desc}
-                    </p>
-                    <div className="w-full flex items-center justify-center gap-4 flex-wrap">
-                      <div className="relative w-fit px-4 py-1 text-zinc-500 text-sm rounded-full bg-zinc-100">
-                        <span>{service?.category}</span>
-                      </div>
-                      <div className="relative w-fit px-4 py-1 text-zinc-500 text-sm rounded-full bg-zinc-100">
-                        <span>Planning</span>
-                      </div>
-                      <div className="relative w-fit px-4 py-1 text-zinc-500 text-sm rounded-full bg-zinc-100">
-                        <span>Grand Opening</span>
-                      </div>
-                      <div className="relative w-fit px-4 py-1 text-zinc-500 text-sm rounded-full bg-zinc-100">
-                        <span>Branding</span>
-                      </div>
-                      <div className="relative w-fit px-4 py-1 text-zinc-500 text-sm rounded-full bg-zinc-100">
-                        <span>Production</span>
+          <div className="grid grid-cols-1 gap-4 lg:gap-8 lg:grid-cols-2 py-10 ">
+              {/* Event Management */}
+              <Link href={`/projects/events`} >
+                  <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
+                    <div className="overflow-hidden w-full h-full lg:h-80 relative group">
+                      <Image
+                        src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt=""
+                        width={1200}
+                        height={800}
+                        objectFit="cover"
+                        className="group group-hover:scale-110 transition duration-700 ease-linear"
+                      />
+                      <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-lime-300/90 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
+                        <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center  bg-inherit pt-5 pb-5 w-full  ">
+                          <span className="hidden">Event Management</span>
+                          <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                    <h3 className="pt-3 font-semibold text-xl">
+                      Event
+                    </h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
+                    </p>
                   </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="w-fit mx-auto mt-8 ">
-            <Link href="/projects">
-              <button className="border border-zinc-600  px-12 flex items-center justify-center py-2">
-                see more
-              </button>
-            </Link>
-          </div>
-          <div className="absolute -bottom-1 left-0 -z-10 right-0 w-full h-32 bg-gradient-to-t from-black to-transparent" />
+                </Link>              
+              {/* Production */}
+              <Link href={`/projects/production`} >
+                  <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
+                    <div className="overflow-hidden w-full h-full lg:h-80 relative group">
+                      <Image
+                        src="https://images.unsplash.com/photo-1637441212098-baef320ab80b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt=""
+                        width={1200}
+                        height={800}
+                        objectFit="cover"
+                        className="group group-hover:scale-110 transition duration-700 ease-linear"
+                      />
+                      <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-lime-300/90 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
+                        <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center  bg-inherit pt-5 pb-5 w-full  ">
+                          <span className="hidden">Production</span>
+                          <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
+                    <h3 className="pt-3 font-semibold text-xl">
+                      Production
+                    </h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
+                    </p>
+                  </div>
+              </Link>   
+
+              {/* Branding */}
+              <Link href={`/projects/branding`} >
+                  <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
+                    <div className="overflow-hidden w-full h-full lg:h-80 relative group">
+                      <Image
+                        src="https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt=""
+                        width={1200}
+                        height={800}
+                        objectFit="cover"
+                        className="group group-hover:scale-110 transition duration-700 ease-linear"
+                      />
+                      <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-lime-300/90 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
+                        <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center  bg-inherit pt-5 pb-5 w-full  ">
+                          <span className="hidden">Branding</span>
+                          <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
+                    <h3 className="pt-3 font-semibold text-xl">
+                      Branding
+                    </h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
+                    </p>
+                  </div>
+              </Link> 
+            </div>
         </div>
       </section>
 
@@ -426,23 +459,7 @@ export default function Home() {
           {/* ANIMATE PORTFOLIO TEXT END*/}
 
           <div className="buttonContainer px-4 flex flex-wrap gap-5 md:gap-8 relative overflow-scroll z-20 w-full py-10 h-full items-center justify-center mt-4">
-            <button
-              onClick={() => setActiveButton("")}
-              className={`group hover:border-[#fd1313] transition-all text-sm  hover:text-[#fd1313] duration-200 ease-linear py-2 px-12 md:px-5 w-52 md:w-32 relative  bg-[#121212] border ${
-                activeButton === ""
-                  ? " border-[#ff5050] text-[#ff5050] "
-                  : " border-zinc-600 text-zinc-500/80 "
-              }`}
-            >
-              All
-              <span
-                className={`border-l border-b   group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-br from-orange-500/60 to-red-600/60 w-full h-full absolute -z-20 ${
-                  activeButton === ""
-                    ? "bg-gradient-to-br from-orange-500/60 to-red-600/60 -bottom-2 -left-2 border-none"
-                    : ""
-                } `}
-              ></span>
-            </button>
+            
             <button
               onClick={() => setActiveButton("event")}
               className={`group hover:border-[#fd1313] transition-all text-sm  hover:text-[#fd1313] duration-200 ease-linear py-2 px-12 md:px-5 w-52 md:w-32 relative  bg-[#121212] border ${
@@ -451,7 +468,7 @@ export default function Home() {
                   : " border-zinc-600 text-zinc-500/80 "
               }`}
             >
-              Events
+              Event
               <span
                 className={`border-l border-b   group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-br from-orange-500/60 to-red-600/60 w-full h-full absolute -z-20 ${
                   activeButton === "event"

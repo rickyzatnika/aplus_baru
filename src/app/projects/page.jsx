@@ -1,39 +1,9 @@
-"use client"
-
-import { useEffect } from "react";
-import useSWR from "swr";
 import Image from "next/image";
 import Link from "next/link";
 
 
 const Services = () => {
 
-  const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
-  const { data, error } = useSWR(`/api/services`, fetcher);
-
-  useEffect(() => { }, [data]);
-
-  if (error)
-    return (
-      <div className="min-h-screen w-full flex flex-col gap-2 items-center justify-center text-white">
-        <Image src="/logo_merah.png" alt="logo" width={100} height={100} />
-        <div className="flex gap-2 items-center justify-center">
-          <span>Ups sorry something went wrong!</span>
-        </div>
-      </div>
-    );
-
-  if (!data)
-    return (
-      <div className="min-h-screen w-full flex flex-col gap-2 items-center justify-center text-white">
-        <Image src="/logo_merah.png" alt="logo" width={100} height={100} />
-        <div className="flex gap-2 items-center justify-center">
-          <span>Loading...</span>
-          <span className="loading loading-spinner loading-sm"></span>
-        </div>
-      </div>
-    );
 
   return (
     <>
@@ -48,14 +18,13 @@ const Services = () => {
 
           <div className="w-full h-full px-2 lg:px-20">
             <div className="grid grid-cols-1 gap-4 lg:gap-8 lg:grid-cols-2 py-10 ">
-              {/* Event Documentation */}
-              {data?.map((project, i) => (
-                <Link key={i} href={`/projects/${project?._id.toString()}`} >
+              {/* Event Management */}
+              <Link href={`/projects/events`} >
                   <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
                     <div className="overflow-hidden w-full h-full lg:h-80 relative group">
                       <Image
-                        src={project?.imageUrl}
-                        alt={project?.slug}
+                        src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt=""
                         width={1200}
                         height={800}
                         objectFit="cover"
@@ -63,30 +32,104 @@ const Services = () => {
                       />
                       <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-lime-300/90 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
                         <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center  bg-inherit pt-5 pb-5 w-full  ">
-                          <span className="hidden">{project?.title}</span>
+                          <span className="hidden">Event Management</span>
                           <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
-                            <span className="ml-8">{project?.title}</span>
-                            <span className="ml-8">{project?.title}</span>
-                            <span className="ml-8">{project?.title}</span>
-                            <span className="ml-8">{project?.title}</span>
-                            <span className="ml-8">{project?.title}</span>
-                            <span className="ml-8">{project?.title}</span>
-                            <span className="ml-8">{project?.title}</span>
-                            <span className="ml-8">{project?.title}</span>
-                            <span className="ml-8">{project?.title}</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
+                            <span className="ml-8">Event Management</span>
                           </div>
                         </div>
                       </div>
                     </div>
                     <h3 className="pt-3 font-semibold text-xl">
-                      {project?.title}
+                      Event Management
                     </h3>
                     <p>
-                      {project?.desc}
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
                     </p>
                   </div>
-                </Link>
-              ))}
+                </Link>              
+              {/* Production */}
+              <Link href={`/projects/production`} >
+                  <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
+                    <div className="overflow-hidden w-full h-full lg:h-80 relative group">
+                      <Image
+                        src="https://images.unsplash.com/photo-1637441212098-baef320ab80b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt=""
+                        width={1200}
+                        height={800}
+                        objectFit="cover"
+                        className="group group-hover:scale-110 transition duration-700 ease-linear"
+                      />
+                      <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-lime-300/90 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
+                        <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center  bg-inherit pt-5 pb-5 w-full  ">
+                          <span className="hidden">Production</span>
+                          <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                            <span className="ml-8">Production</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
+                    <h3 className="pt-3 font-semibold text-xl">
+                      Production
+                    </h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
+                    </p>
+                  </div>
+              </Link>   
+
+              {/* Branding */}
+              <Link href={`/projects/branding`} >
+                  <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
+                    <div className="overflow-hidden w-full h-full lg:h-80 relative group">
+                      <Image
+                        src="https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt=""
+                        width={1200}
+                        height={800}
+                        objectFit="cover"
+                        className="group group-hover:scale-110 transition duration-700 ease-linear"
+                      />
+                      <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-lime-300/90 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
+                        <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center  bg-inherit pt-5 pb-5 w-full  ">
+                          <span className="hidden">Branding</span>
+                          <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                            <span className="ml-8">Branding</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
+                    <h3 className="pt-3 font-semibold text-xl">
+                      Branding
+                    </h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
+                    </p>
+                  </div>
+              </Link> 
             </div>
           </div>
         </div>
@@ -96,3 +139,4 @@ const Services = () => {
 };
 
 export default Services;
+
