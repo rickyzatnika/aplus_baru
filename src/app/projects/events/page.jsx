@@ -39,7 +39,7 @@ const Branding = () => {
   return (
     <section className='pt-12'>
       {data?.map((event, i) => (
-        <div key={i} className='w-full py-8 md:py-24 md:px-20 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-center justify-center text-white text-center '>
+        <div key={i} className='w-full py-8 md:py-24 md:px-20 flex gap-6 items-center justify-center text-white text-center '>
           <div className="w-full">
             <Link
               href={`/projects/events/${event?.slug}`}
