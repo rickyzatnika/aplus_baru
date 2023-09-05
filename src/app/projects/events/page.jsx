@@ -39,8 +39,7 @@ const Branding = () => {
   return (
     <section className='pt-12'>
       {data?.map((event, i) => (
-        <div key={i} className='w-full py-8 md:py-24 md:px-20 flex gap-6 items-center justify-center text-white text-center '>
-          <div className="w-full">
+        <div key={i} className='w-full py-8 md:py-24 md:px-20 flex gap-6 flex-wrap items-center justify-center text-white text-center '>
             <Link
               href={`/projects/events/${event?.slug}`}
               passHref
@@ -74,7 +73,7 @@ const Branding = () => {
                 </div>
               </div>
             </Link>
-          </div>
+          
         </div>
       ))}
     </section>
