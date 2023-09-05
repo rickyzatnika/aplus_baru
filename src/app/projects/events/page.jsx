@@ -39,10 +39,8 @@ const Branding = () => {
   return (
     <section className='pt-12'>
       {data?.map((event, i) => (
-        <div key={i} className='py-8 md:py-24 md:px-20 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-center justify-center text-white text-center '>
-          <h3 className='text-xl md:text-3xl text-zinc-200 uppercase' >{event?.category}</h3>
-          <p className='w-full py-4 md:w-96 mx-auto px-4 text-sm md:text-md text-zinc-400'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae id porro magni nobis dicta eaque dolor. Ipsam nobis numquam cum.</p>
-          <div className=" flex flex-col">
+        <div key={i} className='w-full py-8 md:py-24 md:px-20 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-center justify-center text-white text-center '>
+          <div className="w-full">
             <Link
               href={`/projects/events/${event?.slug}`}
               passHref
