@@ -7,7 +7,7 @@ import React from 'react'
 import useSWR from "swr";
 import { BsArrowRight } from "react-icons/bs";
 
-const Branding = () => {
+const Events = () => {
 
 
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -37,9 +37,64 @@ const Branding = () => {
     );
 
   return (
-    <section className='pt-12'>
-      {data?.map((event, i) => (
-        <div key={i} className='w-full py-8 md:py-24 md:px-20 flex gap-6 flex-wrap items-center justify-center text-white text-center '>
+    <section className='pt-12 w-full overflow-hidden'>
+      <div className="w-full relative overflow-hidden py-8 lg:py-12 ">
+        <div className="target block  relative text-5xl lg:text-7xl  font-bold text-center  py-6 w-full  ">
+          <span className="hidden">Event Management</span>
+          <div className="absolute z-5 top-[50%] right-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-100 transition-opacity text-white ">
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+            <span className="ml-10 md:ml-14 uppercase ">
+              Event Management
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div className='w-full px-4 md:px-10'>
+      <div className='flex items-center justify-center flex-col md:flex-row gap-3 py-6 md:py-14 md:px-20 '>
+        {data?.map((event, i) => (
+          <div key={i} className='w-full  text-white text-center '>
             <Link
               href={`/projects/events/${event?.slug}`}
               passHref
@@ -68,16 +123,18 @@ const Branding = () => {
                   </p>
                   <div className="w-full flex items-center justify-center">
                     <button className='text-zinc-100 py-2 px-6 '>Details</button>
-                    <span className='opacity-0 group-hover:opacity-100 relative left-0 group-hover:left-6 transition-all duration-300 ease-linear text-zinc-400'><BsArrowRight size={20}/></span>
+                    <span className='opacity-0 group-hover:opacity-100 relative left-0 group-hover:left-6 transition-all duration-300 ease-linear text-zinc-400'><BsArrowRight size={20} /></span>
                   </div>
                 </div>
               </div>
             </Link>
-          
-        </div>
-      ))}
+
+          </div>
+        ))}
+      </div>
+      </div>
     </section>
   )
 }
 
-export default Branding
+export default Events

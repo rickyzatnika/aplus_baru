@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react'
 
-const AddProductionPages = () => {
+const AddProduction = () => {
 
 
   const router = useRouter();
@@ -73,7 +73,7 @@ const AddProductionPages = () => {
 
       const setTimeoutId = setTimeout(() => {
         setLoading(false);
-        router.push("/");
+        router.push("/projects/production");
       }, 3000)
       return () => clearTimeout(setTimeoutId);
 
@@ -157,4 +157,4 @@ const AddProductionPages = () => {
   )
 }
 
-export default AddProductionPages
+export default AddProduction

@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react'
 
-const AddEventPages = () => {
+const AddBranding = () => {
 
 
   const router = useRouter();
@@ -49,7 +49,7 @@ const AddEventPages = () => {
       setLoading(true);
       const imageUrl = await uploadImage();
 
-      const res = await fetch("/api/events", {
+      const res = await fetch("/api/branding", {
         headers: {
           "Content-Type": "application/json",
         },
@@ -73,7 +73,7 @@ const AddEventPages = () => {
 
       const setTimeoutId = setTimeout(() => {
         setLoading(false);
-        router.push("/projects/events");
+        router.push("/projects/branding");
       }, 3000)
       return () => clearTimeout(setTimeoutId);
 
@@ -110,7 +110,7 @@ const AddEventPages = () => {
   return (
     <div>
       <div className='text-left text-2xl pb-8'>
-        <h3>Event Management</h3>
+        <h3>Branding</h3>
       </div>
       <form onSubmit={handleSubmit} className='w-full lg:w-[75%]'>
         <div className='flex items-start flex-col gap-2 mb-5'>
@@ -157,4 +157,4 @@ const AddEventPages = () => {
   )
 }
 
-export default AddEventPages
+export default AddBranding
