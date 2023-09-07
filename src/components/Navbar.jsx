@@ -8,7 +8,7 @@ import ContactForm from "./ContactForm"
 
 const Navbar = () => {
 
- 
+
 
   const [scroll, setScroll] = useState(false);
 
@@ -40,6 +40,14 @@ const Navbar = () => {
         </button>
         <ul className={`${scroll ? "bg-white text-zinc-500" : "bg-transparent text-white"}  px-12 hidden lg:relative py-3 rounded-full lg:flex gap-8 `}>
           <li className="flex items-center justify-center">
+            <Link href="/" className="group overflow-hidden h-[22px] px-2 ">
+              <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
+                <span className="text-sm">Home</span>
+                <span className="text-sm">Home</span>
+              </div>
+            </Link>
+          </li>
+          <li className="flex items-center justify-center">
             <Link href="/about" className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">About Us</span>
@@ -55,14 +63,7 @@ const Navbar = () => {
               </div>
             </Link>
           </li>
-          <li className="flex items-center justify-center">
-            <Link href="/portfolio" className="group overflow-hidden h-[22px] px-2 ">
-              <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
-                <span className="text-sm">Portfolio</span>
-                <span className="text-sm">Portfolio</span>
-              </div>
-            </Link>
-          </li>
+
           <li className="flex items-center justify-center">
             <button onClick={() => setOpenForm(true)} className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
