@@ -26,7 +26,7 @@ const ContactForm = ({ openForm, setOpenForm }) => {
     }
     try {
       setLoading(true);
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/contact`, {
+      const res = await fetch(`/api/contact`, {
         headers: {
           "Content-Type": "application/json",
         },
