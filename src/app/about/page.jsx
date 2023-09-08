@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { GiTeamIdea } from "react-icons/gi"
+import { choose } from "@/lib/data";
 
 const About = () => {
 
@@ -114,6 +116,36 @@ const About = () => {
           </p>
         </div>
       </div>
+
+
+      {/* Why Choose Us */}
+      <div className="relative w-full h-full py-14 px-2 lg:py-24 lg:px-14 bg-black overflow-hidden">
+        <div className="w-full h-full pb-14">
+          <span className="text-zinc-500 text-[18px]">— Why Choose Us ??</span>
+          <p className=" text-[24px] md:text-[28px] lg:text-[36px] text-zinc-500 w-full lg:w-[75%] pt-4">
+            We Focus on finding ways to make your life as easy as possible when planning an event & production.
+          </p>
+        </div>
+        <div className="w-full flex flex-wrap items-center justify-center gap-2 my-6 lg:my-10 ">
+          {choose?.map((c, i) => (
+            <div key={i} className="w-full mx-auto mb-14 lg:mb-8 lg:w-1/3 md:w-1/3 ">
+              <div className="relative text-center h-full md:h-72 px-2 lg:px-4 mx-auto py-6 bg-gradient-to-tr from-red-800 to-red-500 rounded-xl">
+                <div className="absolute shadow-md shadow-black/20 left-[50%] -translate-x-[50%] -top-12 lg:-top-5 w-fit mx-auto bg-red-600 rounded-full p-4">
+                  <span className="text-white text-4xl lg:text-5xl">
+                    {c?.icons}
+                  </span>
+                </div>
+                <div className="w-full h-full flex flex-col items-center justify-center gap-1 ">
+                  <h3 className="text-zinc-50 uppercase text-md font-medium md:font-semibold md:text-lg ">{c?.title}</h3>
+                  <p className="text-sm  text-zinc-200">{c?.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
       {/* Team Card */}
       <div className="py-14 px-4 w-full h-full">
         <div className="text-center ">
