@@ -62,7 +62,7 @@ const Footer = () => {
       <div className="w-full bg-[#000000] gap-5 p-8 flex items-center justify-center md:justify-between flex-col-reverse md:flex-row">
         <div className="text-sm text-center text-zinc-400 ">
           <Link href="/" passHref={true}>
-            APLUS MULTI KREASI © 2018 All Right Reserved
+            PT. APLUS MULTI KREASI © 2018 All Right Reserved
           </Link>
         </div>
         <div className='flex gap-5 items-center text-zinc-400 py-2 px-4'>
