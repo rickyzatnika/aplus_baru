@@ -147,12 +147,12 @@ const About = () => {
 
 
       {/* Team Card */}
-      <div className="py-14 px-4 w-full h-full">
+      {/* <div className="py-14 px-4 w-full h-full">
         <div className="text-center ">
           <h3 className="text-xl lg:text-4xl text-zinc-200">— OUR PROFESSIONAL TEAM —</h3>
           <p className="text-zinc-400 text-sm pt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }
