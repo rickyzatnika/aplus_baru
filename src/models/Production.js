@@ -19,6 +19,9 @@ const ProductionSchema = new mongoose.Schema(
       type: String,
         required: true,
     },
+    place: {
+      type: String,
+    },
     category: {
       type: String,
       required: true,

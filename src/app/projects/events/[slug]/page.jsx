@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import React from 'react'
+import {BsCalendarDate} from "react-icons/bs"
+import {BiMap} from "react-icons/bi"
 
 
 async function getData(slug) {
@@ -47,8 +49,15 @@ const ServiceDetails = async ({ params }) => {
     <div className='w-full py-12'>
       <div className='w-full md:w-[65%] px-4 md:px-20 flex flex-col gap-3 items-start'>
         <div className='flex flex-col gap-2 mb-5'>
-        <h3 className='text-zinc-400  text-3xl'>{event?.title}</h3>
-        <p className='text-zinc-500 text-md'>{event?.date}</p>
+          <h3 className='text-zinc-400  text-3xl'>{event?.title}</h3>
+          <div className='flex items-center gap-3'>
+            <BsCalendarDate size={14} className="text-zinc-500" />
+            <p className='text-zinc-500 text-md'>{event?.date}</p>
+          </div>
+          <div className='flex items-center gap-3'>
+            <BiMap size={14} className="text-zinc-500" />
+            <p className='text-zinc-500 text-md'>{event?.place}</p>
+          </div>
         </div>
         <Image src={event?.imageUrl} alt="image cover" width={800} height={400} className='object-cover py-8' />
         <p className='text-lg md:text-xl leading-relaxed text-justify text-zinc-400'>{event?.content}</p>

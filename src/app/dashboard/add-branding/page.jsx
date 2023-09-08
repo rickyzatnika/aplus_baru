@@ -13,6 +13,7 @@ const AddBranding = () => {
   const [content, setContent] = useState("");
   const [desc, setDesc] = useState("");
   const [slug, setSlug] = useState("");
+  const [place, setPlace] = useState("");
   const [category, setCategory] = useState("");
   const [photo, setPhoto] = useState("");
   const [loading, setLoading] = useState(false);
@@ -58,6 +59,7 @@ const AddBranding = () => {
           title,
           content,
           date,
+          place,
           desc,
           slug,
           category,
@@ -124,6 +126,10 @@ const AddBranding = () => {
         <div className='flex items-start flex-col gap-2 mb-5'>
           <label>Date</label>
           <input value={date} onChange={(e) => setDate(e.currentTarget.value)} placeholder='Tanggal Acara' type="text" className=' placeholder:text-sm  w-full text-zinc-800 py-2 px-2 placeholder:text-zinc-400 border border-zinc-400 focus:outline-none focus:border-zinc-600' />
+        </div>
+        <div className='flex items-start flex-col gap-2 mb-5'>
+          <label>Place</label>
+          <input value={place} onChange={(e) => setPlace(e.currentTarget.value)} placeholder='Nama Tempat' type="text" className=' placeholder:text-sm  w-full text-zinc-800 py-2 px-2 placeholder:text-zinc-400 border border-zinc-400 focus:outline-none focus:border-zinc-600' />
         </div>
         <div className='flex items-start flex-col gap-2 mb-5'>
           <label>Content</label>
