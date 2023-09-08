@@ -23,7 +23,7 @@ async function getImages(slug) {
   const cloudName = process.env.NEXT_PUBLIC_CLOUD_NAME;
   const auth = btoa(`${apiKey}:${apiSecret}`);
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URI}/v1_1/${cloudName}/resources/image?type=upload&prefix=photo/aplus/event/${slug}&max_results=50`, {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URI}/v1_1/${cloudName}/resources/image?type=upload&prefix=photo/aplus/production/${slug}&max_results=50`, {
     headers: {
       Authorization: `Basic ${auth}`,
     },
