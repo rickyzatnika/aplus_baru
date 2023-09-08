@@ -58,7 +58,7 @@ export default function Home() {
           <div className="w-full relative z-30 grid grid-cols-1 lg:grid-cols-12 ">
             <div className="col-span-1 lg:col-span-10 py-20 px-4 lg:py-32 lg:px-12">
               <div className="flex pb-8 leading-loose flex-col w-full  item-center justify-center gap-3 text-zinc-100">
-                <h1 className="text-lg">APLUS MULTI KREASI COMPANY</h1>
+                <h1 className="text-lg">APLUS MULTI KREASI</h1>
                 <h3 className="text-5xl lg:text-7xl bg-gradient-to-tr tracking-wide lg:tracking-widest from-red-600 to-orange-500 bg-clip-text text-transparent font-extrabold uppercase">
                   inspiring partner
                 </h3>
