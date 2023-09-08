@@ -8,8 +8,6 @@ import ContactForm from "./ContactForm"
 
 const Navbar = () => {
 
-
-
   const [scroll, setScroll] = useState(false);
 
   const [open, setOpen] = useState(false);
@@ -20,7 +18,6 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 120);
     })
@@ -38,7 +35,7 @@ const Navbar = () => {
             {scroll ? "" : <span className="text-white tracking-[0.4rem]">APLUS</span>}
           </Link>
         </button>
-        <ul className={`${scroll ? "bg-white text-zinc-500" : "bg-transparent text-white"}  px-12 hidden lg:relative py-3 rounded-full lg:flex gap-8 `}>
+        <ul className={`${scroll ? "bg-white text-zinc-700" : "bg-transparent text-white"}  px-12 hidden lg:relative py-3 rounded-full lg:flex gap-8 `}>
           <li className="flex items-center justify-center">
             <Link href="/" className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
@@ -63,7 +60,6 @@ const Navbar = () => {
               </div>
             </Link>
           </li>
-
           <li className="flex items-center justify-center">
             <button onClick={() => setOpenForm(true)} className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
@@ -88,8 +84,7 @@ const Navbar = () => {
           <button
             type="button"
             className="border-none outline-none rounded-md z-[9999] cursor-pointer top-0 flex lg:hidden relative  gap-1.5 flex-col justify-between items-end"
-            onClick={() => handleBurger()}
-          >
+            onClick={() => handleBurger()}>
             <span
               className={`h-0.5 w-6 bg-blend-color origin-center rounded-lg  transform transition duration-300 ease-out ${open ? "rotate-45 translate-y-2 bg-white " : "bg-white "
                 }`}

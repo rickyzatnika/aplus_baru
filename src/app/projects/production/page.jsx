@@ -92,7 +92,7 @@ const Production = () => {
       </div>
 
       <div className='w-full px-4 md:px-10'>
-      <div className='flex items-center justify-center flex-col md:flex-row gap-3 py-6 md:py-14 md:px-20 '>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 py-6 md:py-14 md:px-20'>
         {data?.map((production, i) => (
           <div key={i} className='w-full  text-white text-center '>
             <Link
