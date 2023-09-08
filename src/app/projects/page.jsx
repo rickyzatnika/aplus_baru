@@ -50,8 +50,8 @@ const Services = () => {
                     <h3 className="pt-3 font-semibold text-xl">
                       Event Management
                     </h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
+                    <p className="capitalize">
+                    Take a Look at our inspiring event 
                     </p>
                   </div>
                 </Link>              
@@ -87,8 +87,8 @@ const Services = () => {
                     <h3 className="pt-3 font-semibold text-xl">
                       Production
                     </h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
+                    <p className="capitalize">
+                    see closer to our production built
                     </p>
                   </div>
               </Link>   
@@ -125,8 +125,8 @@ const Services = () => {
                     <h3 className="pt-3 font-semibold text-xl">
                       Branding
                     </h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
+                    <p className="capitalize">
+                      Is a story unfolding across all customer touch points
                     </p>
                   </div>
               </Link> 

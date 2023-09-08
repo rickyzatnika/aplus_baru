@@ -197,10 +197,10 @@ export default function Home() {
                       </div>
                     </div>
                     <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
-                      Event
+                      Event Management
                     </h3>
-                    <p className="text-zinc-500">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
+                    <p className="text-zinc-500 capitalize">
+                      Take a Look at our inspiring event 
                     </p>
                   </div>
                 </Link>              
@@ -235,8 +235,8 @@ export default function Home() {
                     <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
                       Production
                     </h3>
-                    <p className="text-zinc-500">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
+                    <p className="text-zinc-500 capitalize">
+                      see closer to our production built
                     </p>
                   </div>
               </Link>   
@@ -272,8 +272,8 @@ export default function Home() {
                     <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
                       Branding
                     </h3>
-                    <p className="text-zinc-500">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quasi?
+                    <p className="text-zinc-500 capitalize">
+                    Is a story unfolding across all customer touch points
                     </p>
                   </div>
               </Link> 
