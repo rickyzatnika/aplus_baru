@@ -2,6 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 
+
+export const metadata = {
+  title: "APLUS - Projects",
+  description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
+};
+
+
 const Services = () => {
 
 

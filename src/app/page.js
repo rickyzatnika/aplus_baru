@@ -1,17 +1,21 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { ImFacebook2 } from "react-icons/im";
 import { GrInstagram } from "react-icons/gr";
 import { FaTiktok } from "react-icons/fa";
-import LightGallery from "lightgallery/react";
-import axios from "axios";
-import moment from "moment";
-import { BsArrowRight } from "react-icons/bs";
-import "lightgallery/css/lightgallery.css";
-import "lightgallery/css/lg-zoom.css";
-import "lightgallery/css/lg-thumbnail.css";
+// import LightGallery from "lightgallery/react";
+// import axios from "axios";
+// import moment from "moment";
+// import { BsArrowRight } from "react-icons/bs";
+// import "lightgallery/css/lightgallery.css";
+// import "lightgallery/css/lg-zoom.css";
+// import "lightgallery/css/lg-thumbnail.css";
+
+
+export const metadata = {
+  title: "APLUS - Homepage",
+  description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
+};
 
 export default function Home() {
   // const [datas, setDatas] = useState([]);
@@ -48,6 +52,7 @@ export default function Home() {
   //   getGallery();
   // }, [activeButton]);
 
+ 
   return (
     <>
       {/* Header */}
