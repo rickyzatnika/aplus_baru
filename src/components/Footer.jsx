@@ -62,7 +62,7 @@ const Footer = () => {
       <div className="w-full bg-[#000000] gap-5 p-8 flex items-center justify-center md:justify-between flex-col-reverse md:flex-row">
         <div className="text-sm text-center text-zinc-400 ">
           <span className='flex items-center gap-1'>
-            PT. APLUS MULTI KREASI © Powered by : <Link href="https://ryza.webqodes.com">Ryza</Link>
+            PT. APLUS MULTI KREASI © 2018 | Powered by : <Link target="_blank" href="https://ryza.webqodes.com">Ryza</Link>
           </span>
         </div>
         <div className='flex gap-5 items-center text-zinc-400 py-2 px-4'>
