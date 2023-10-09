@@ -30,7 +30,7 @@ export const choose = [
   {
     id: 4,
     title: "Consultation Meetings",
-    desc: "The best ideas come from meetings, which is why when working with us there is no such thing as too many meetings. Want to have a meeting to go over all of the event & production details? No problem. Let`s do it!",
+    desc: "The best ideas come from meetings, which is why when working with us there is no such thing as too many meetings.",
     icons: <SiGotomeeting/>,
   },
 ];

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { GiTeamIdea } from "react-icons/gi"
 import { choose } from "@/lib/data";
 
+
 const About = () => {
 
   const easing = [0.5, 0.8, -0.35, 0.01];
@@ -122,25 +123,19 @@ const About = () => {
       <div className="relative w-full h-full py-14 px-2 lg:py-24 lg:px-14 bg-black overflow-hidden">
         <div className="w-full h-full pb-14">
           <span className="text-zinc-500 text-[18px]">— Why Choose Us ??</span>
-          <p className=" text-[24px] md:text-[28px] lg:text-[36px] text-zinc-500 w-full lg:w-[75%] pt-4">
+          <p className=" text-[22px] md:text-[28px] lg:text-[36px] text-zinc-400 w-full lg:w-[75%] pt-4">
             We Focus on finding ways to make your life as easy as possible when planning an event & production.
           </p>
         </div>
-        <div className="w-full flex flex-wrap items-center justify-center gap-2 my-6 lg:my-10 ">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-4 lg:my-0 ">
           {choose?.map((c, i) => (
-            <div key={i} className="w-full mx-auto mb-14 lg:mb-8 lg:w-1/3 md:w-1/3 ">
-              <div className="relative text-center h-full md:h-72 px-2 lg:px-4 mx-auto py-6 bg-gradient-to-tr from-red-800 to-red-500 rounded-xl">
-                <div className="absolute shadow-md shadow-black/20 left-[50%] -translate-x-[50%] -top-12 lg:-top-5 w-fit mx-auto bg-red-600 rounded-full p-4">
-                  <span className="text-white text-4xl lg:text-5xl">
-                    {c?.icons}
-                  </span>
-                </div>
-                <div className="w-full h-full flex flex-col items-center justify-center gap-1 ">
-                  <h3 className="text-zinc-50 uppercase text-md font-medium md:font-semibold md:text-lg ">{c?.title}</h3>
-                  <p className="text-sm  text-zinc-200">{c?.desc}</p>
-                </div>
+            
+              <div key={i} className="flex gap-2 w-full h-full mb-4 lg:mb-0 text-white flex-col bg-gradient-to-tr from-black to-zinc-800 rounded p-4 md:p-8">
+                <span className="text-5xl">{c?.icons}</span>
+                <h3 className="text-md uppercase text-zinc-300 mb-2">{c?.title}</h3>
+                <p className="text-zinc-500 text-sm leading-relaxed">{c?.desc}</p>
               </div>
-            </div>
+           
           ))}
         </div>
       </div>
