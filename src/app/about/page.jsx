@@ -66,9 +66,9 @@ const About = () => {
               </h3>
             </div>
           </motion.div>
-          <motion.div variants={slideInRight} className=" px-6 lg:px-3 col-span-1 lg:col-span-4  relative top-8">
+          <div className=" px-6 lg:px-3 col-span-1 lg:col-span-4  relative top-8">
             <Image src="/logo_red.png" alt="logo" width={350} height={350} className="mix-blend-screen opacity-20 " />
-          </motion.div>
+          </div>
         </motion.div>
       </div>
       <div className="w-full h-full relative bg-[#fff] grid grid-cols-1 gap-4 lg:gap-4 lg:grid-cols-12 justify-center px-4 py-10 lg:py-20 lg:px-20">
