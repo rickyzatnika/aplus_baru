@@ -67,7 +67,7 @@ const About = () => {
             </div>
           </motion.div>
           <div className=" px-6 lg:px-3 col-span-1 lg:col-span-4  relative top-8">
-            <motion.div initial={{ y: 250 }} animate={{ y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className=" ">
+            <motion.div variants={slideInRight} className=" ">
               <Image src="/logo_red.png" alt="logo" width={350} height={350} className="mix-blend-screen opacity-20 " />
             </motion.div>
           </div>
