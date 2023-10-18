@@ -35,28 +35,26 @@ const Footer = () => {
 
         </div>
         <div className=''>
-          <span className=" text-zinc-200 font-semibold">Company</span>
+          <span className=" text-zinc-200 font-semibold">Menu</span>
+          <Link href="/" passHref={true} className="text-zinc-400 link link-hover">
+            Home
+          </Link>
           <Link href="/about" passHref={true} className="text-zinc-400 link link-hover">
             About Us
           </Link>
           <Link href="/projects" passHref={true} className="text-zinc-400 link link-hover">
             Projects
           </Link>
-          <Link href="/contact" passHref={true} className="text-zinc-400 link link-hover">
-            Contact Us
-          </Link>
         </div>
         <div className=''>
           <span className=" text-zinc-200 font-semibold">Legal</span>
-          <Link href="/" className="text-zinc-400 link link-hover">
-            Terms of use
+          <Link href="/terms&conditions" className="text-zinc-400 link link-hover">
+            Terms and Conditions
           </Link>
-          <Link href="/" className="text-zinc-400 link link-hover">
-            Privacy policy
+          <Link href="/privacypolicy" className="text-zinc-400 link link-hover">
+            Privacy Policy
           </Link>
-          <Link href="/" className="text-zinc-400 link link-hover">
-            Cookie policy
-          </Link>
+          
         </div>
       </div>
       <div className="w-full bg-[#000000] gap-5 p-8 flex items-center justify-center md:justify-between flex-col-reverse md:flex-row">

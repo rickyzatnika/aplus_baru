@@ -44,9 +44,7 @@ const About = () => {
   return (
     <section className="overflow-hidden">
       <div className="w-full relative px-4 lg:px-14 py-24 lg:py-40  bg-[#171717] ">
-        <motion.div initial={{ y: 250 }} animate={{ y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
-          <Image src="/logo_red.png" alt="logo" width={350} height={350} className="mix-blend-screen opacity-20 " />
-        </motion.div>
+
         <div className="bg-path z-5" />
         <motion.div
           exit={{ opacity: 0 }}
@@ -69,7 +67,9 @@ const About = () => {
             </div>
           </motion.div>
           <div className=" px-6 lg:px-3 col-span-1 lg:col-span-4  relative top-8">
-            
+            <motion.div initial={{ y: 250 }} animate={{ y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className=" ">
+              <Image src="/logo_red.png" alt="logo" width={350} height={350} className="mix-blend-screen opacity-20 " />
+            </motion.div>
           </div>
         </motion.div>
       </div>
@@ -107,13 +107,13 @@ const About = () => {
         </div>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-4 lg:my-0 ">
           {choose?.map((c, i) => (
-            
-              <div key={i} className="flex gap-2 w-full h-full mb-4 lg:mb-0 text-white flex-col bg-gradient-to-tr from-black to-zinc-800 rounded p-4 md:p-8">
-                <span className="text-5xl">{c?.icons}</span>
-                <h3 className="text-md uppercase text-zinc-300 mb-2">{c?.title}</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed">{c?.desc}</p>
-              </div>
-           
+
+            <div key={i} className="flex gap-2 w-full h-full mb-4 lg:mb-0 text-white flex-col bg-gradient-to-tr from-black to-zinc-800 rounded p-4 md:p-8">
+              <span className="text-5xl">{c?.icons}</span>
+              <h3 className="text-md uppercase text-zinc-300 mb-2">{c?.title}</h3>
+              <p className="text-zinc-500 text-sm leading-relaxed">{c?.desc}</p>
+            </div>
+
           ))}
         </div>
       </div>
