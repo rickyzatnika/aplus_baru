@@ -69,29 +69,7 @@ const About = () => {
             </div>
           </motion.div>
           <div className=" px-6 lg:px-3 col-span-1 lg:col-span-4  relative top-8">
-            <div className="flex flex-col gap-4">
-              <motion.div variants={slideInRight} className="leading-relaxed">
-                <h3 className="text-semibold text-xl text-zinc-200 font-extrabold uppercase tracking-widest mb-2">
-                  Vision
-                </h3>
-                <p className="text-zinc-400 lg:text-zinc-500 tracking-wide text-md leading-relaxed">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit dicta labore autem cum vero? Repellat perspiciatis reiciendis repellendus maiores ea?
-                </p>
-              </motion.div>
-              <motion.div
-                initial={{ x: 100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.9, delay: 0.6, easing: easing }}
-                className="leading-relaxed"
-              >
-                <h3 className="text-semibold text-xl text-zinc-100 font-extrabold lg:text-zinc-900  uppercase tracking-widest mb-2">
-                  Mission
-                </h3>
-                <p className="text-zinc-400 lg:text-zinc-500 tracking-wide text-md leading-relaxed">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptates iure eligendi hic quo..
-                </p>
-              </motion.div>
-            </div>
+            
           </div>
         </motion.div>
       </div>
