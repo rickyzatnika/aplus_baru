@@ -10,7 +10,7 @@ import { BiSolidMap } from "react-icons/bi";
 const Footer = () => {
   return (
     <footer className="w-full relative z-50 flex flex-col  gap-0  items-center justify-between ">
-      <div className="footer bg-[#101010] py-12 lg:py-20 p-8 text-base-content">
+      <div className="footer bg-[#101010] py-12 lg:py-18 p-8 text-base-content">
         <div className="flex flex-col">
           <Image src="/logo.png" alt='logo_aplus' width={100} height={100} className='object-cover ' />
           <p className="w-full max-w-sm text-justify text-zinc-400">
@@ -19,7 +19,6 @@ const Footer = () => {
         </div>
         <div className=''>
           <span className=" text-zinc-200 font-semibold mb-2">Support</span>
-
           <div className='flex gap-2 items-center text-zinc-400'>
             <FaPhoneSquareAlt size={20} />
             <span>081214707415</span>
@@ -28,9 +27,13 @@ const Footer = () => {
             <AiOutlineMail size={20} />
             <span>aplusmultikreasi@gmail.com</span>
           </div>
-          <div className='flex gap-2 items-center text-zinc-400'>
-            <BiSolidMap size={20} />
-            <span>Jl. Sariwangi 165, Parongpong - <br /> Kabupaten Bandung Barat 40559</span>
+          <div className='flex flex-col gap-1 items-start text-zinc-400'>
+            <p>Address 1 :</p>
+            <span className='pl-3'>Jl. Sariwangi No.165, Parongpong - <br /> Kabupaten Bandung Barat 40559</span>
+          </div>
+          <div className='flex flex-col gap-1 items-start text-zinc-400'>
+            <p>Address 2 :</p>
+            <span className='pl-3'>Jl. Koja I No.1 Jatiasih, Kec. Jatiasih - <br/> Kota Bekasi - Jawa Barat 17423</span>
           </div>
 
         </div>
@@ -45,6 +48,7 @@ const Footer = () => {
           <Link href="/projects" passHref={true} className="text-zinc-400 link link-hover">
             Projects
           </Link>
+          
         </div>
         <div className=''>
           <span className=" text-zinc-200 font-semibold">Legal</span>
@@ -57,10 +61,10 @@ const Footer = () => {
           
         </div>
       </div>
-      <div className="w-full bg-[#000000] gap-5 p-8 flex items-center justify-center md:justify-between flex-col-reverse md:flex-row">
+      <div className="w-full bg-[#000000] gap-5 p-6 flex items-center justify-center md:justify-between flex-col-reverse md:flex-row">
         <div className="text-sm text-center text-zinc-400 ">
           <span className='flex items-center gap-1'>
-            PT. APLUS MULTI KREASI © 2018 | Powered by : <Link target="_blank" href="https://ryza.webqodes.com">Ryza</Link>
+            PT. APLUS MULTI KREASI © 2018
           </span>
         </div>
         <div className='flex gap-5 items-center text-zinc-400 py-2 px-4'>
