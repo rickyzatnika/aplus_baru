@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import { ImFacebook2 } from "react-icons/im";
 import { GrInstagram } from "react-icons/gr";
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 const NavMobile = ({ open, setOpen, openForm, setOpenForm }) => {
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ImFacebook2 } from "react-icons/im";
 import { GrInstagram } from "react-icons/gr";
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaWhatsapp } from "react-icons/fa";
 // import LightGallery from "lightgallery/react";
 // import axios from "axios";
 // import moment from "moment";
