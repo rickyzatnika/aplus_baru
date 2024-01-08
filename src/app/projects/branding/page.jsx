@@ -135,7 +135,7 @@ const Branding = () => {
           ))}
         </div>
       </div>
-      <div className='w-fit mx-auto'>
+      <div className='w-fit mx-auto py-8'>
         <Link href="/projects" className='group' passHref>
           <button type='button' className='group text-zinc-500 flex items-center justify-center gap-2 px-5 py-2 border-zinc-500 group-hover:border-zinc-200 group-hover:text-zinc-200  transition-all duration-300 ease-linear'>
             <span className='relative group-hover:-left-3 '>
