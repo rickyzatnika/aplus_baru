@@ -89,13 +89,13 @@ export default function Home() {
                   <ImFacebook2 size={24} />
                 </Link>
                 <Link
-                  href="/https://www.instagram.com/aplusmultikreasi.id/" target='_blink'
+                  href="https://www.instagram.com/aplusmultikreasi.id" target='_blink'
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-pink-600"
                 >
                   <GrInstagram size={24} />
                 </Link>
                 <Link
-                  href="/https://www.youtube.com/@hello_aplus7424/featured" target='_blink'
+                  href="https://www.youtube.com/@hello_aplus7424" target='_blink'
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-red-500  text-zinc-100"
                 >
                   <FaYoutube size={24} />

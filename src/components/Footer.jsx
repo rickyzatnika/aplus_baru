@@ -71,11 +71,11 @@ const Footer = () => {
           <Link href="/">
             <ImFacebook2 size={20} />
           </Link>
-          <Link href="/https://www.instagram.com/aplusmultikreasi.id/" target='_blink'>
+          <Link href="https://www.instagram.com/aplusmultikreasi.id" target='_blink'>
             <GrInstagram size={20} />
           </Link>
          
-          <Link href="/https://www.youtube.com/@hello_aplus7424/featured" target='_blink'>
+          <Link href="https://www.youtube.com/@hello_aplus7424" target='_blink'>
             <FaYoutube size={20} />
           </Link>
          
