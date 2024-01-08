@@ -15,7 +15,7 @@ const NavMobile = ({ open, setOpen, openForm, setOpenForm }) => {
       <nav className={`fixed w-full min-h-screen bg-[#131313] top-0 left-0 flex flex-col items-center justify-between gap-5 lg:hidden transition-all duration-300 ease-in-out ${open ? " text-white left-0" : "left-[-100%]"} `}>
         <span></span>
         <ul className='gap-5 flex flex-col items-center text-xl'>
-        <li>
+          <li>
             <button onClick={() => setOpen(false)}>
               <Link href="/">Home</Link>
             </button>
@@ -39,9 +39,12 @@ const NavMobile = ({ open, setOpen, openForm, setOpenForm }) => {
             <button onClick={() => setOpenForm(true)}>Contact Us</button>
           </li>
         </ul >
-        <div className='flex gap-6 items-center justify-center py-6 px-4' target='_blink'>
-          <Link href="/">
+        <div className='flex gap-6 items-center justify-center py-6 px-4'>
+          <Link href="">
             <ImFacebook2 size={24} />
+          </Link>
+          <Link href="https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus" target='_blink'>
+            <FaWhatsapp size={24} />
           </Link>
           <Link href="https://www.instagram.com/aplusmultikreasi.id" target='_blink'>
             <GrInstagram size={24} />

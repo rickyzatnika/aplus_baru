@@ -3,9 +3,9 @@ import Link from 'next/link'
 import React from 'react'
 import { ImFacebook2 } from "react-icons/im";
 import { GrInstagram } from "react-icons/gr";
-import { FaYoutube, FaPhoneSquareAlt } from "react-icons/fa";
+import { FaYoutube, FaPhoneSquareAlt, FaWhatsapp } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
-import { BiSolidMap } from "react-icons/bi";
+
 
 const Footer = () => {
   return (
@@ -21,11 +21,11 @@ const Footer = () => {
           <span className=" text-zinc-200 font-semibold mb-2">Support</span>
           <div className='flex gap-2 items-center text-zinc-400'>
             <FaPhoneSquareAlt size={20} />
-            <span>081214707415</span>
+            <span>+6281214707415</span>
           </div>
           <div className='flex gap-2 items-center text-zinc-400'>
             <AiOutlineMail size={20} />
-            <span>aplusmultikreasi@gmail.com</span>
+            <span>sayhi@aplusmultikreasi.id</span>
           </div>
           <div className='flex flex-col gap-1 items-start text-zinc-400'>
             <p>Address 1 :</p>
@@ -48,7 +48,9 @@ const Footer = () => {
           <Link href="/projects" passHref={true} className="text-zinc-400 link link-hover">
             Projects
           </Link>
-          
+          <Link href="/gallery" passHref={true} className="text-zinc-400 link link-hover">
+            Gallery
+          </Link>
         </div>
         <div className=''>
           <span className=" text-zinc-200 font-semibold">Legal</span>
@@ -71,10 +73,12 @@ const Footer = () => {
           <Link href="/">
             <ImFacebook2 size={20} />
           </Link>
+          <Link href="https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus" target='_blink'>
+            <FaWhatsapp size={20} />
+          </Link>
           <Link href="https://www.instagram.com/aplusmultikreasi.id" target='_blink'>
             <GrInstagram size={20} />
           </Link>
-         
           <Link href="https://www.youtube.com/@hello_aplus7424" target='_blink'>
             <FaYoutube size={20} />
           </Link>

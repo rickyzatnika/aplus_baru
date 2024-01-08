@@ -22,7 +22,7 @@ export default function Home() {
   // const [activeButton, setActiveButton] = useState("event");
   // const [isLoading, setIsLoading] = useState(false);
 
-  
+
 
   // useEffect(() => {
   //   const getGallery = async () => {
@@ -52,7 +52,7 @@ export default function Home() {
   //   getGallery();
   // }, [activeButton]);
 
- 
+
   return (
     <>
       {/* Header */}
@@ -87,6 +87,10 @@ export default function Home() {
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-blue-600"
                 >
                   <ImFacebook2 size={24} />
+                </Link>
+                <Link href="https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus" target='_blink'
+                  className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-green-600">
+                  <FaWhatsapp size={24} />
                 </Link>
                 <Link
                   href="https://www.instagram.com/aplusmultikreasi.id" target='_blink'
@@ -164,7 +168,7 @@ export default function Home() {
 
       {/* About */}
       <section className="bg-[#000]">
-      <div className="w-full h-full lg:min-h-screen px-4 lg:px-8 py-24 lg:py-32 relative z-auto">
+        <div className="w-full h-full lg:min-h-screen px-4 lg:px-8 py-24 lg:py-32 relative z-auto">
           <div className="w-full h-full">
             <span className="text-zinc-500 text-[18px]">— Our Projects</span>
             <p className=" text-[24px] md:text-[28px] lg:text-[36px] text-zinc-500 w-full lg:w-[75%] pt-4">
@@ -173,116 +177,116 @@ export default function Home() {
             </p>
           </div>
           <div className="w-full grid grid-cols-1 gap-4 lg:gap-8 lg:grid-cols-2 justify-center items-center mx-auto py-10 ">
-              {/* Event Management */}
-              <Link href={`/projects/events`} >
-                  <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
-                    <div className="overflow-hidden w-full h-full lg:h-80 relative group">
-                      <Image
-                        src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                        alt=""
-                        width={1200}
-                        height={800}
-                        className="group object-cover group-hover:scale-110 transition duration-700 ease-linear"
-                      />
-                      <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-lime-300/50 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
-                        <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center pt-5 pb-5 w-full  ">
-                          <span className="hidden">Event Management</span>
-                          <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
-                            <span className="ml-8">Event Management</span>
-                            <span className="ml-8">Event Management</span>
-                            <span className="ml-8">Event Management</span>
-                            <span className="ml-8">Event Management</span>
-                            <span className="ml-8">Event Management</span>
-                            <span className="ml-8">Event Management</span>
-                            <span className="ml-8">Event Management</span>
-                            <span className="ml-8">Event Management</span>
-                            <span className="ml-8">Event Management</span>
-                          </div>
-                        </div>
+            {/* Event Management */}
+            <Link href={`/projects/events`} >
+              <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
+                <div className="overflow-hidden w-full h-full lg:h-80 relative group">
+                  <Image
+                    src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt=""
+                    width={1200}
+                    height={800}
+                    className="group object-cover group-hover:scale-110 transition duration-700 ease-linear"
+                  />
+                  <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-lime-300/50 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
+                    <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center pt-5 pb-5 w-full  ">
+                      <span className="hidden">Event Management</span>
+                      <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
+                        <span className="ml-8">Event Management</span>
+                        <span className="ml-8">Event Management</span>
+                        <span className="ml-8">Event Management</span>
+                        <span className="ml-8">Event Management</span>
+                        <span className="ml-8">Event Management</span>
+                        <span className="ml-8">Event Management</span>
+                        <span className="ml-8">Event Management</span>
+                        <span className="ml-8">Event Management</span>
+                        <span className="ml-8">Event Management</span>
                       </div>
                     </div>
-                    <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
-                      Event Management
-                    </h3>
-                    <p className="text-zinc-500 capitalize">
-                      Take a Look at our inspiring event 
-                    </p>
                   </div>
-                </Link>              
-              {/* Production */}
-              <Link href={`/projects/production`} >
-                  <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
-                    <div className="overflow-hidden w-full h-full lg:h-80 relative group">
-                      <Image
-                        src="https://images.unsplash.com/photo-1637441212098-baef320ab80b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                        alt=""
-                        width={1200}
-                        height={800}
-                        className="group object-cover group-hover:scale-110 transition duration-700 ease-linear"
-                      />
-                      <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-orange-300/50  absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
-                        <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center pt-5 pb-5 w-full  ">
-                          <span className="hidden">Production</span>
-                          <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
-                            <span className="ml-8">Production</span>
-                            <span className="ml-8">Production</span>
-                            <span className="ml-8">Production</span>
-                            <span className="ml-8">Production</span>
-                            <span className="ml-8">Production</span>
-                            <span className="ml-8">Production</span>
-                            <span className="ml-8">Production</span>
-                            <span className="ml-8">Production</span>
-                            <span className="ml-8">Production</span>
-                          </div>
-                        </div>
+                </div>
+                <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
+                  Event Management
+                </h3>
+                <p className="text-zinc-500 capitalize">
+                  Take a Look at our inspiring event
+                </p>
+              </div>
+            </Link>
+            {/* Production */}
+            <Link href={`/projects/production`} >
+              <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
+                <div className="overflow-hidden w-full h-full lg:h-80 relative group">
+                  <Image
+                    src="https://images.unsplash.com/photo-1637441212098-baef320ab80b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt=""
+                    width={1200}
+                    height={800}
+                    className="group object-cover group-hover:scale-110 transition duration-700 ease-linear"
+                  />
+                  <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-orange-300/50  absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
+                    <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center pt-5 pb-5 w-full  ">
+                      <span className="hidden">Production</span>
+                      <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
+                        <span className="ml-8">Production</span>
+                        <span className="ml-8">Production</span>
+                        <span className="ml-8">Production</span>
+                        <span className="ml-8">Production</span>
+                        <span className="ml-8">Production</span>
+                        <span className="ml-8">Production</span>
+                        <span className="ml-8">Production</span>
+                        <span className="ml-8">Production</span>
+                        <span className="ml-8">Production</span>
                       </div>
-                    </div>  
-                    <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
-                      Production
-                    </h3>
-                    <p className="text-zinc-500 capitalize">
-                      see closer to our production built
-                    </p>
+                    </div>
                   </div>
-              </Link>   
+                </div>
+                <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
+                  Production
+                </h3>
+                <p className="text-zinc-500 capitalize">
+                  see closer to our production built
+                </p>
+              </div>
+            </Link>
 
-              {/* Branding */}
-              <Link href={`/projects/branding`} >
-                  <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
-                    <div className="overflow-hidden w-full h-full lg:h-80 relative group">
-                      <Image
-                        src="https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                        alt=""
-                        width={1200}
-                        height={800}
-                        className="group object-cover group-hover:scale-110 transition duration-700 ease-linear"
-                      />
-                      <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-red-500/50 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
-                        <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center  pt-5 pb-5 w-full  ">
-                          <span className="hidden">Branding</span>
-                          <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
-                            <span className="ml-8">Branding</span>
-                            <span className="ml-8">Branding</span>
-                            <span className="ml-8">Branding</span>
-                            <span className="ml-8">Branding</span>
-                            <span className="ml-8">Branding</span>
-                            <span className="ml-8">Branding</span>
-                            <span className="ml-8">Branding</span>
-                            <span className="ml-8">Branding</span>
-                            <span className="ml-8">Branding</span>
-                          </div>
-                        </div>
+            {/* Branding */}
+            <Link href={`/projects/branding`} >
+              <div className="group cursor-pointer transition duration-700 ease-linear mb-6 lg:mb-0">
+                <div className="overflow-hidden w-full h-full lg:h-80 relative group">
+                  <Image
+                    src="https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt=""
+                    width={1200}
+                    height={800}
+                    className="group object-cover group-hover:scale-110 transition duration-700 ease-linear"
+                  />
+                  <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-red-500/50 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
+                    <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center  pt-5 pb-5 w-full  ">
+                      <span className="hidden">Branding</span>
+                      <div className="group absolute z-2 top-[50%] left-0 -translate-y-[50%] m-0 whitespace-nowrap opacity-20 transition-opacity duration-700 group-hover:opacity-100 text-white">
+                        <span className="ml-8">Branding</span>
+                        <span className="ml-8">Branding</span>
+                        <span className="ml-8">Branding</span>
+                        <span className="ml-8">Branding</span>
+                        <span className="ml-8">Branding</span>
+                        <span className="ml-8">Branding</span>
+                        <span className="ml-8">Branding</span>
+                        <span className="ml-8">Branding</span>
+                        <span className="ml-8">Branding</span>
                       </div>
-                    </div>  
-                    <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
-                      Branding
-                    </h3>
-                    <p className="text-zinc-500 capitalize">
-                    Is a story unfolding across all customer touch points
-                    </p>
+                    </div>
                   </div>
-              </Link> 
-            </div>
+                </div>
+                <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
+                  Branding
+                </h3>
+                <p className="text-zinc-500 capitalize">
+                  Is a story unfolding across all customer touch points
+                </p>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
     </>
