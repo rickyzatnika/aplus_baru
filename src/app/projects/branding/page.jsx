@@ -6,6 +6,7 @@ import Link from 'next/link';
 import React from 'react'
 import useSWR from "swr";
 import { BsArrowRight } from "react-icons/bs";
+import { FaArrowLeftLong } from 'react-icons/fa6';
 
 const Branding = () => {
 
@@ -37,7 +38,7 @@ const Branding = () => {
     );
 
   return (
-    <section className='pt-12 w-full overflow-hidden'>
+    <section className='pt-12 w-full overflow-hidden bg-[#000]'>
       <div className="w-full relative overflow-hidden py-8 lg:py-12 ">
         <div className="h-full w-24 md:w-96 absolute top-0 left-0 bg-gradient-to-r from-black to-transparent z-10"></div>
         <div className="h-full w-24 md:w-96 absolute top-0 right-0 bg-gradient-to-l from-black to-transparent z-10"></div>
@@ -130,10 +131,19 @@ const Branding = () => {
                   </div>
                 </div>
               </Link>
-
             </div>
           ))}
         </div>
+      </div>
+      <div className='w-fit mx-auto'>
+        <Link href="/projects" className='group' passHref>
+          <button type='button' className='group text-zinc-500 flex items-center justify-center gap-2 px-5 py-2 border-zinc-500 group-hover:border-zinc-200 group-hover:text-zinc-200  transition-all duration-300 ease-linear'>
+            <span className='relative group-hover:-left-3 '>
+              <FaArrowLeftLong />
+            </span>
+            <span>back</span>
+          </button>
+        </Link>
       </div>
     </section>
   )
