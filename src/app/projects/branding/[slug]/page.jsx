@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import React from 'react'
-import {BsCalendarDate} from "react-icons/bs"
-import {BiMap} from "react-icons/bi"
+import { BsCalendarDate } from "react-icons/bs"
+import { BiMap } from "react-icons/bi"
 
 async function getData(slug) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/branding/${slug}`,
@@ -65,16 +65,16 @@ const BrandingDetails = async ({ params }) => {
         {images?.resources?.map((image, i) => (
           <div>
             <Image
-            className="w-full md:w-96 hover:scale-110 duration-700 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
-            src={image.secure_url}
-            alt=""
-            placeholder="blur"
-            blurDataURL={image.secure_url}
-            width={1200}
-            height={900}
-            priority={true}
-          />
-        </div>
+              className="w-full md:w-96 hover:scale-110 duration-700 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
+              src={image?.secure_url}
+              alt=""
+              placeholder="blur"
+              blurDataURL={image?.secure_url}
+              width={1200}
+              height={900}
+              
+            />
+          </div>
         ))}
       </div>
     </div>
