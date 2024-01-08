@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import React from 'react'
 import {BsCalendarDate} from "react-icons/bs"
 import {BiMap} from "react-icons/bi"
+import { FaArrowLeftLong } from 'react-icons/fa6';
+import Link from 'next/link';
 
 
 async function getData(slug) {
@@ -62,12 +64,31 @@ const ProductionDetails = async ({ params }) => {
         <Image src={production?.imageUrl} alt="image cover" width={800} height={400} className='object-cover py-8' />
         <p className='text-lg md:text-xl leading-relaxed text-justify text-zinc-400'>{production?.content}</p>
       </div>
-      <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 px-4 md:px-20 py-24' >
+      <div className='w-full relative z-10 h-full columns-1 md:columns-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20' >
         {images?.resources?.map((image, i) => (
-          <div key={i} className='w-full '>
-            <Image src={image?.secure_url} alt='image cover' width={800} height={400} className='object-cover' />
+          <div key={i}>
+            <Image
+              className="w-full md:w-96 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
+              src={image?.secure_url}
+              alt=""
+              placeholder="blur"
+              blurDataURL={image?.secure_url}
+              width={1200}
+              height={900}
+              priority={true}
+            />
           </div>
         ))}
+      </div>
+      <div className='w-fit mx-auto'>
+        <Link href="/projects/production" className='group' passHref>
+          <button type='button' className='group text-zinc-500 flex items-center justify-center gap-2 px-5 py-2 border-zinc-500 group-hover:border-zinc-200 group-hover:text-zinc-200  transition-all duration-300 ease-linear'>
+            <span className='relative group-hover:-left-3 '>
+              <FaArrowLeftLong />
+            </span>
+            <span>back</span>
+          </button>
+        </Link>
       </div>
     </div>
   )
