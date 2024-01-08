@@ -63,7 +63,7 @@ const BrandingDetails = async ({ params }) => {
       </div>
       <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  gap-3 px-4 md:px-20 py-24' >
         {images?.resources?.map((image, i) => (
-          <div key={i} className='w-full lg:w-1/4 md:w-1/2'>
+          <div key={i} className='w-full'>
             <Image src={image?.secure_url} alt='image cover' width={800} height={400} className='object-cover' />
           </div>
         ))}
