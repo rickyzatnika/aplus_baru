@@ -10,7 +10,7 @@ import { AiOutlineMail } from "react-icons/ai";
 const Footer = () => {
   return (
     <footer className="w-full relative z-50 flex flex-col  gap-0  items-center justify-between ">
-      <div className="footer bg-[#101010] py-12 lg:py-18 p-8 text-base-content">
+      <div className="footer bg-[#080808] py-12 lg:py-18 p-8 text-base-content">
         <div className="flex flex-col">
           <Image src="/logo.png" alt='logo_aplus' width={100} height={100} className='object-cover ' />
           <p className="w-full max-w-sm text-justify text-zinc-400">
