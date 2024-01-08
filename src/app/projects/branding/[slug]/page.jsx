@@ -60,8 +60,9 @@ const BrandingDetails = async ({ params }) => {
         </div>
         <Image src={branding?.imageUrl} alt="image cover" width={800} height={400} className='object-cover py-8' />
         <p className='text-sm md:text-md leading-relaxed text-justify text-zinc-400'>{branding?.content}</p>
+        <p className='text-zinc-400 text-sm md:text-md italic pt-6'>Berikut adalah beberapa foto project <span className='text-zinc-400 text-sm md:text-md capitalize font-semibold not-italic'> {branding?.title}</span> yang sudah kami kerjakan :</p>
       </div>
-      <p className='text-zinc-400 text-sm md:text-md italic py-4'>Berikut adalah beberapa foto project <span className='text-zinc-400 text-sm md:text-md  font-semibold not-italic'>{branding?.category}</span> yang sudah kami kerjakan :</p>
+      
       <div className='w-full relative z-10 h-full columns-1 md:columns-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20' >
         {images?.resources?.map((image, i) => (
           <div key={i}>
