@@ -61,6 +61,14 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="flex items-center justify-center">
+            <Link href="/gallery" className="group overflow-hidden h-[22px] px-2 ">
+              <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
+                <span className="text-sm">Gallery</span>
+                <span className="text-sm">Gallery</span>
+              </div>
+            </Link>
+          </li>
+          <li className="flex items-center justify-center">
             <button onClick={() => setOpenForm(true)} className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Contact Us</span>

@@ -48,8 +48,8 @@ const About = () => {
         <div className="bg-path z-5" />
         <motion.div
           exit={{ opacity: 0 }}
-          initial="initial"
-          animate="animate"
+          initial='initial'
+          animate='animate'
           className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 "
         >
           <motion.div
