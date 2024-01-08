@@ -59,13 +59,13 @@ const BrandingDetails = async ({ params }) => {
           </div>
         </div>
         <Image src={branding?.imageUrl} alt="image cover" width={800} height={400} className='object-cover py-8' />
-        <p className='text-lg md:text-xl leading-relaxed text-justify text-zinc-400'>{branding?.content}</p>
+        <p className='text-sm md:text-md leading-relaxed text-justify text-zinc-400'>{branding?.content}</p>
       </div>
       <div className='w-full relative z-10 h-full columns-1 md:columns-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20' >
         {images?.resources?.map((image, i) => (
           <div key={i}>
             <Image
-              className="w-full md:w-96 hover:scale-110 duration-700 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
+              className="w-full md:w-96 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
               src={image?.secure_url}
               alt=""
               placeholder="blur"
