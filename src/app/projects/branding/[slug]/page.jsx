@@ -84,7 +84,7 @@ const BrandingDetails = async ({ params }) => {
       <div className='w-fit mx-auto'>
         <div className=' group flex text-zinc-500 hover:text-zinc-100 hover:transition-all duration-300 ease-linear items-center justify-center gap-2 px-6 py-2 hover:border-zinc-200 border-zinc-500'>
           <Link href="/projects/branding" passHref>
-            <span className='relative group-hover:-left-10  group-hover:transition-all duration-300 ease-linear'>
+            <span className='relative group-hover:-left-3  group-hover:transition-all duration-300 ease-linear'>
               <FaArrowLeftLong />
             </span>
             back
