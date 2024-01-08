@@ -96,7 +96,7 @@ const Branding = () => {
         {data?.map((branding, i) => (
           <div key={i} className='w-full  text-white text-center '>
             <Link
-              href={`/projects/events/${branding?.slug}`}
+              href={`/projects/branding/${branding?.slug}`}
               passHref
               prefetch={true}
               className="group"
