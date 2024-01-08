@@ -82,14 +82,14 @@ const BrandingDetails = async ({ params }) => {
         ))}
       </div>
       <div className='w-fit mx-auto'>
-        <div className=' group flex text-zinc-500 hover:text-zinc-100 hover:transition-all duration-300 ease-linear items-center justify-center gap-2 px-6 py-2 hover:border-zinc-200 border-zinc-500'>
-          <Link href="/projects/branding" passHref>
-            <span className='relative group-hover:-left-3  group-hover:transition-all duration-300 ease-linear'>
+        <Link href="/projects/branding" className='group' passHref>
+          <button type='button' className='text-zinc-500 flex items-center justify-center gap-2 px-5 py-2 border-zinc-500 group-hover:border-zinc-200 group-hover:text-zinc-200  '>
+            <span className='relative group-hover:-left-3 transition-all duration-300 ease-linear'>
               <FaArrowLeftLong />
             </span>
-            back
-          </Link>
-        </div>
+            <span>back</span>
+          </button>
+        </Link>
       </div>
     </div>
   )
