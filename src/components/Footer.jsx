@@ -63,7 +63,7 @@ const Footer = () => {
           
         </div>
       </div>
-      <div className="w-full bg-[#000000] gap-5 py-4 px-6 flex items-center justify-center md:justify-between flex-col-reverse md:flex-row">
+      <div className="w-full bg-[#000000] gap-5 py-2 px-6 flex items-center justify-center md:justify-between flex-col-reverse md:flex-row">
         <div className="text-sm text-center text-zinc-400 ">
           <span className='flex items-center gap-1'>
             PT. APLUS MULTI KREASI © 2016
