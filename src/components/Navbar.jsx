@@ -32,7 +32,7 @@ const Navbar = () => {
         <button type="button" onClick={() => setOpen(false)} className="border-none outline-none relative z-50 flex flex-col items-center justify-center">
           <Link href="/" className="flex flex-col items-center">
             {scroll ? <Image alt="logo_aplus" src="/logo_merah.png" width={75} height={75} className="object-cover" /> : <Image alt="logo_aplus" src="/logo.png" width={45} height={45} className="object-cover" />}
-            {scroll ? "" : <span className="text-white tracking-[0.4rem]">APLUS</span>}
+            
           </Link>
         </button>
         <ul className={`${scroll ? "bg-white text-zinc-700" : "bg-transparent text-white"}  px-12 hidden lg:relative py-3 rounded-full lg:flex gap-8 `}>
