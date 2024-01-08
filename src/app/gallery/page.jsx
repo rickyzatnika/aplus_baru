@@ -190,7 +190,7 @@ const Gallery = () => {
                     .startOf("hour")
                     .fromNow()}</p>`}
                 >
-                  <div className="overflow-hidden w-full md:w-96 h-96 mb-[4px] md:mb-3 relative">
+                  <div className="overflow-hidden w-full md:w-96 h-full md:h-96 mb-[4px] md:mb-3 relative">
                     <Image
                       className="w-full md:w-96 hover:scale-110 duration-700 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
                       src={g.secure_url}
@@ -221,7 +221,7 @@ const Gallery = () => {
                     .startOf("hour")
                     .fromNow()}</p>`}
                 >
-                  <div className="overflow-hidden w-full md:w-96 h-96 mb-[4px] md:mb-3 relative">
+                  <div className="overflow-hidden w-full md:w-96 h-full md:h-96 mb-[4px] md:mb-3 relative">
                     <Image
                       className="w-full md:w-96 hover:scale-110 duration-700 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
                       src={g.secure_url}
