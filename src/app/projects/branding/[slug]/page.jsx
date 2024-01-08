@@ -63,7 +63,7 @@ const BrandingDetails = async ({ params }) => {
       </div>
       <div className='w-full relative z-10 h-full columns-1 md:columns-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20' >
         {images?.resources?.map((image, i) => (
-          <div>
+          <div key={i}>
             <Image
               className="w-full md:w-96 hover:scale-110 duration-700 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
               src={image?.secure_url}
@@ -72,7 +72,7 @@ const BrandingDetails = async ({ params }) => {
               blurDataURL={image?.secure_url}
               width={1200}
               height={900}
-              
+              priority={true}
             />
           </div>
         ))}
