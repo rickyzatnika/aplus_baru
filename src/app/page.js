@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ImFacebook2 } from "react-icons/im";
 import { GrInstagram } from "react-icons/gr";
-import { FaTiktok } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 // import LightGallery from "lightgallery/react";
 // import axios from "axios";
 // import moment from "moment";
@@ -89,16 +89,16 @@ export default function Home() {
                   <ImFacebook2 size={24} />
                 </Link>
                 <Link
-                  href="/"
+                  href="/https://www.instagram.com/aplusmultikreasi.id/" target='_blink'
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-pink-600"
                 >
                   <GrInstagram size={24} />
                 </Link>
                 <Link
-                  href="/"
-                  className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-black  text-zinc-100"
+                  href="/https://www.youtube.com/@hello_aplus7424/featured" target='_blink'
+                  className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-red-500  text-zinc-100"
                 >
-                  <FaTiktok size={24} />
+                  <FaYoutube size={24} />
                 </Link>
               </div>
             </div>

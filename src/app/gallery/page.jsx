@@ -98,7 +98,7 @@ const Gallery = () => {
             className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed"
           >
             <span className="flex text-white items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
-              Gallery
+              Gallery Of
             </span>
             <div className="pt-6 ">
               <h2 className="text-white">APLUS MULTI KREASI</h2>

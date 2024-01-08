@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import { ImFacebook2 } from "react-icons/im";
 import { GrInstagram } from "react-icons/gr";
-import { FaTiktok } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 const NavMobile = ({ open, setOpen, openForm, setOpenForm }) => {
 
@@ -30,20 +30,24 @@ const NavMobile = ({ open, setOpen, openForm, setOpenForm }) => {
               <Link href="/projects">Projects</Link>
             </button>
           </li>
-          
+          <li>
+            <button onClick={() => setOpen(false)} >
+              <Link href="/gallery">Gallery</Link>
+            </button>
+          </li>
           <li>
             <button onClick={() => setOpenForm(true)}>Contact Us</button>
           </li>
         </ul >
-        <div className='flex gap-6 items-center justify-center py-6 px-4'>
+        <div className='flex gap-6 items-center justify-center py-6 px-4' target='_blink'>
           <Link href="/">
             <ImFacebook2 size={24} />
           </Link>
-          <Link href="/">
+          <Link href="/https://www.instagram.com/aplusmultikreasi.id/" target='_blink'>
             <GrInstagram size={24} />
           </Link>
-          <Link href="/">
-            <FaTiktok size={24} />
+          <Link href="/https://www.youtube.com/@hello_aplus7424/featured" target='_blink'>
+            <FaYoutube size={24} />
           </Link>
         </div>
 

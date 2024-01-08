@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { ImFacebook2 } from "react-icons/im";
 import { GrInstagram } from "react-icons/gr";
-import { FaTiktok, FaPhoneSquareAlt } from "react-icons/fa";
+import { FaYoutube, FaPhoneSquareAlt } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiSolidMap } from "react-icons/bi";
 
@@ -71,12 +71,14 @@ const Footer = () => {
           <Link href="/">
             <ImFacebook2 size={20} />
           </Link>
-          <Link href="/">
+          <Link href="/https://www.instagram.com/aplusmultikreasi.id/" target='_blink'>
             <GrInstagram size={20} />
           </Link>
-          <Link href="/">
-            <FaTiktok size={20} />
+         
+          <Link href="/https://www.youtube.com/@hello_aplus7424/featured" target='_blink'>
+            <FaYoutube size={20} />
           </Link>
+         
         </div>
       </div>
     </footer>
