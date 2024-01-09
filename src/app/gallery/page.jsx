@@ -1,51 +1,18 @@
 "use client"
 
-import { motion } from "framer-motion";
 import LightGallery from "lightgallery/react";
+import lgZoom from "lightgallery/plugins/zoom";
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import moment from "moment";
 import axios from "axios";
 import Link from "next/link";
-import lgZoom from "lightgallery/plugins/zoom";
-import "lightgallery/css/lightgallery.css";
-import "lightgallery/css/lg-zoom.css";
-import "lightgallery/css/lg-thumbnail.css";
-
 
 const Gallery = () => {
 
-  // const easing = [0.5, 0.8, -0.35, 0.01];
-  const slideInLeft = {
-    initial: {
-      x: -100,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        delay: 0.5,
-        ease: [0.5, 0.8, -0.35, 0.01],
-      },
-    },
-  };
-  const slideInRight = {
-    initial: {
-      x: -100,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        delay: 0.5,
-        ease: [0.5, 0.8, -0.35, 0.01],
-      },
-    },
-  };
 
   const [data, setData] = useState([]);
   const [activeButton, setActiveButton] = useState("backdrop");
@@ -85,18 +52,8 @@ const Gallery = () => {
   return (
     <section className="overflow-hidden">
       <div className="w-full relative px-4 lg:px-14 py-24 lg:py-40  bg-[#171717] ">
-
-        <div className="bg-path z-5" />
-        <motion.div
-          exit={{ opacity: 0 }}
-          initial="initial"
-          animate="animate"
-          className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 "
-        >
-          <motion.div
-            variants={slideInLeft}
-            className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed"
-          >
+        <div className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 ">
+          <div className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed">
             <span className="flex text-white items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
               Gallery Of
             </span>
@@ -106,15 +63,16 @@ const Gallery = () => {
                 inspiring partner
               </h3>
             </div>
-          </motion.div>
-          <div className=" px-6 lg:px-3 col-span-1 lg:col-span-4  relative top-8">
-            <Image src="/logo_red.png" alt="logo" width={350} height={350} className="mix-blend-screen opacity-20 " />
           </div>
-        </motion.div>
+          <div className=" px-6 lg:px-3 col-span-1 lg:col-span-4  relative top-8">
+            <Image src="/logo_red.png" alt="logo" width={350} height={350} priority={true} className="mix-blend-screen opacity-20 " />
+          </div>
+        </div>
       </div>
       <div className="buttonContainer px-4 flex gap-5 md:gap-8 relative overflow-scroll z-20 w-screen max-w-[240vw] touch-manipulation py-10 h-full items-start mt-4">
         
         <button
+          type="button"
           onClick={() => setActiveButton("backdrop")}
           className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear py-2 px-12 md:px-5 w-52 md:w-32 relative  bg-[#121212] border ${activeButton === "backdrop"
             ? " border-orange-500 text-orange-500 "
@@ -130,6 +88,7 @@ const Gallery = () => {
           ></span>
         </button>
         <button
+          type="button"
           onClick={() => setActiveButton("framescreen")}
           className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500  duration-200 ease-linear py-2 px-12 md:px-5 w-52 md:w-32 relative  bg-[#121212] border  ${activeButton === "framescreen"
             ? "border-orange-500 text-orange-500"
@@ -145,6 +104,7 @@ const Gallery = () => {
           ></span>
         </button>
         <button
+          type="button"
           onClick={() => setActiveButton("backframe")}
           className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear py-2 px-12 md:px-5 w-full md:w-fit relative  bg-[#121212] border  ${activeButton === "backframe"
             ? "border-orange-500 text-orange-500"
@@ -170,8 +130,8 @@ const Gallery = () => {
         </div>
       )}
       <LightGallery
-        speed={800}
         plugins={[lgZoom]}
+        speed={800}
         elementClassNames="w-full relative z-10 h-full columns-2 md:columns-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20"
       >
         {activeButton === "" ? (
@@ -182,7 +142,7 @@ const Gallery = () => {
                   key={i}
                   href={g.secure_url}
                   className="overflow-hidden"
-                  passHref
+                  passHref={true}
                   prefetch={true}
                   data-sub-html={`<h4>Property of Aplus Multi Kreasi <p class="date"> posted : ${moment(
                     g.created_at
@@ -194,7 +154,7 @@ const Gallery = () => {
                     <Image
                       className="w-full md:w-96 hover:scale-110 duration-700 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
                       src={g.secure_url}
-                      alt=""
+                      alt="Aplus Gallery"
                       placeholder="blur"
                       blurDataURL={g.secure_url}
                       width={1200}
@@ -212,7 +172,7 @@ const Gallery = () => {
                 <Link
                   key={i}
                   href={g.secure_url}
-                  passHref
+                  passHref={true}
                   prefetch={true}
                   
                   data-sub-html={`<h4>Property of Aplus Multi Kreasi <p class="date"> posted : ${moment(
@@ -225,7 +185,7 @@ const Gallery = () => {
                     <Image
                       className="w-full md:w-96 hover:scale-110 duration-700 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
                       src={g.secure_url}
-                      alt=""
+                      alt="Aplus Gallery"
                       placeholder="blur"
                       blurDataURL={g.secure_url}
                       width={1200}
@@ -238,8 +198,6 @@ const Gallery = () => {
           </>
         )}
       </LightGallery>
-
-
     </section>
   )
 }

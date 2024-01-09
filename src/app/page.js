@@ -7,7 +7,7 @@ import { FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 
 export const metadata = {
-  title: "APLUS - Homepage",
+  title: "APLUS MULTI KREASI",
   description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
 };
 
@@ -18,16 +18,18 @@ export default function Home() {
       {/* Header */}
       <section>
         <div className="relative min-h-screen md:min-h-[90vh] py-12 md:py-20 lg:py-24 ">
-          <div className='bg-[url("/bg.jpg")] bg-cover bg-bottom absolute z-10 top-0 left-0 w-full h-full '></div>
+          <div className='absolute z-10 top-0 left-0 right-0 w-full h-full'>
+            <Image src='/bg.jpg' alt="aplus background" width="6000" height="4000" priority={true} className=" w-full h-full bg-cover bg-bottom" />
+          </div>
           <div className="absolute z-20 w-full h-full bottom-0 bg-gradient-to-tr from-black to-transparent " />
           <div className="w-full relative z-30 grid grid-cols-1 lg:grid-cols-12 ">
             <div className="col-span-1 lg:col-span-10 py-20 px-4 lg:py-32 lg:px-12">
               <div className="flex pb-8 leading-loose flex-col w-full  item-center justify-center gap-3 text-zinc-100">
                 <h1 className="text-lg md:text-xl">APLUS MULTI KREASI</h1>
-                <span className="text-5xl lg:text-7xl bg-gradient-to-tr tracking-wide lg:tracking-widest from-red-600 to-orange-500 bg-clip-text text-transparent font-extrabold uppercase">
+                <span className="text-4xl lg:text-6xl bg-gradient-to-tr tracking-wide from-red-600 to-orange-500 bg-clip-text text-transparent font-extrabold uppercase">
                   inspiring partner
                 </span>
-                <p className="w-full lg:w-80 leading-relaxed text-md lg:text-lg ">
+                <p className="w-full lg:w-[60%] tracking-wide font-normal leading-relaxed text-sm md:text-md lg:text-lg ">
                   We are event and production management whose entire team works
                   together to accomplish one mission, to create the equation
                   through quality, trust and ease.

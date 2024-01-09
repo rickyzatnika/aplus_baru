@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="w-full relative z-50 flex flex-col  gap-0  items-center justify-between ">
       <div className="footer bg-[#080808] py-12 lg:py-18 p-8 text-base-content">
         <div className="flex flex-col">
-          <Image src="/logo.png" alt='logo_aplus' width={100} height={100} priority={true} className='object-cover ' />
+          <Image src="/logo_merah.png" alt='logo_aplus' width={100} height={100} priority={true} className='object-cover' />
           <p className="w-full max-w-sm text-justify text-zinc-400">
             Aplus Multi Kreasi are a creative agency in the marketing spehere that focuses on Event, Production and Branding.
           </p>
@@ -70,16 +70,16 @@ const Footer = () => {
           </span>
         </div>
         <div className='flex gap-5 items-center text-zinc-400 py-2 px-4'>
-          <Link passHref={true} href="/">
+          <Link passHref={true} href='/'>
             <ImFacebook2 size={20} />
           </Link>
-          <Link passHref={true} href="https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus" target='_blink'>
+          <Link passHref={false} href='https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus' target='_blink'>
             <FaWhatsapp size={20} />
           </Link>
-          <Link passHref={true} href="https://www.instagram.com/aplusmultikreasi.id" target='_blink'>
+          <Link passHref={false} href='https://www.instagram.com/aplusmultikreasi.id' target='_blink'>
             <GrInstagram size={20} />
           </Link>
-          <Link passHref={true} href="https://www.youtube.com/@hello_aplus7424" target='_blink'>
+          <Link passHref={false} href='https://www.youtube.com/@hello_aplus7424' target='_blink'>
             <FaYoutube size={20} />
           </Link>
         </div>
