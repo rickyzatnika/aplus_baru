@@ -27,7 +27,7 @@ export default function Home() {
                 <span className="text-5xl lg:text-7xl bg-gradient-to-tr tracking-wide lg:tracking-widest from-red-600 to-orange-500 bg-clip-text text-transparent font-extrabold uppercase">
                   inspiring partner
                 </span>
-                <p className="w-full lg:w-40 leading-relaxed text-md lg:text-lg ">
+                <p className="w-full lg:w-80 leading-relaxed text-md lg:text-lg ">
                   We are event and production management whose entire team works
                   together to accomplish one mission, to create the equation
                   through quality, trust and ease.
