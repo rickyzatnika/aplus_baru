@@ -52,6 +52,7 @@ const Gallery = () => {
   return (
     <section className="overflow-hidden">
       <div className="w-full relative px-4 lg:px-14 py-24 lg:py-40  bg-[#171717] ">
+      <div className="bg-path" />
         <div className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 ">
           <div className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed">
             <span className="flex text-white items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
