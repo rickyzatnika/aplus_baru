@@ -28,12 +28,18 @@ const Footer = () => {
             <span>sayhi@aplusmultikreasi.id</span>
           </div>
           <div className='flex items-start text-zinc-400'>
-            <span><FaMapMarkerAlt size={20}/> 1:</span>
+            <div className='flex gap-1 items-center'>
+              <FaMapMarkerAlt size={20} />
+              <span>1:</span>
+            </div>
             <span className='pl-3'>Jl. Sariwangi No.165, Parongpong - <br /> Kabupaten Bandung Barat 40559</span>
           </div>
           <div className='flex items-start text-zinc-400'>
-            <span><FaMapMarkerAlt size={20}/> 2:</span>
-            <span className='pl-3'>Jl. Koja I No.1 Jatiasih, Kec. Jatiasih - <br/> Kota Bekasi - Jawa Barat 17423</span>
+            <div className='flex gap-1 items-center'>
+              <FaMapMarkerAlt size={20} />
+              <span>2:</span>
+            </div>
+            <span className='pl-3'>Jl. Koja I No.1 Jatiasih, Kec. Jatiasih - <br /> Kota Bekasi - Jawa Barat 17423</span>
           </div>
 
         </div>
@@ -60,7 +66,7 @@ const Footer = () => {
           <Link passHref={true} href='/privacypolicy' className="text-zinc-400 link link-hover">
             Privacy Policy
           </Link>
-          
+
         </nav>
       </div>
       <div className="w-full bg-[#000000] gap-5 py-2 px-6 flex items-center justify-center md:justify-between flex-col-reverse md:flex-row">
