@@ -16,40 +16,40 @@ const NavMobile = ({ open, setOpen, openForm, setOpenForm }) => {
         <span></span>
         <ul className='gap-5 flex flex-col items-center text-xl'>
           <li>
-            <button onClick={() => setOpen(false)}>
-              <Link href="/">Home</Link>
+            <button type='button' onClick={() => setOpen(false)}>
+              <Link passHref={true} href="/">Home</Link>
             </button>
           </li>
           <li>
-            <button onClick={() => setOpen(false)}>
-              <Link href="/about">About Us</Link>
+            <button type='button' onClick={() => setOpen(false)}>
+              <Link passHref={true} href="/about">About Us</Link>
             </button>
           </li>
           <li>
-            <button onClick={() => setOpen(false)} >
-              <Link href="/projects">Projects</Link>
+            <button type='button' onClick={() => setOpen(false)} >
+              <Link passHref={true} href="/projects">Projects</Link>
             </button>
           </li>
           <li>
-            <button onClick={() => setOpen(false)} >
-              <Link href="/gallery">Gallery</Link>
+            <button type='button' onClick={() => setOpen(false)} >
+              <Link passHref={true} href="/gallery">Gallery</Link>
             </button>
           </li>
           <li>
-            <button onClick={() => setOpenForm(true)}>Contact Us</button>
+            <button type='button' onClick={() => setOpenForm(true)}>Contact Us</button>
           </li>
         </ul >
         <div className='flex gap-6 items-center justify-center py-6 px-4'>
-          <Link href="">
+          <Link passHref={true} href="">
             <ImFacebook2 size={24} />
           </Link>
-          <Link href="https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus" target='_blink'>
+          <Link passHref={true} href="https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus" target='_blink'>
             <FaWhatsapp size={24} />
           </Link>
-          <Link href="https://www.instagram.com/aplusmultikreasi.id" target='_blink'>
+          <Link passHref={true} href="https://www.instagram.com/aplusmultikreasi.id" target='_blink'>
             <GrInstagram size={24} />
           </Link>
-          <Link href="https://www.youtube.com/@hello_aplus7424" target='_blink'>
+          <Link passHref={true} href="https://www.youtube.com/@hello_aplus7424" target='_blink'>
             <FaYoutube size={24} />
           </Link>
         </div>

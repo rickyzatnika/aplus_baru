@@ -90,24 +90,24 @@ const ContactForm = ({ openForm, setOpenForm }) => {
               Hey! Tell us <span>all the things</span>
             </h2>
 
-            <button className="absolute top-8 right-6 text-xl" onClick={() => setOpenForm(!openForm)}><FaRegWindowClose className='hover:text-red-600' size={25} /></button>
+            <button type='button' className="absolute top-8 right-6 text-xl" onClick={() => setOpenForm(!openForm)}> <FaRegWindowClose className='hover:text-red-600' size={25} /></button>
           </div>
           <form onSubmit={handleContactForm} className='w-full  h-full py-4'>
             <div className='w-full px-4'>
               <div className='flex flex-col sm:flex-row gap-2'>
                 <div className='flex-1 flex-col gap-3 items-start'>
                   <label className='font-bold'>Name</label>
-                  <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='john doe' className='placeholder:text-sm placeholder:text-zinc-500 px-6 py-3 w-full outline-none border-none bg-zinc-100 focus:border-none focus:outline-none' />
+                  <input aria-label='title' value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='john doe' className='placeholder:text-sm placeholder:text-zinc-500 px-6 py-3 w-full outline-none border-none bg-zinc-100 focus:border-none focus:outline-none' />
                 </div>
                 <div className='flex-1 flex-col gap-2 items-start'>
                   <label className='font-bold'>Company</label>
-                  <input value={company} onChange={(e) => setCompany(e.target.value)} type="text" placeholder='Apple' className='placeholder:text-sm placeholder:text-zinc-500 px-6 py-3 w-full outline-none border-none bg-zinc-100 focus:border-none focus:outline-none' />
+                  <input aria-label='title' value={company} onChange={(e) => setCompany(e.target.value)} type="text" placeholder='Apple' className='placeholder:text-sm placeholder:text-zinc-500 px-6 py-3 w-full outline-none border-none bg-zinc-100 focus:border-none focus:outline-none' />
                 </div>
               </div>
               <div className='flex flex-col gap-2 py-2 lg:py-6'>
                 <div className=' flex-col gap-3 items-start'>
                   <label className='font-bold'>Your Email</label>
-                  <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='john@gmail.com' className='placeholder:text-sm placeholder:text-zinc-500 px-6 py-3 w-full outline-none border-none bg-zinc-100 focus:border-none focus:outline-none' />
+                  <input aria-label='title' value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='john@gmail.com' className='placeholder:text-sm placeholder:text-zinc-500 px-6 py-3 w-full outline-none border-none bg-zinc-100 focus:border-none focus:outline-none' />
                 </div>
                 <div className='mt-5 flex flex-col gap-2'>
                   <label className='font-bold'>i`m interested in...</label>

@@ -28,16 +28,16 @@ const Navbar = () => {
   return (
     <>
       <ContactForm openForm={openForm} setOpenForm={setOpenForm} />
-      <div className={` px-6 lg:px-8 py-5 w-full z-[99] fixed top-0 left-0 flex items-center justify-between transition-all duration-300 ease-linear ${scroll ? "bg-[#000]/80 backdrop-blur" : "bg-transparent "}  `}>
+      <header className={` px-6 lg:px-8 py-5 w-full z-[99] fixed top-0 left-0 flex items-center justify-between transition-all duration-300 ease-linear ${scroll ? "bg-[#000]/80 backdrop-blur" : "bg-transparent "}  `}>
         <button type="button" onClick={() => setOpen(false)} className="border-none outline-none relative z-50 flex flex-col items-center justify-center">
-          <Link href="/" className="flex flex-col items-center">
-            {scroll ? <Image alt="logo_aplus" src="/logo_merah.png" width={75} height={75} className="object-cover" /> : <Image alt="logo_aplus" src="/logo.png" width={45} height={45} className="object-cover" />}
+          <Link passHref={true} href="/" className="flex flex-col items-center">
+            {scroll ? <Image alt="logo_aplus" src="/logo_merah.png" priority={true} width={75} height={75} className="object-cover" /> : <Image alt="logo_aplus" src="/logo.png" width={45} height={45} priority={true} className="object-cover" />}
             
           </Link>
         </button>
         <ul className={`${scroll ? "bg-white text-zinc-700" : "bg-transparent text-white"}  px-12 hidden lg:relative py-3 rounded-full lg:flex gap-8 `}>
           <li className="flex items-center justify-center">
-            <Link href="/" className="group overflow-hidden h-[22px] px-2 ">
+            <Link passHref={true} href="/" className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Home</span>
                 <span className="text-sm">Home</span>
@@ -45,7 +45,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link href="/about" className="group overflow-hidden h-[22px] px-2 ">
+            <Link passHref={true} href="/about" className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">About Us</span>
                 <span className="text-sm">About Us</span>
@@ -53,7 +53,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link href="/projects" className="group overflow-hidden h-[22px] px-2 ">
+            <Link passHref={true} href="/projects" className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Projects</span>
                 <span className="text-sm">Projects</span>
@@ -61,7 +61,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link href="/gallery" className="group overflow-hidden h-[22px] px-2 ">
+            <Link passHref={true} href="/gallery" className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Gallery</span>
                 <span className="text-sm">Gallery</span>
@@ -69,7 +69,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <button onClick={() => setOpenForm(true)} className="group overflow-hidden h-[22px] px-2 ">
+            <button type="button" onClick={() => setOpenForm(true)} className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Contact Us</span>
                 <span className="text-sm">Contact Us</span>
@@ -78,8 +78,8 @@ const Navbar = () => {
           </li>
         </ul>
         <NavMobile open={open} setOpen={setOpen} openForm={openForm} setOpenForm={setOpenForm} />
-        <div div className="flex items-center gap-4">
-          <button onClick={() => setOpenForm(!openForm)} className={`btn_container overflow-hidden relative ${scroll ? "bg-gradient-to-r from-red-500 to-orange-500 text-zinc-100  transition-all duration-200 ease-linear" : "bg-white"} group px-4 py-2 bg-white rounded-full  flex items-center justify-center`}>
+        <div className="flex items-center gap-4">
+          <button type="button" onClick={() => setOpenForm(!openForm)} className={`btn_container overflow-hidden relative ${scroll ? "bg-gradient-to-r from-red-500 to-orange-500 text-zinc-100  transition-all duration-200 ease-linear" : "bg-white"} group px-4 py-2 bg-white rounded-full  flex items-center justify-center`}>
             <div className="group overflow-hidden h-[22px]">
               <div className="group-hover:text-zinc-100 relative z-20 flex flex-col items-center group-hover:-translate-y-5 transition-all duration-200 ease-linear">
                 <span className="text-sm">
@@ -107,7 +107,7 @@ const Navbar = () => {
             ></span>
           </button>
         </div>
-      </div>
+      </header>
     </>
 
   )

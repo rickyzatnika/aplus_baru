@@ -57,7 +57,7 @@ const About = () => {
             className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed"
           >
             <span className="flex text-white items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
-              <Image src="/logo.png" alt="logo" width={80} height={80} /><span className="relative -left-2">bout Us</span>
+              <Image priority src="/logo.png" alt="logo" width={80} height={80} /><span className="relative -left-2">bout Us</span>
             </span>
             <div className="pt-6 ">
               <h2 className="text-white">APLUS MULTI KREASI</h2>
@@ -67,7 +67,7 @@ const About = () => {
             </div>
           </motion.div>
           <div className=" px-6 lg:px-3 col-span-1 lg:col-span-4  relative top-8">
-            <Image src="/logo_red.png" alt="logo" width={350} height={350} className="mix-blend-screen opacity-20 " />
+            <Image priority src="/logo_red.png" alt="logo" width={350} height={350} className="mix-blend-screen opacity-20 " />
           </div>
         </motion.div>
       </div>
@@ -79,6 +79,7 @@ const About = () => {
         <div className="col-span-1 lg:col-span-6">
           <div className="p-4 border-2 border-gray-500">
             <Image
+              priority
               src="/event.jpg"
               alt="about us"
               width={1200}
@@ -115,15 +116,6 @@ const About = () => {
           ))}
         </div>
       </div>
-
-
-      {/* Team Card */}
-      {/* <div className="py-14 px-4 w-full h-full">
-        <div className="text-center ">
-          <h3 className="text-xl lg:text-4xl text-zinc-200">— OUR PROFESSIONAL TEAM —</h3>
-          <p className="text-zinc-400 text-sm pt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-      </div> */}
     </section>
   )
 }
