@@ -52,7 +52,7 @@ const Gallery = () => {
   return (
     <section className="overflow-hidden">
       <div className="w-full relative px-4 lg:px-14 py-24 lg:py-40  bg-[#171717] ">
-      <div className="bg-path" />
+        <div className="bg-path" />
         <div className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 ">
           <div className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed">
             <span className="flex text-white items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
@@ -70,17 +70,17 @@ const Gallery = () => {
           </div>
         </div>
       </div>
-      <div className="buttonContainer px-4 flex gap-5 md:gap-8 relative overflow-scroll z-20 w-screen max-w-[240vw] touch-manipulation py-10 h-full items-start mt-4">
-        
+      <div className="buttonContainer px-4 flex gap-5 md:gap-8 relative overflow-scroll z-20 w-screen max-w-[240vw] touch-manipulation py-10 h-full items-center justify-center mt-4">
+
         <button
           type="button"
           onClick={() => setActiveButton("backdrop")}
-          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear py-2 px-12 md:px-5 w-52 md:w-32 relative  bg-[#121212] border ${activeButton === "backdrop"
+          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit relative  bg-[#121212] border ${activeButton === "backdrop"
             ? " border-orange-500 text-orange-500 "
             : " border-zinc-600 text-zinc-500/80 "
             }`}
         >
-          Backdrop
+          1
           <span
             className={`border-l border-b   group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "backdrop"
               ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
@@ -91,12 +91,12 @@ const Gallery = () => {
         <button
           type="button"
           onClick={() => setActiveButton("framescreen")}
-          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500  duration-200 ease-linear py-2 px-12 md:px-5 w-52 md:w-32 relative  bg-[#121212] border  ${activeButton === "framescreen"
+          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500  duration-200 ease-linear p-2 w-fit relative  bg-[#121212] border  ${activeButton === "framescreen"
             ? "border-orange-500 text-orange-500"
             : "border-zinc-600 text-zinc-500/80"
             }`}
         >
-          Framescreen
+          2
           <span
             className={`border-l border-b  group-hover:border-none border-zinc-600  -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "framescreen"
               ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
@@ -107,12 +107,12 @@ const Gallery = () => {
         <button
           type="button"
           onClick={() => setActiveButton("backframe")}
-          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear py-2 px-12 md:px-5 w-full md:w-fit relative  bg-[#121212] border  ${activeButton === "backframe"
+          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit  relative  bg-[#121212] border  ${activeButton === "backframe"
             ? "border-orange-500 text-orange-500"
             : "border-zinc-600 text-zinc-500/80"
             }`}
         >
-          Backdrop & Framescreen
+          3
           <span
             className={`border-l border-b group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "backframe"
               ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
@@ -120,20 +120,38 @@ const Gallery = () => {
               }`}
           ></span>
         </button>
+        <button
+          type="button"
+          onClick={() => setActiveButton("mural")}
+          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit  relative  bg-[#121212] border  ${activeButton === "mural"
+            ? "border-orange-500 text-orange-500"
+            : "border-zinc-600 text-zinc-500/80"
+            }`}
+        >
+          4
+          <span
+            className={`border-l border-b group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "mural"
+              ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
+              : ""
+              }`}
+          ></span>
+        </button>
 
       </div>
-      {isLoading && (
-        <div className="w-full h-full  z-50 right-0 text-center mt-10 md:mt-40 text-zinc-200">
-          <div className="flex gap-2 items-center justify-center">
-            <span>Loading...</span>
-            <span className="loading loading-spinner loading-sm"></span>
-          </div>
+      {isLoading ? (<div className="w-full h-full  z-50 right-0 text-center mt-10 md:mt-40 text-zinc-200">
+        <div className="flex gap-2 items-center justify-center">
+          <span>Loading...</span>
+          <span className="loading loading-spinner loading-sm"></span>
         </div>
+      </div>
+      ) : (
+        activeButton === "backframe" ? <><p className="w-fit mx-auto px-3 border-b border-orange-600 pb-2 text-zinc-200  text-sm md:text-xl py-4 ">Backdrop & Framescreen</p></> : <><p className="w-fit mx-auto px-3 uppercase text-zinc-200 border-b border-orange-600 pb-2 text-sm md:text-xl py-4 ">{activeButton}</p></>
       )}
+
       <LightGallery
         plugins={[lgZoom]}
         speed={800}
-        elementClassNames="w-full relative z-10 h-full columns-2 md:columns-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20"
+        elementClassNames="w-full relative z-10 h-full grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20"
       >
         {activeButton === "" ? (
           <>
@@ -153,7 +171,7 @@ const Gallery = () => {
                 >
                   <div className="overflow-hidden w-full md:w-96 h-full md:h-96 mb-[4px] md:mb-3 relative">
                     <Image
-                      className="w-full md:w-96 hover:scale-110 duration-700 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
+                      className="w-full md:w-96 hover:scale-110 duration-700 h-full md:h-96  object-cover mb-[4px] md:mb-3 mx-auto"
                       src={g.secure_url}
                       alt="Aplus Gallery"
                       placeholder="blur"
@@ -175,7 +193,7 @@ const Gallery = () => {
                   href={g.secure_url}
                   passHref={true}
                   prefetch={true}
-                  
+
                   data-sub-html={`<h4>Property of Aplus Multi Kreasi <p class="date"> posted : ${moment(
                     g.created_at
                   )
@@ -184,7 +202,7 @@ const Gallery = () => {
                 >
                   <div className="overflow-hidden w-full md:w-96 h-full md:h-96 mb-[4px] md:mb-3 relative">
                     <Image
-                      className="w-full md:w-96 hover:scale-110 duration-700 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
+                      className="w-full md:w-96 hover:scale-110 duration-700 h-full md:h-96  object-cover mb-[4px] md:mb-3 mx-auto"
                       src={g.secure_url}
                       alt="Aplus Gallery"
                       placeholder="blur"

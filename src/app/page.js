@@ -17,10 +17,8 @@ export default function Home() {
     <>
       {/* Header */}
       <section>
-        <div className="relative min-h-screen md:min-h-[90vh] py-12 md:py-20 lg:py-24 ">
-          <div className='absolute z-10 top-0 left-0 right-0 w-full h-full'>
-            <Image src='/bg.jpg' alt="aplus background" width="6000" height="4000" priority={true} className=" w-full h-full bg-cover bg-bottom" />
-          </div>
+        <div className="relative min-h-screen md:min-h-[90vh] py-12 md:py-20 lg:py-24 overflow-hidden">
+          <div className='bg-[url("/bg.jpg")] bg-cover bg-bottom absolute z-10 top-0 left-0 bottom-0 w-full h-full'/>
           <div className="absolute z-20 w-full h-full bottom-0 bg-gradient-to-tr from-black to-transparent " />
           <div className="w-full relative z-30 grid grid-cols-1 lg:grid-cols-12 ">
             <div className="col-span-1 lg:col-span-10 py-20 px-4 lg:py-32 lg:px-12">
