@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col">
           <Image src="/logo_merah.png" alt='logo_aplus' width={100} height={100} priority={true} className='object-cover' />
           <p className="w-full max-w-sm text-justify text-zinc-400">
-            Aplus Multi Kreasi are a creative agency in the marketing spehere that focuses on Event, Production and Branding.
+            Aplus Multi Kreasi are a creative agency in the marketing sphere that focuses on Event, Production and Branding.
           </p>
         </div>
         <div className=''>
