@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { ImFacebook2 } from "react-icons/im";
 import { GrInstagram } from "react-icons/gr";
-import { FaYoutube, FaPhoneSquareAlt, FaWhatsapp } from "react-icons/fa";
+import { FaYoutube, FaPhoneSquareAlt, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 
 
@@ -27,12 +27,12 @@ const Footer = () => {
             <AiOutlineMail size={20} />
             <span>sayhi@aplusmultikreasi.id</span>
           </div>
-          <div className='flex flex-col gap-1 items-start text-zinc-400'>
-            <p>Address 1 :</p>
+          <div className='flex flex-wrap gap-1 items-start text-zinc-400'>
+            <span><FaMapMarkerAlt size={20}/> 1:</span>
             <span className='pl-3'>Jl. Sariwangi No.165, Parongpong - <br /> Kabupaten Bandung Barat 40559</span>
           </div>
-          <div className='flex flex-col gap-1 items-start text-zinc-400'>
-            <p>Address 2 :</p>
+          <div className='flex flex-wrap gap-1 items-start text-zinc-400'>
+          <span><FaMapMarkerAlt size={20}/> 2:</span>
             <span className='pl-3'>Jl. Koja I No.1 Jatiasih, Kec. Jatiasih - <br/> Kota Bekasi - Jawa Barat 17423</span>
           </div>
 
