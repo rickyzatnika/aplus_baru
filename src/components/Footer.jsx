@@ -27,12 +27,12 @@ const Footer = () => {
             <AiOutlineMail size={20} />
             <span>sayhi@aplusmultikreasi.id</span>
           </div>
-          <div className='flex flex-wrap gap-1 items-start text-zinc-400'>
+          <div className='flex items-start text-zinc-400'>
             <span><FaMapMarkerAlt size={20}/> 1:</span>
             <span className='pl-3'>Jl. Sariwangi No.165, Parongpong - <br /> Kabupaten Bandung Barat 40559</span>
           </div>
-          <div className='flex flex-wrap gap-1 items-start text-zinc-400'>
-          <span><FaMapMarkerAlt size={20}/> 2:</span>
+          <div className='flex items-start text-zinc-400'>
+            <span><FaMapMarkerAlt size={20}/> 2:</span>
             <span className='pl-3'>Jl. Koja I No.1 Jatiasih, Kec. Jatiasih - <br/> Kota Bekasi - Jawa Barat 17423</span>
           </div>
 
