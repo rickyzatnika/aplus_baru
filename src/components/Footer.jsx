@@ -9,11 +9,11 @@ import { AiOutlineMail } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="w-full relative z-50 flex flex-col  gap-0  items-center justify-between ">
+    <footer className="w-full relative z-50 flex flex-col text-sm  gap-0  items-center justify-between ">
       <div className="footer bg-[#080808] py-12 lg:py-18 p-8 text-base-content">
         <div className="flex flex-col">
-          <Image src="/logo_merah.png" alt='logo_aplus' width={100} height={100} priority={true} className='object-cover' />
-          <p className="w-full max-w-sm text-justify text-zinc-400">
+          <Image src="/logo_merah.png" alt='logo_aplus' width={75} height={75} priority={true} className='object-cover' />
+          <p className="w-full max-w-sm text-justify text-zinc-400 pt-2 leading-relaxed">
             Aplus Multi Kreasi are a creative agency in the marketing sphere that focuses on Event, Production and Branding.
           </p>
         </div>
@@ -70,7 +70,7 @@ const Footer = () => {
         </nav>
       </div>
       <div className="w-full bg-[#000000] gap-5 py-2 px-6 flex items-center justify-center md:justify-between flex-col-reverse md:flex-row">
-        <div className="text-sm text-center text-zinc-400 ">
+        <div className="text-xs text-center text-zinc-400 ">
           <span className='flex items-center gap-1'>
             PT. APLUS MULTI KREASI © 2016
           </span>
