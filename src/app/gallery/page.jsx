@@ -51,26 +51,31 @@ const Gallery = () => {
 
   return (
     <section className="overflow-hidden">
-      <div className="w-full relative px-4 lg:px-14 py-24 lg:py-40  bg-[#171717] ">
+      <div className="w-full min-h-screen relative px-4 lg:px-14 py-24 lg:py-40  ">
+        <div className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
+          <Image src="/logo.png" alt="logo" width={350} height={350} className="opacity-5 " />
+        </div>
         <div className="bg-path" />
         <div className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 ">
           <div className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed">
-            <span className="flex text-white items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
-              Gallery Of
+            <span className="flex text-zinc-200 items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
+              Gallery
             </span>
             <div className="pt-6 ">
-              <h2 className="text-white">APLUS MULTI KREASI</h2>
+              <h2 className="text-zinc-200">APLUS MULTI KREASI</h2>
               <h3 className="text-3xl textCustom  lg:text-5xl tracking-wide lg:tracking-wide text-transparent font-extrabold uppercase">
                 inspiring partner
               </h3>
             </div>
           </div>
-          <div className=" px-6 lg:px-3 col-span-1 lg:col-span-4  relative top-8">
-            <Image src="/logo_red.png" alt="logo" width={350} height={350} priority={true} className="mix-blend-screen opacity-20 " />
+          <div className="col-span-1 lg:col-span-4  pb-8 relative top-8">
+            <p className="text-zinc-400 lg:text-zinc-600 relative top-0 lg:top-32 antialiased tracking-wide">
+             A Property of Aplus Multi Kreasi ©
+            </p>
           </div>
         </div>
       </div>
-      <div className="buttonContainer px-4 flex gap-5 md:gap-8 relative overflow-scroll z-20 w-screen max-w-[240vw] touch-manipulation py-10 h-full items-center justify-center mt-4">
+      <div className="buttonContainer bg-white px-4 py-10 flex gap-5 md:gap-8 relative overflow-scroll z-20 w-screen max-w-[240vw] touch-manipulation  h-full items-center justify-center ">
 
         <button
           type="button"
@@ -138,20 +143,20 @@ const Gallery = () => {
         </button>
 
       </div>
-      {isLoading ? (<div className="w-full h-full  z-50 right-0 text-center mt-10 md:mt-40 text-zinc-200">
+      {isLoading ? (<div className="w-full bg-white  h-full  z-50 right-0 text-center  text-zinc-600">
         <div className="flex gap-2 items-center justify-center">
           <span>Loading...</span>
           <span className="loading loading-spinner loading-sm"></span>
         </div>
       </div>
       ) : (
-        activeButton === "backframe" ? <><p className="w-fit mx-auto px-3 border-b border-orange-600 pb-2 text-zinc-200  text-sm md:text-xl py-4 ">Backdrop & Framescreen</p></> : <><p className="w-fit mx-auto px-3 uppercase text-zinc-200 border-b border-orange-600 pb-2 text-sm md:text-xl py-4 ">{activeButton}</p></>
+        activeButton === "backframe" ? <><p className="w-full text-center bg-white px-3 border-b pb-3 border-orange-600  text-zinc-600  text-sm md:text-xl  ">Backdrop & Framescreen</p></> : <><p className="w-full bg-white text-center mx-auto uppercase text-zinc-600 border-b border-orange-600 pb-3 text-sm md:text-xl ">{activeButton}</p></>
       )}
 
       <LightGallery
         plugins={[lgZoom]}
         speed={800}
-        elementClassNames="w-full relative z-10 h-full grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20"
+        elementClassNames="w-full bg-white relative z-10 h-full grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20"
       >
         {activeButton === "" ? (
           <>

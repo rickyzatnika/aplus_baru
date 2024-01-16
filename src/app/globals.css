@@ -9,6 +9,16 @@
 body {
   @apply bg-[#111];
 }
+/* Outline Text */
+.font-outline-2 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.8px rgb(68, 68, 68);
+}
+.font-outline-2:hover {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgb(68, 68, 68);
+}
+
 
 .btn_container::after {
   content: "";
@@ -23,6 +33,7 @@ body {
   transition: all 0.3s linear;
   z-index: 1;
 }
+
 .btn_container:hover::after {
   width: 100%;
 }
@@ -46,6 +57,7 @@ body {
   0% {
     transform: translateX(400%);
   }
+
   100% {
     transform: translateX(-10%);
   }
@@ -58,10 +70,12 @@ body {
 
   /* animation: rightToLeft 4.5s linear infinite; */
 }
+
 @keyframes leftToRight {
   0% {
     transform: translateX(-400%);
   }
+
   100% {
     transform: translateX(10%);
   }
@@ -79,10 +93,12 @@ body {
   0% {
     transform: translateX(-10%);
   }
+
   100% {
     transform: translateX(400%);
   }
 }
+
 /* Animate text END*/
 
 /* Text Custom */
@@ -109,11 +125,13 @@ body {
 
     /* animation: rightToLeft 4.5s linear infinite; */
   }
+
   .target_1 {
     animation: LeftToRight 22s linear infinite;
 
     /* animation: rightToLeft 4.5s linear infinite; */
   }
+
   .bg-path {
     height: 20%;
     width: 40%;

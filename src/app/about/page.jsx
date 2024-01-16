@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { GiTeamIdea } from "react-icons/gi"
 import { choose } from "@/lib/data";
+import Link from "next/link";
 
 
 
@@ -18,18 +18,18 @@ const About = () => {
 
   return (
     <section className="overflow-hidden">
-      <div className="w-full min-h-screen relative px-4 lg:px-14 py-24 lg:py-40  bg-[#171717] ">
-      <div className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
+      <div className="w-full min-h-screen relative px-4 lg:px-14 py-24 lg:py-40   ">
+        <div className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
           <Image src="/logo.png" alt="logo" width={350} height={350} className="opacity-5 " />
         </div>
         <div className="bg-path z-5" />
         <div className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 ">
           <div className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed">
-            <span className="flex text-white items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
+            <span className="flex text-zinc-200 items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
               <span className="relative -left-2">About Us</span>
             </span>
             <div className="pt-6 ">
-              <h2 className="text-white">APLUS MULTI KREASI</h2>
+              <h2 className="text-zinc-200">APLUS MULTI KREASI</h2>
               <h3 className="text-3xl textCustom  lg:text-5xl tracking-wide lg:tracking-wide text-transparent font-extrabold uppercase">
                 inspiring partner
               </h3>
@@ -40,30 +40,28 @@ const About = () => {
               We are committed to be a one-stop shop for your event & production needs.
             </p>
           </div>
-          
+
         </div>
       </div>
       <div className="w-full h-full relative bg-[#fff] grid grid-cols-1 gap-4 lg:gap-4 lg:grid-cols-12 justify-center px-4 py-10 lg:py-20 lg:px-20">
-        <div className="relative w-full h-full">
-          <div className="w-4 h-4 lg:h-44 rounded-full hidden lg:block bg-red-600 absolute -left-5 top-0 z-0" />
-          <h3 className="col-span-1 lg:col-span-1 relative">A STORY OF APLUS COMPANY</h3>
-        </div>
-        <div className="col-span-1 lg:col-span-6">
-          <div className="p-4 border-2 border-gray-500">
-            <Image
-              priority
-              src="/event.jpg"
-              alt="about us"
-              width={1200}
-              height={800}
-            />
-          </div>
-        </div>
-        <div className="col-span-1 lg:col-span-5 w-full lg:w-5/6 mx-auto">
-          <p className="text-lg text-[#636262]">
+
+        <div className="col-span-1 lg:col-span-5 w-full lg:w-5/6 mx-auto relative">
+          <div className="w-2 h-full rounded-full hidden lg:block bg-red-600/30 absolute -left-8 top-0 z-0" />
+          <p className="text-sm leading-relaxed md:text-lg text-[#636262]">
             We are event and production management whose entire team works together  to accomplish one mission, to create the equation through quality, trust and ease.
             We understand that planning an event can be extremely stressful, confusing, and upredictable. We promise where things might be stressful, we will make it easy. We pride ourselves on the quality of our integrated event service and the event management we deliver to create the ultimate live event for our clients. We want to bring it all together for our client, just like creating an equation to provide you the perfect solution.
           </p>
+        </div>
+        <div className="col-span-1 lg:col-span-7 relative">
+          <div className="p-4 z-5 bg-red-600/50 absolute left-2 -top-2 w-full h-full" />
+          <Image
+            priority
+            src="/event.jpg"
+            alt="about us"
+            width={1200}
+            height={800}
+            className="z-10 relative rounded-bl-xl"
+          />
         </div>
       </div>
 
@@ -87,7 +85,13 @@ const About = () => {
 
           ))}
         </div>
+        <div className="text-zinc-500 text-right  pt-8 relative right-4  ">
+          <Link href="/projects" passhref={true} className="text-5xl lg:text-7xl text-transparent font-outline-2 transition-all duration-300 ease-linear">
+            Projects -
+          </Link>
+        </div>
       </div>
+
     </section>
   )
 }
