@@ -7,15 +7,10 @@ import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
-import AnimatePage from "../components/AnimatePage/AnimatePage";
+
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400", display: "swap" });
 
-export const metadata = {
-  title: "Aplus Multi Kreasi",
-  description:
-    "Aplus Multi Kreasi are a creative agency in the marketing spehere that focuses on Event, Production and Branding.",
-};
 
 const GTM_ID = "G-LJ0KYVQ00T"
 
@@ -35,12 +30,11 @@ export default function RootLayout({ children }) {
 
       <body className={`${poppins.className} `}>
         <ToastContainer theme="dark" />
-        <AnimatePage>
+        
           <Navbar />
           {children}
           <Footer />
-        </AnimatePage>
-
+        
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,

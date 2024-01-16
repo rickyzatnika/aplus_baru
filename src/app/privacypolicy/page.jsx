@@ -1,6 +1,17 @@
 import Link from 'next/link'
 import React from 'react'
 
+
+
+export const metadata = {
+    title: "Aplus - Privacy Policy",
+    openGraph: {
+      title: 'Aplus - Privacy Policy',
+    },
+    description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
+  };
+
+
 const PrivacyPolicy = () => {
     return (
         <div className='w-full px-4 md:px-8 bg-white pt-40 pb-20 leading-relaxed'>

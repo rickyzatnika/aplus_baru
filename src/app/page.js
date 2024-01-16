@@ -6,8 +6,13 @@ import { FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 
 
+
 export const metadata = {
-  title: "APLUS MULTI KREASI",
+  title: "Home - Aplus Multi Kreasi",
+  openGraph: {
+   
+    title: 'Home',
+  },
   description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
 };
 

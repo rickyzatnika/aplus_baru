@@ -3,9 +3,13 @@ import Link from "next/link";
 
 
 
+
 export const metadata = {
-  title: "APLUS - Projects",
-  description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
+  title: "Projects - Aplus Multi Kreasi",
+  openGraph: {
+    title: 'Projects',
+  },
+  description: "The best ideas come frome meetings, which is why when working with us there is no such thing as too many meetings Want to have a meeting to go over all of the event and production details.",
 };
 
 

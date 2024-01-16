@@ -1,6 +1,16 @@
 import Link from 'next/link'
 import React from 'react'
 
+
+
+export const metadata = {
+    title: "Aplus - Terms & Conditions",
+    openGraph: {
+      title: 'Aplus - Terms & Conditions',
+    },
+    description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
+  };
+
 const Terms = () => {
     return (
         <div className='w-full px-4 md:px-8 bg-white pt-40 pb-20 leading-relaxed'>

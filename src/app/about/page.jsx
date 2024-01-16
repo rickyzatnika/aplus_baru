@@ -1,63 +1,32 @@
-"use client"
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { GiTeamIdea } from "react-icons/gi"
 import { choose } from "@/lib/data";
 
 
+
+export const metadata = {
+  title: "About - Aplus Multi Kreasi",
+  openGraph: {
+    title: 'About',
+  },
+  description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
+};
+
+
+
 const About = () => {
-
-  const easing = [0.5, 0.8, -0.35, 0.01];
-  const slideInLeft = {
-    initial: {
-      x: -100,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        delay: 0.5,
-        ease: [0.5, 0.8, -0.35, 0.01],
-      },
-    },
-  };
-  const slideInRight = {
-    initial: {
-      x: -100,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        delay: 0.5,
-        ease: [0.5, 0.8, -0.35, 0.01],
-      },
-    },
-  };
-
 
   return (
     <section className="overflow-hidden">
-      <div className="w-full relative px-4 lg:px-14 py-24 lg:py-40  bg-[#171717] ">
-
+      <div className="w-full min-h-screen relative px-4 lg:px-14 py-24 lg:py-40  bg-[#171717] ">
+      <div className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
+          <Image src="/logo.png" alt="logo" width={350} height={350} className="opacity-5 " />
+        </div>
         <div className="bg-path z-5" />
-        <motion.div
-          exit={{ opacity: 0 }}
-          initial='initial'
-          animate='animate'
-          className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 "
-        >
-          <motion.div
-            variants={slideInLeft}
-            className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed"
-          >
+        <div className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 ">
+          <div className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed">
             <span className="flex text-white items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
-              <Image priority src="/logo.png" alt="logo" width={80} height={80} /><span className="relative -left-2">bout Us</span>
+              <span className="relative -left-2">About Us</span>
             </span>
             <div className="pt-6 ">
               <h2 className="text-white">APLUS MULTI KREASI</h2>
@@ -65,11 +34,14 @@ const About = () => {
                 inspiring partner
               </h3>
             </div>
-          </motion.div>
-          <div className=" px-6 lg:px-3 col-span-1 lg:col-span-4  relative top-8">
-            <Image priority src="/logo_red.png" alt="logo" width={350} height={350} className="mix-blend-screen opacity-20 " />
           </div>
-        </motion.div>
+          <div className="col-span-1 lg:col-span-4  pb-8 relative top-8">
+            <p className="text-zinc-400 lg:text-zinc-600 relative top-0 lg:top-32 antialiased tracking-wide">
+              We are committed to be a one-stop shop for your event & production needs.
+            </p>
+          </div>
+          
+        </div>
       </div>
       <div className="w-full h-full relative bg-[#fff] grid grid-cols-1 gap-4 lg:gap-4 lg:grid-cols-12 justify-center px-4 py-10 lg:py-20 lg:px-20">
         <div className="relative w-full h-full">
