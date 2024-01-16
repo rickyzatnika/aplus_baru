@@ -51,7 +51,9 @@ const About = () => {
             We are event and production management whose entire team works together  to accomplish one mission, to create the equation through quality, trust and ease.
             We understand that planning an event can be extremely stressful, confusing, and upredictable.
             <br />
+            <br />
             We promise where things might be stressful, we will make it easy. We pride ourselves on the quality of our integrated event service and the event management we deliver to create the ultimate live event for our clients. 
+            <br />
             <br />
             We want to bring it all together for our client, just like creating an equation to provide you the perfect solution.
           </p>
