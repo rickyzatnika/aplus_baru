@@ -49,7 +49,11 @@ const About = () => {
           <div className="w-2 h-full rounded-full hidden lg:block bg-red-600/30 absolute -left-8 top-0 z-0" />
           <p className="text-sm leading-relaxed md:text-lg text-[#636262]">
             We are event and production management whose entire team works together  to accomplish one mission, to create the equation through quality, trust and ease.
-            We understand that planning an event can be extremely stressful, confusing, and upredictable. We promise where things might be stressful, we will make it easy. We pride ourselves on the quality of our integrated event service and the event management we deliver to create the ultimate live event for our clients. We want to bring it all together for our client, just like creating an equation to provide you the perfect solution.
+            We understand that planning an event can be extremely stressful, confusing, and upredictable.
+            <br />
+            We promise where things might be stressful, we will make it easy. We pride ourselves on the quality of our integrated event service and the event management we deliver to create the ultimate live event for our clients. 
+            <br />
+            We want to bring it all together for our client, just like creating an equation to provide you the perfect solution.
           </p>
         </div>
         <div className="col-span-1 lg:col-span-7 relative">
