@@ -76,7 +76,7 @@ const Footer = () => {
           </span>
         </div>
         <div className='flex gap-5 items-center text-zinc-400 py-2 px-4'>
-          <Link passHref={true} href='/'>
+          <Link passHref={true} href='https://web.facebook.com/people/Aplus-Multi/61555802003335/' target='_blink'>
             <ImFacebook2 size={20} />
           </Link>
           <Link passHref={false} href='https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus' target='_blink'>

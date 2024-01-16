@@ -48,7 +48,7 @@ const NavMobile = ({ open, setOpen, openForm, setOpenForm }) => {
         <div className='w-full flex items-center gap-2 py-2 px-1 flex-col justify-center bg-gradient-to-tr from-red-700 to-orange-600'>
           <span className='text-zinc-200 text-xs tracking-widest'>Follow Us :</span>
           <div className='w-full flex gap-4 pb-2 items-center justify-center  text-zinc-200 '>
-            <Link passHref={true} href="">
+            <Link passHref={true} href="https://web.facebook.com/people/Aplus-Multi/61555802003335/" target='_blink'>
               <ImFacebook2 size={22} />
             </Link>
             <Link passHref={true} href="https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus" target='_blink'>

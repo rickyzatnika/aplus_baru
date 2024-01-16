@@ -41,7 +41,7 @@ export default function Home() {
               </p>
               <div className="flex flex-row lg:flex-col gap-8 items-center justify-center">
                 <Link
-                  href="/"
+                  href="https://web.facebook.com/people/Aplus-Multi/61555802003335/" target="_blink"
                   passHref={true}
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-blue-600"
                 >
