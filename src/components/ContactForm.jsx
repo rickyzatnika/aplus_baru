@@ -11,7 +11,7 @@ const ContactForm = ({ openForm, setOpenForm }) => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
+  const [phone, setPhone] = useState("");
   const [interested, setInterested] = useState("");
   const [desc, setDesc] = useState("");
   const [loading, setLoading] = useState(false);
@@ -20,10 +20,20 @@ const ContactForm = ({ openForm, setOpenForm }) => {
   const handleContactForm = async (e) => {
     e.preventDefault();
 
-    if (!name || !email || !company || !desc || !interested) {
+    if (!name || !email || !phone || !desc || !interested) {
       toast.error("All fields are required!");
       return;
     }
+
+    if(phone.startsWith("0")) {
+      toast.error("Please use 62")
+      return;
+    }
+    if(phone.length < 8 || phone.length > 15) {
+      toast.error("Number is not available")
+      return;
+    }
+
     try {
       setLoading(true);
       const res = await fetch(`/api/contact`, {
@@ -34,7 +44,7 @@ const ContactForm = ({ openForm, setOpenForm }) => {
         body: JSON.stringify({
           name,
           email,
-          company,
+          phone,
           interested,
           desc,
         }),
@@ -100,13 +110,13 @@ const ContactForm = ({ openForm, setOpenForm }) => {
                   <input aria-label='title' value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='john doe' className='placeholder:text-sm placeholder:text-zinc-500 px-6 py-3 w-full outline-none border-none bg-zinc-100 focus:border-none focus:outline-none' />
                 </div>
                 <div className='flex-1 flex-col gap-2 items-start'>
-                  <label className='font-bold'>Company</label>
-                  <input aria-label='title' value={company} onChange={(e) => setCompany(e.target.value)} type="text" placeholder='Apple' className='placeholder:text-sm placeholder:text-zinc-500 px-6 py-3 w-full outline-none border-none bg-zinc-100 focus:border-none focus:outline-none' />
+                  <label className='font-bold'>Phone</label>
+                  <input aria-label='title' value={phone} onChange={(e) => setPhone(e.target.value)} type="number" placeholder='628xxxxx' className='placeholder:text-sm placeholder:text-zinc-500 px-6 py-3 w-full outline-none border-none bg-zinc-100 focus:border-none focus:outline-none' />
                 </div>
               </div>
               <div className='flex flex-col gap-2 py-2 lg:py-6'>
                 <div className=' flex-col gap-3 items-start'>
-                  <label className='font-bold'>Your Email</label>
+                  <label className='font-bold'>Email</label>
                   <input aria-label='title' value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='john@gmail.com' className='placeholder:text-sm placeholder:text-zinc-500 px-6 py-3 w-full outline-none border-none bg-zinc-100 focus:border-none focus:outline-none' />
                 </div>
                 <div className='mt-5 flex flex-col gap-2'>
