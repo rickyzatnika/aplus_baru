@@ -141,6 +141,22 @@ const Gallery = () => {
               }`}
           ></span>
         </button>
+        <button
+          type="button"
+          onClick={() => setActiveButton("flagchain")}
+          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit  relative  bg-[#121212] border  ${activeButton === "flagchain"
+            ? "border-orange-500 text-orange-500"
+            : "border-zinc-600 text-zinc-500/80"
+            }`}
+        >
+          5
+          <span
+            className={`border-l border-b group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "flagchain"
+              ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
+              : ""
+              }`}
+          ></span>
+        </button>
 
       </div>
       {isLoading ? (<div className="w-full bg-white  h-full  z-50 right-0 text-center  text-zinc-600">
@@ -150,7 +166,7 @@ const Gallery = () => {
         </div>
       </div>
       ) : (
-        activeButton === "backframe" ? <><p className="w-full text-center bg-white px-3 border-b pb-3 border-orange-600  text-zinc-600  text-sm md:text-xl  ">Backdrop & Framescreen</p></> : <><p className="w-full bg-white text-center mx-auto uppercase text-zinc-600 border-b border-orange-600 pb-3 text-sm md:text-xl ">{activeButton}</p></>
+        activeButton === "backframe" ? <><p className="w-full text-center bg-white px-3 border-b pb-3 border-orange-600  text-zinc-800  text-sm md:text-xl  ">Backdrop & Framescreen</p></> : <><p className="w-full bg-white text-center mx-auto uppercase text-zinc-800 border-b border-orange-600 pb-3 text-sm md:text-xl ">{activeButton}</p></>
       )}
 
       <LightGallery
