@@ -50,8 +50,8 @@ const Gallery = () => {
 
 
   return (
-    <section className="overflow-hidden">
-      <div className="w-full min-h-screen relative px-4 lg:px-14 py-24 lg:py-40  ">
+    <section className="w-full h-full bg-white">
+      <div className="w-full min-h-screen relative px-4 lg:px-14 py-24 lg:py-40 bg-black ">
         <div className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
           <Image src="/logo.png" alt="logo" width={350} height={350} className="opacity-5 " />
         </div>
@@ -70,104 +70,110 @@ const Gallery = () => {
           </div>
           <div className="col-span-1 lg:col-span-4  pb-8 relative top-8">
             <p className="text-zinc-400 lg:text-zinc-600 relative top-0 lg:top-32 antialiased tracking-wide">
-             A Property of Aplus Multi Kreasi ©
+              A Property of Aplus Multi Kreasi ©
             </p>
           </div>
         </div>
       </div>
-      <div className="buttonContainer bg-white px-4 py-10 flex gap-5 md:gap-8 relative overflow-scroll z-20 w-screen max-w-[240vw] touch-manipulation  h-full items-center justify-center ">
+      <div className="w-full h-full sticky top-14 z-20 bg-white/60 backdrop-blur-sm ">
+        <div className=" buttonContainer px-4 pt-10 pb-6 flex gap-5 md:gap-8  overflow-scroll z-20 w-screen max-w-[240vw] touch-manipulation  h-full items-center justify-center ">
 
-        <button
-          type="button"
-          onClick={() => setActiveButton("backdrop")}
-          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit relative  bg-[#121212] border ${activeButton === "backdrop"
-            ? " border-orange-500 text-orange-500 "
-            : " border-zinc-600 text-zinc-500/80 "
-            }`}
-        >
-          1
-          <span
-            className={`border-l border-b   group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "backdrop"
-              ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
-              : ""
-              } `}
-          ></span>
-        </button>
-        <button
-          type="button"
-          onClick={() => setActiveButton("framescreen")}
-          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500  duration-200 ease-linear p-2 w-fit relative  bg-[#121212] border  ${activeButton === "framescreen"
-            ? "border-orange-500 text-orange-500"
-            : "border-zinc-600 text-zinc-500/80"
-            }`}
-        >
-          2
-          <span
-            className={`border-l border-b  group-hover:border-none border-zinc-600  -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "framescreen"
-              ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
-              : ""
+          <button
+            type="button"
+            onClick={() => setActiveButton("backdrop")}
+            className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit relative  bg-[#121212] border ${activeButton === "backdrop"
+              ? " border-orange-500 text-orange-500 "
+              : " border-zinc-600 text-zinc-500/80 "
               }`}
-          ></span>
-        </button>
-        <button
-          type="button"
-          onClick={() => setActiveButton("backframe")}
-          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit  relative  bg-[#121212] border  ${activeButton === "backframe"
-            ? "border-orange-500 text-orange-500"
-            : "border-zinc-600 text-zinc-500/80"
-            }`}
-        >
-          3
-          <span
-            className={`border-l border-b group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "backframe"
-              ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
-              : ""
+          >
+            1
+            <span
+              className={`border-l border-b   group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "backdrop"
+                ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
+                : ""
+                } `}
+            ></span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveButton("framescreen")}
+            className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500  duration-200 ease-linear p-2 w-fit relative  bg-[#121212] border  ${activeButton === "framescreen"
+              ? "border-orange-500 text-orange-500"
+              : "border-zinc-600 text-zinc-500/80"
               }`}
-          ></span>
-        </button>
-        <button
-          type="button"
-          onClick={() => setActiveButton("mural")}
-          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit  relative  bg-[#121212] border  ${activeButton === "mural"
-            ? "border-orange-500 text-orange-500"
-            : "border-zinc-600 text-zinc-500/80"
-            }`}
-        >
-          4
-          <span
-            className={`border-l border-b group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "mural"
-              ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
-              : ""
+          >
+            2
+            <span
+              className={`border-l border-b  group-hover:border-none border-zinc-600  -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "framescreen"
+                ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
+                : ""
+                }`}
+            ></span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveButton("backframe")}
+            className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit  relative  bg-[#121212] border  ${activeButton === "backframe"
+              ? "border-orange-500 text-orange-500"
+              : "border-zinc-600 text-zinc-500/80"
               }`}
-          ></span>
-        </button>
-        <button
-          type="button"
-          onClick={() => setActiveButton("flagchain")}
-          className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit  relative  bg-[#121212] border  ${activeButton === "flagchain"
-            ? "border-orange-500 text-orange-500"
-            : "border-zinc-600 text-zinc-500/80"
-            }`}
-        >
-          5
-          <span
-            className={`border-l border-b group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "flagchain"
-              ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
-              : ""
+          >
+            3
+            <span
+              className={`border-l border-b group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "backframe"
+                ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
+                : ""
+                }`}
+            ></span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveButton("mural")}
+            className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit  relative  bg-[#121212] border  ${activeButton === "mural"
+              ? "border-orange-500 text-orange-500"
+              : "border-zinc-600 text-zinc-500/80"
               }`}
-          ></span>
-        </button>
+          >
+            4
+            <span
+              className={`border-l border-b group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "mural"
+                ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
+                : ""
+                }`}
+            ></span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveButton("flagchain")}
+            className={`group hover:border-orange-500 transition-all text-sm  hover:text-orange-500 duration-200 ease-linear p-2 w-fit  relative  bg-[#121212] border  ${activeButton === "flagchain"
+              ? "border-orange-500 text-orange-500"
+              : "border-zinc-600 text-zinc-500/80"
+              }`}
+          >
+            5
+            <span
+              className={`border-l border-b group-hover:border-none border-zinc-600 -left-1.5 -bottom-1.5 group-hover:-bottom-2 group-hover:-left-2 transition-all duration-300 ease-linear group-hover:bg-gradient-to-r from-red-500 to-orange-500 w-full h-full absolute -z-20 ${activeButton === "flagchain"
+                ? "bg-gradient-to-r from-red-500 to-orange-500 -bottom-2 -left-2 border-none"
+                : ""
+                }`}
+            ></span>
+          </button>
 
-      </div>
-      {isLoading ? (<div className="w-full bg-white  h-full  z-50 right-0 text-center  text-zinc-600">
-        <div className="flex gap-2 items-center justify-center">
-          <span>Loading...</span>
-          <span className="loading loading-spinner loading-sm"></span>
         </div>
+        {isLoading ? (
+        <div className="w-full h-full  z-50 right-0 text-center  text-zinc-600">
+          <div className="flex gap-2 items-center justify-center">
+            <span>Loading...</span>
+            <span className="loading loading-spinner loading-sm"></span>
+          </div>
+        </div>
+        ) : (
+          <div className="pb-3 w-full">
+            {activeButton === "backframe" ? <><p className="w-fit text-center mx-auto px-3 border-b  border-orange-600  text-zinc-800  text-md md:text-xl  ">Backdrop & Framescreen</p></> : <><p className="w-fit text-center mx-auto uppercase text-zinc-800 border-b border-orange-600  text-md md:text-xl ">{activeButton}</p></>}
+          </div>
+        )}
       </div>
-      ) : (
-        activeButton === "backframe" ? <><p className="w-full text-center bg-white px-3 border-b pb-3 border-orange-600  text-zinc-800  text-sm md:text-xl  ">Backdrop & Framescreen</p></> : <><p className="w-full bg-white text-center mx-auto uppercase text-zinc-800 border-b border-orange-600 pb-3 text-sm md:text-xl ">{activeButton}</p></>
-      )}
+
 
       <LightGallery
         plugins={[lgZoom]}
