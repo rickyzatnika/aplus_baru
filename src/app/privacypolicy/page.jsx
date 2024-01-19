@@ -4,10 +4,7 @@ import React from 'react'
 
 
 export const metadata = {
-    title: "Aplus - Privacy Policy",
-    openGraph: {
-      title: 'Aplus - Privacy Policy',
-    },
+    title: "Aplus Multi Kreasi - Privacy Policy",
     description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
   };
 

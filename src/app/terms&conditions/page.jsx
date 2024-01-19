@@ -4,10 +4,7 @@ import React from 'react'
 
 
 export const metadata = {
-    title: "Aplus - Terms & Conditions",
-    openGraph: {
-      title: 'Aplus - Terms & Conditions',
-    },
+    title: "Aplus Multi Kreasi - Terms & Conditions" ,
     description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
   };
 

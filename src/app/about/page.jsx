@@ -5,7 +5,7 @@ import Link from "next/link";
 
 
 export const metadata = {
-  title: "About - Aplus Multi Kreasi",
+  title: "Aplus Multi Kreasi - About",
   openGraph: {
     title: 'About',
   },
