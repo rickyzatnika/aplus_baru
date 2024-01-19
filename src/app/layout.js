@@ -1,7 +1,9 @@
+"use client"
+
+import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
-
 
 import Script from "next/script";
 import { ToastContainer } from "react-toastify";
@@ -30,11 +32,14 @@ export default function RootLayout({ children }) {
 
       <body className={`${poppins.className} `}>
         <ToastContainer theme="dark" />
-        
-          <Navbar />
+        <Navbar />
+        <AnimatePresence mode="wait">
+
           {children}
-          <Footer />
-        
+
+        </AnimatePresence>
+        <Footer />
+
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,

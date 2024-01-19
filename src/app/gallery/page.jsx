@@ -54,8 +54,8 @@ const Gallery = () => {
         <div className="bg-path" />
         <div className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 ">
           <div className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed">
-            <span className="flex text-zinc-200 items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
-              Gallery
+            <span className="flex text-zinc-200 items-center font-semibold text-3xl lg:text-5xl w-full lg:w-4/6 ">
+              GaLLery
             </span>
             <div className="pt-6 ">
               <h2 className="text-zinc-200">APLUS MULTI KREASI</h2>

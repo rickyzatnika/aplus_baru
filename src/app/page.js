@@ -7,6 +7,7 @@ import { FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 
 
+
 export const metadata = {
   title: "Aplus Multi Kreasi - Home",
   description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
@@ -34,7 +35,7 @@ export default function Home() {
                   through quality, trust and ease.
                 </p>
               </div>
-              <Link className="px-6 py-2 rounded-full bg-gradient-to-tr from-red-600 to-orange-500 text-zinc-200 text-sm lg:text-md" passHref={true} href="/about">About Us</Link>
+              <Link passHref={true} className="px-6 py-2 rounded-full bg-gradient-to-tr from-red-600 to-orange-500 text-zinc-200 text-sm lg:text-md"  href="/about">About Us</Link>
             </div>
             <div className="col-span-1 lg:col-span-2 flex flex-col items-center justify-center text-white">
               <p className="text-sm block lg:hidden text-center py-6">

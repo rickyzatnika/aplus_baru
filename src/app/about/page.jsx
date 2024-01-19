@@ -13,11 +13,10 @@ export const metadata = {
 };
 
 
-
 const About = () => {
 
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden bg-black">
       <div className="w-full min-h-screen relative px-4 lg:px-14 py-24 lg:py-40   ">
         <div className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
           <Image src="/logo.png" alt="logo" width={350} height={350} className="opacity-5 " />
@@ -25,7 +24,7 @@ const About = () => {
         <div className="bg-path z-5" />
         <div className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 ">
           <div className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed">
-            <span className="flex text-zinc-200 items-center font-semibold text-4xl lg:text-7xl w-full lg:w-4/6 ">
+            <span className="flex text-zinc-200 items-center font-semibold text-3xl lg:text-5xl w-full lg:w-4/6 ">
               <span className="relative -left-2">About Us</span>
             </span>
             <div className="pt-6 ">
@@ -46,7 +45,7 @@ const About = () => {
       <div className="w-full h-full relative bg-[#fff] grid grid-cols-1 gap-4 lg:gap-4 lg:grid-cols-12 justify-center px-4 py-10 lg:py-20 lg:px-20">
 
         <div className="col-span-1 lg:col-span-5 w-full lg:w-5/6 mx-auto relative">
-          <div className="w-2 h-full rounded-full hidden lg:block bg-red-600/30 absolute -left-8 top-0 z-0" />
+          <div className="w-0.5 h-full rounded-full hidden lg:block bg-red-600/30 absolute -left-8 top-0 z-0" />
           <p className="text-sm leading-relaxed md:text-lg text-[#636262]">
             We are event and production management whose entire team works together  to accomplish one mission, to create the equation through quality, trust and ease.
             We understand that planning an event can be extremely stressful, confusing, and upredictable.
@@ -59,7 +58,7 @@ const About = () => {
           </p>
         </div>
         <div className="col-span-1 lg:col-span-7 relative">
-          <div className="p-4 z-5 bg-red-600/50 absolute left-2 -top-2 w-full h-full" />
+          <div className="p-4 z-5 bg-black/20 absolute rounded-bl-xl left-2 top-2 w-full h-[97%]" />
           <Image
             priority
             src="/event.jpg"

@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import NavMobile from "./NavMobile"
 import ContactForm from "./ContactForm"
+import { usePathname } from "next/navigation"
 
 const Navbar = () => {
 
@@ -12,6 +13,8 @@ const Navbar = () => {
 
   const [open, setOpen] = useState(false);
   const [openForm, setOpenForm] = useState(false);
+
+  const path = usePathname();
 
   const handleBurger = () => {
     setOpen(!open);
@@ -35,9 +38,9 @@ const Navbar = () => {
             
           </Link>
         </button>
-        <ul className={`${scroll ? "bg-white text-zinc-700" : "bg-transparent text-white"}  px-12 hidden lg:relative py-3 rounded-full lg:flex gap-8 `}>
+        <ul className={`${scroll ? "bg-white text-zinc-500" : "bg-transparent text-white"}  px-12 hidden lg:relative py-3 rounded-full lg:flex gap-8 `}>
           <li className="flex items-center justify-center">
-            <Link passHref={true} href="/" className="group overflow-hidden h-[22px] px-2 ">
+            <Link passHref={true} href="/" className={`${path === "/" ? "text-red-500 font-semibold" : ""} group overflow-hidden h-[22px] px-2 `}>
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Home</span>
                 <span className="text-sm">Home</span>
@@ -45,7 +48,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link passHref={true} href="/about" className="group overflow-hidden h-[22px] px-2 ">
+            <Link passHref={true} href="/about" className={`${path === "/about" ? "text-red-500 font-semibold" : ""} group overflow-hidden h-[22px] px-2 `}>
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">About Us</span>
                 <span className="text-sm">About Us</span>
@@ -53,7 +56,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link passHref={true} href="/projects" className="group overflow-hidden h-[22px] px-2 ">
+            <Link passHref={true} href="/projects" className={`${path === "/projects" ? "text-red-500 font-semibold" : ""} group overflow-hidden h-[22px] px-2 `}>
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Projects</span>
                 <span className="text-sm">Projects</span>
@@ -61,7 +64,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link passHref={true} href="/gallery" className="group overflow-hidden h-[22px] px-2 ">
+            <Link passHref={true} href="/gallery" className={`${path === "/gallery" ? "text-red-500 font-semibold" : ""} group overflow-hidden h-[22px] px-2 `}>
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Gallery</span>
                 <span className="text-sm">Gallery</span>

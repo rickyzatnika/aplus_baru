@@ -7,7 +7,7 @@ const ServiceLayout = ({ children }) => {
 
   return (
     <div>
-      <div className="w-full  py-24 lg:py-40 relative bg-[#171717] px-2 "
+      <div className="w-full  py-24 lg:py-40 relative bg-black px-2 "
       >
         <div className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
           <Image src="/logo.png" alt="logo" width={350} height={350} className="opacity-5 " />
