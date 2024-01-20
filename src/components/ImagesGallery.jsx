@@ -32,7 +32,7 @@ const ImagesGallery = ({ data, isLoading }) => {
               .startOf("hour")
               .fromNow()}</p>`}
           >
-            <div className="overflow-hidden w-full md:w-96 h-full md:h-96 mb-[4px] md:mb-3 relative">
+            <div data-aos="zoom-in-up" data-aos-duration="800" className="overflow-hidden w-full md:w-96 h-full md:h-96 mb-[4px] md:mb-3 relative">
               <Image
                 className="w-full md:w-96 hover:scale-110 duration-700 h-full md:h-96  object-cover mb-[4px] md:mb-3 mx-auto"
                 src={g?.secure_url}

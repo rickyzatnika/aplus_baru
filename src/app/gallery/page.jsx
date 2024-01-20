@@ -48,24 +48,24 @@ const Gallery = () => {
   return (
     <section className="w-full h-full bg-white">
       <div className="w-full min-h-screen relative px-4 lg:px-14 py-24 lg:py-40 bg-black ">
-        <div className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
+        <div data-aos="fade-up" data-aos-duration="900"  className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
           <Image src="/logo.png" alt="logo" width={350} height={350} className="opacity-5 " />
         </div>
         <div className="bg-path" />
         <div className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 ">
           <div className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed">
-            <span className="flex text-zinc-200 items-center font-semibold text-3xl lg:text-5xl w-full lg:w-4/6 ">
+            <span data-aos="fade-up" data-aos-duration="600" className="flex text-zinc-200 items-center font-semibold text-3xl lg:text-5xl w-full lg:w-4/6 ">
               GaLLery
             </span>
             <div className="pt-6 ">
-              <h2 className="text-zinc-200">APLUS MULTI KREASI</h2>
-              <h3 className="text-3xl textCustom  lg:text-5xl tracking-wide lg:tracking-wide text-transparent font-extrabold uppercase">
+              <h2 data-aos="fade-up" data-aos-duration="700"  className="text-zinc-200">APLUS MULTI KREASI</h2>
+              <h3 data-aos="fade-up" data-aos-duration="800" className="text-3xl textCustom  lg:text-5xl tracking-wide lg:tracking-wide text-transparent font-extrabold uppercase">
                 inspiring partner
               </h3>
             </div>
           </div>
           <div className="col-span-1 lg:col-span-4  pb-8 relative top-8">
-            <p className="text-zinc-400 lg:text-zinc-600 relative top-0 lg:top-32 antialiased tracking-wide">
+            <p data-aos="fade-down" data-aos-duration="800"  className="text-zinc-400 lg:text-zinc-600 relative top-0 lg:top-32 antialiased tracking-wide">
               A Property of Aplus Multi Kreasi ©
             </p>
           </div>

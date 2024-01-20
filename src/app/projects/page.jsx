@@ -6,9 +6,6 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Aplus Multi Kreasi - Projects",
-  openGraph: {
-    title: 'Projects',
-  },
   description: "The best ideas come frome meetings, which is why when working with us there is no such thing as too many meetings Want to have a meeting to go over all of the event and production details.",
 };
 
@@ -21,7 +18,7 @@ const Services = () => {
       <section className="overflow-hidden">
 
         <div className="w-full h-full bg-white py-8">
-          <p className="text-center leading-relaxed text-xl text-black/80 w-full lg:w-4/6 mx-auto p-6 text">
+          <p data-aos="fade-up" data-aos-duration="600" className="text-center leading-relaxed text-xl text-black/80 w-full lg:w-4/6 mx-auto p-6 text">
             The best ideas come frome meetings, which is why when working with us there is no such thing as too many meetings.
             Want to have a meeting to go over all of the event and production details. <br /> Lets do it
 
@@ -143,7 +140,7 @@ const Services = () => {
               </Link>
             </div>
           </div>
-          <div className="text-zinc-500 text-right  pt-8 relative right-4  ">
+          <div data-aos="fade-up" data-aos-duration="800" className="text-zinc-500 text-right  pt-8 relative right-4  ">
             <Link href="/gallery" passhref={true} className="text-5xl lg:text-7xl text-transparent font-outline-2 transition-all duration-300 ease-linear">
               Gallery -
             </Link>

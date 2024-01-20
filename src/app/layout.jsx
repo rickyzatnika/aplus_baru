@@ -1,6 +1,5 @@
 "use client"
 
-import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,9 +8,9 @@ import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
+import AOSInit from "@/components/AOSInit";
 
-
-const poppins = Poppins({ subsets: ["latin"], weight: "400", display: "swap" });
+const poppins = Poppins({ subsets: ["latin"], weight: "400", display: "swap", });
 
 
 const GTM_ID = "G-LJ0KYVQ00T"
@@ -31,13 +30,10 @@ export default function RootLayout({ children }) {
       </Script>
 
       <body className={`${poppins.className} `}>
+        <AOSInit/>
         <ToastContainer theme="dark" />
         <Navbar />
-        <AnimatePresence mode="wait">
-
           {children}
-
-        </AnimatePresence>
         <Footer />
 
         <noscript
