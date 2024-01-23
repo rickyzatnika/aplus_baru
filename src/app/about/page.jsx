@@ -19,12 +19,12 @@ const About = () => {
 
   return (
     <section className="overflow-hidden bg-black">
-      <div className="w-full min-h-screen relative px-4 lg:px-14 py-24 lg:py-40   ">
+      <div className="w-full h-full md:min-h-screen relative px-4 lg:px-14 py-24 lg:py-40   ">
         <div data-aos="fade-up" data-aos-duration="900"  className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
           <Image src="/logo.png" alt="logo" width={350} height={350} className="opacity-5 " />
         </div>
         <div className="bg-path z-5" />
-        <div className="relative w-full h-full  grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 ">
+        <div className="relative w-full h-full py-14 md:py-10 grid grid-cols-1 lg:grid-cols-12 mx-auto items-center px-2 ">
           <div className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed">
             <span data-aos="fade-up" data-aos-duration="600" className="flex text-zinc-200 items-center font-semibold text-3xl lg:text-5xl w-full lg:w-4/6 ">
               <span className="relative -left-2">About Us</span>

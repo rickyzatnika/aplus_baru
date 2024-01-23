@@ -45,25 +45,28 @@ const Footer = () => {
         </div>
         <nav>
           <span className=" text-zinc-200 font-semibold">Menu</span>
-          <Link href='/' passHref={true} className="text-zinc-400 link link-hover">
+          <Link href='/' passHref className="text-zinc-400 link link-hover">
             Home
           </Link>
-          <Link href='/about' passHref={true} className="text-zinc-400 link link-hover">
+          <Link href='/about' passHref className="text-zinc-400 link link-hover">
             About Us
           </Link>
-          <Link href='/projects' passHref={true} className="text-zinc-400 link link-hover">
+          <Link href='/projects' passHref className="text-zinc-400 link link-hover">
             Projects
           </Link>
-          <Link href='/gallery' passHref={true} className="text-zinc-400 link link-hover">
+          <Link href='/gallery' passHref className="text-zinc-400 link link-hover">
             Gallery
+          </Link>
+          <Link href='/login' passHref className="text-zinc-400 link link-hover">
+            Admin
           </Link>
         </nav>
         <nav >
           <span className=" text-zinc-200 font-semibold">Legal</span>
-          <Link passHref={true} href='/terms&conditions' className="text-zinc-400 link link-hover">
+          <Link passHref href='/terms&conditions' className="text-zinc-400 link link-hover">
             Terms and Conditions
           </Link>
-          <Link passHref={true} href='/privacypolicy' className="text-zinc-400 link link-hover">
+          <Link passHref href='/privacypolicy' className="text-zinc-400 link link-hover">
             Privacy Policy
           </Link>
 
@@ -76,16 +79,16 @@ const Footer = () => {
           </span>
         </div>
         <div className='flex gap-5 items-center text-zinc-400 py-2 px-4'>
-          <Link passHref={true} href='https://web.facebook.com/people/Aplus-Multi/61555802003335/' target='_blink'>
+          <Link passHref href='https://web.facebook.com/people/Aplus-Multi/61555802003335/' target='_blink'>
             <ImFacebook2 size={20} />
           </Link>
-          <Link passHref={false} href='https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus' target='_blink'>
+          <Link passHref href='https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus' target='_blink'>
             <FaWhatsapp size={20} />
           </Link>
-          <Link passHref={false} href='https://www.instagram.com/aplusmultikreasi.id' target='_blink'>
+          <Link passHref href='https://www.instagram.com/aplusmultikreasi.id' target='_blink'>
             <GrInstagram size={20} />
           </Link>
-          <Link passHref={false} href='https://www.youtube.com/@hello_aplus7424' target='_blink'>
+          <Link passHref href='https://www.youtube.com/@hello_aplus7424' target='_blink'>
             <FaYoutube size={20} />
           </Link>
         </div>
