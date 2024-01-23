@@ -10,12 +10,12 @@ const RegisterPages = () => {
   const { data: session } = useSession()
   const router = useRouter();
 
-  useEffect(() => {
-    if (!session) {
-      router.push("/")
-    }
-    return;
-  }, [session, router])
+  // useEffect(() => {
+  //   if (!session) {
+  //     router.push("/")
+  //   }
+  //   return;
+  // }, [session, router])
 
 
   return (

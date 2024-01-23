@@ -3,7 +3,7 @@
 import { signOut } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 
 const links = [
@@ -29,18 +29,18 @@ const links = [
 const NavDashboard = () => {
 
 
-  const {data : session, status} = useSession();
+  const { data: session, status } = useSession();
 
   const router = useRouter();
 
- useEffect(() => {
+  useEffect(() => {
 
-  if(!session) {
-    router.push("/")
+    if (!status || status === "unauthenticated") {
+      router.push("/")
+    }
     return;
-  }
 
- }, [session, router])
+  }, [session, router])
 
 
   return (
