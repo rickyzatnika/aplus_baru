@@ -62,7 +62,7 @@ const Navbar = () => {
         </button>
         <ul
           className={`${
-            scroll ? "bg-white text-gray-500" : "bg-transparent text-white"
+            scroll ? "bg-white text-gray-600" : "bg-transparent text-white"
           }  px-12 hidden lg:relative py-3 rounded-full lg:flex gap-8 `}
         >
           <li className="flex items-center justify-center">
