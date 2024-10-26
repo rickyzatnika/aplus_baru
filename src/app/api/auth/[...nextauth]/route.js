@@ -2,27 +2,25 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import NextAuth from "next-auth/next";
 import connect from "@/utils/db";
 import User from "@/models/User";
-import bcrypt from "bcryptjs"
-
+import bcrypt from "bcryptjs";
 
 async function login(credentials) {
   try {
-    connect();
+    await connect();
     const user = await User.findOne({ username: credentials.username });
     if (!user) throw new Error("Wrong Credentials.");
     const isCorrect = await bcrypt.compare(credentials.password, user.password);
     if (!isCorrect) throw new Error("Wrong Credentials.");
     return user;
   } catch (error) {
-    console.log("error while logging in.")
-    throw new Error("something went wrong!")
+    console.log("error while logging in.");
+    throw new Error("something went wrong!");
   }
 }
 
 export const authOptions = {
   pages: {
     signIn: "/login",
-    
   },
 
   providers: [
@@ -34,7 +32,7 @@ export const authOptions = {
           const user = await login(credentials);
           return user;
         } catch (error) {
-          throw new Error("Failed to login.")
+          throw new Error("Failed to login.");
         }
       },
     }),
@@ -45,7 +43,7 @@ export const authOptions = {
         token.username = user.username;
         token.email = user.email;
         token.isAdmin = user.isAdmin;
-        token.id = user.id
+        token.id = user.id;
       }
       console.log("this is the token = ", token);
       return token;
