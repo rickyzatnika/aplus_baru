@@ -64,7 +64,7 @@ const ProductionDetails = async ({ params }) => {
           height={400}
           className="object-cover py-8"
         />
-        <p className="text-sm md:text-md leading-relaxed text-justify text-gray-600">
+        <p className="text-base md:text-lg leading-relaxed text-justify text-gray-600">
           {production?.content}
         </p>
       </div>
