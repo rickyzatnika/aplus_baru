@@ -48,7 +48,6 @@ export default function Home() {
               <Link
                 data-aos="fade-up"
                 data-aos-duration="800"
-                passHref={true}
                 className="px-6 py-2 rounded-full bg-gradient-to-tr from-red-600 to-orange-500 text-zinc-200 text-sm lg:text-md"
                 href="/about"
               >
@@ -64,7 +63,6 @@ export default function Home() {
                   data-aos="fade-left"
                   href="https://web.facebook.com/people/Aplus-Multi/61555802003335/"
                   target="_blink"
-                  passHref={true}
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-blue-600"
                 >
                   <ImFacebook2 size={24} />
@@ -72,7 +70,6 @@ export default function Home() {
                 <Link
                   data-aos="fade-left"
                   data-aos-delay="0.5"
-                  passHref={true}
                   href="https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus"
                   target="_blink"
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-green-600"
@@ -82,7 +79,6 @@ export default function Home() {
                 <Link
                   data-aos="fade-left"
                   data-aos-delay="0.8"
-                  passHref={true}
                   href="https://www.instagram.com/aplusmultikreasi.id"
                   target="_blink"
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-pink-600"
@@ -92,7 +88,6 @@ export default function Home() {
                 <Link
                   data-aos="fade-left"
                   data-aos-delay="0.10"
-                  passHref={true}
                   href="https://www.youtube.com/@hello_aplus7424"
                   target="_blink"
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-red-500  text-zinc-100"
@@ -183,7 +178,7 @@ export default function Home() {
           </div>
           <div className="w-full lg:w-[80%] grid-cols-1 grid text-center gap-10 lg:gap-20  justify-center items-center mx-auto py-10 ">
             {/* Event Management */}
-            <Link passHref={true} href={`/projects/events`}>
+            <Link href={`/projects/events`}>
               <div className="group  cursor-pointer transition border-b border-b-zinc-600 pb-4 lg:pb-6 duration-700 ease-linear mb-6 lg:mb-0">
                 <div className="overflow-hidden w-full h-full  relative group">
                   <Image
@@ -221,7 +216,7 @@ export default function Home() {
               </div>
             </Link>
             {/* Production */}
-            <Link passHref={true} href={`/projects/production`}>
+            <Link href={`/projects/production`}>
               <div className="group cursor-pointer transition border-b border-b-zinc-600 pb-4 lg:pb-6 duration-700 ease-linear mb-6 lg:mb-0">
                 <div className="overflow-hidden w-full h-full relative group">
                   <Image
@@ -260,7 +255,7 @@ export default function Home() {
             </Link>
 
             {/* Branding */}
-            <Link passHref={true} href={`/projects/branding`}>
+            <Link href={`/projects/branding`}>
               <div className="group cursor-pointer transition border-b border-b-zinc-600 pb-4 lg:pb-6 duration-700 ease-linear mb-6 lg:mb-0">
                 <div className="overflow-hidden w-full h-full relative group">
                   <Image
@@ -305,7 +300,6 @@ export default function Home() {
           >
             <Link
               href="/about"
-              passhref={true}
               className="text-5xl lg:text-7xl text-transparent font-outline-2 transition-all duration-300 ease-linear"
             >
               About Us -

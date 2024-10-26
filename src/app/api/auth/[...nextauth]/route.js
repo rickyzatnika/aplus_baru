@@ -21,6 +21,7 @@ async function login(credentials) {
 export const authOptions = {
   pages: {
     signIn: "/login",
+    signOut: "/login",
   },
 
   providers: [

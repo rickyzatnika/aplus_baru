@@ -30,9 +30,7 @@ const NavDashboard = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (!status || status === "unauthenticated") {
-      router.push("/");
-    }
+    console.log(status);
     return;
   }, [session, router, status]);
 
@@ -40,15 +38,11 @@ const NavDashboard = () => {
     <>
       <div className="col-span-1 lg:col-span-2 flex flex-col items-start gap-8 w-full h-full md:min-h-screen bg-red-600 text-zinc-100 px-4 pb-14 pt-32 lg:pt-44">
         {links?.map((link, i) => (
-          <Link passHref={true} key={i} href={link?.url}>
+          <Link key={i} href={link?.url}>
             {link?.title}
           </Link>
         ))}
-        <button
-          onClick={() => signOut("credentials").then(() => router.push("/"))}
-        >
-          Logout
-        </button>
+        <button onClick={() => signOut()}>Logout</button>
       </div>
     </>
   );
