@@ -47,14 +47,14 @@ const ProductionDetails = async ({ params }) => {
     <div className="w-full py-12 bg-white">
       <div className="w-full md:w-[65%] px-4 md:px-20 flex flex-col gap-3 items-start">
         <div className="flex flex-col gap-2 mb-5">
-          <h3 className="text-zinc-600  text-3xl">{production?.title}</h3>
+          <h3 className="text-gray-600  text-3xl">{production?.title}</h3>
           <div className="flex items-center gap-3">
-            <BsCalendarDate size={14} className="text-zinc-500" />
-            <p className="text-zinc-500 text-md">{production?.date}</p>
+            <BsCalendarDate size={14} className="text-gray-500" />
+            <p className="text-gray-500 text-md">{production?.date}</p>
           </div>
           <div className="flex items-center gap-3">
-            <BiMap size={14} className="text-zinc-500" />
-            <p className="text-zinc-500 text-md">{production?.place}</p>
+            <BiMap size={14} className="text-gray-500" />
+            <p className="text-gray-500 text-md">{production?.place}</p>
           </div>
         </div>
         <Image
@@ -64,7 +64,7 @@ const ProductionDetails = async ({ params }) => {
           height={400}
           className="object-cover py-8"
         />
-        <p className="text-md md:text-lg leading-relaxed text-justify text-zinc-500">
+        <p className="text-md md:text-lg leading-relaxed text-justify text-gray-500">
           {production?.content}
         </p>
       </div>
@@ -88,7 +88,7 @@ const ProductionDetails = async ({ params }) => {
         <Link href="/projects/production" className="group" passHref>
           <button
             type="button"
-            className="group text-zinc-500 flex items-center justify-center gap-2 px-5 py-2 group-hover:text-zinc-600  transition-all duration-300 ease-linear"
+            className="group text-gray-500 flex items-center justify-center gap-2 px-5 py-2 group-hover:text-gray-600  transition-all duration-300 ease-linear"
           >
             <span className="relative group-hover:-left-3 ">
               <FaArrowLeftLong />
