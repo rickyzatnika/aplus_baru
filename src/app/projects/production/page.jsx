@@ -11,10 +11,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 const Production = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-  const { data, error } = useSWR(
-    `${process.env.NEXT_PUBLIC_API}/api/production`,
-    fetcher
-  );
+  const { data, error } = useSWR(`/api/production`, fetcher);
 
   useEffect(() => {}, [data]);
 
