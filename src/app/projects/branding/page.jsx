@@ -11,7 +11,10 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 const Branding = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-  const { data, error } = useSWR(`/api/branding`, fetcher);
+  const { data, error } = useSWR(
+    `${process.env.NEXT_PUBLIC_API}/api/branding`,
+    fetcher
+  );
 
   useEffect(() => {}, [data]);
 
