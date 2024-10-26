@@ -16,7 +16,9 @@ const Events = () => {
     fetcher
   );
 
-  useEffect(() => {}, [data]);
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
   if (error)
     return (
