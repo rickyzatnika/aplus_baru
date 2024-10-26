@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { signOut } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import React, { useEffect } from 'react'
-import { useSession } from 'next-auth/react'
+import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import React, { useEffect } from "react";
+import { useSession } from "next-auth/react";
 
 const links = [
   {
@@ -21,40 +21,37 @@ const links = [
     id: "3",
     title: "Add Branding",
     url: "/dashboard/branding",
-  }
-]
-
-
+  },
+];
 
 const NavDashboard = () => {
-
-
   const { data: session, status } = useSession();
 
   const router = useRouter();
 
   useEffect(() => {
-
     if (!status || status === "unauthenticated") {
-      router.push("/")
+      router.push("/");
     }
     return;
-
-  }, [session, router])
-
+  }, [session, router, status]);
 
   return (
     <>
-      <div className='col-span-1 lg:col-span-2 flex flex-col items-start gap-8 w-full h-full md:min-h-screen bg-red-600 text-zinc-100 px-4 pb-14 pt-32 lg:pt-44'>
+      <div className="col-span-1 lg:col-span-2 flex flex-col items-start gap-8 w-full h-full md:min-h-screen bg-red-600 text-zinc-100 px-4 pb-14 pt-32 lg:pt-44">
         {links?.map((link, i) => (
           <Link passHref={true} key={i} href={link?.url}>
             {link?.title}
           </Link>
         ))}
-        <button onClick={() => signOut("credentials").then(() => router.push("/"))}>Logout</button>
+        <button
+          onClick={() => signOut("credentials").then(() => router.push("/"))}
+        >
+          Logout
+        </button>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default NavDashboard
+export default NavDashboard;

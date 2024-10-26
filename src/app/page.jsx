@@ -4,17 +4,13 @@ import { ImFacebook2 } from "react-icons/im";
 import { GrInstagram } from "react-icons/gr";
 import { FaYoutube, FaWhatsapp } from "react-icons/fa";
 
-
-
-
-
 export const metadata = {
   title: "Aplus Multi Kreasi - Home",
-  description: "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
+  description:
+    "We are event and production management whose entire team works together to accomplish one mission, to create the equation through quality, trust and ease.",
 };
 
 export default function Home() {
-
   return (
     <>
       {/* Header */}
@@ -25,17 +21,39 @@ export default function Home() {
           <div className="w-full relative z-30 grid grid-cols-1 lg:grid-cols-12 ">
             <div className="col-span-1 lg:col-span-10 py-20 px-4 lg:py-32 lg:px-12">
               <div className="flex pb-8 leading-loose flex-col w-full  item-center justify-center gap-3 text-zinc-100">
-                <h1 data-aos="fade-up" data-aos-duration="600" className="text-lg md:text-xl">APLUS MULTI KREASI</h1>
-                <span data-aos="fade-up" data-aos-duration="700" className="text-4xl lg:text-6xl bg-gradient-to-tr tracking-wide from-red-600 to-orange-500 bg-clip-text text-transparent font-extrabold uppercase">
+                <h1
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                  className="text-lg md:text-xl"
+                >
+                  APLUS MULTI KREASI
+                </h1>
+                <span
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                  className="text-4xl lg:text-6xl bg-gradient-to-tr tracking-wide from-red-600 to-orange-500 bg-clip-text text-transparent font-extrabold uppercase"
+                >
                   inspiring partner
                 </span>
-                <p data-aos="fade-up" data-aos-duration="800" className="w-full lg:w-[60%] tracking-wide font-normal leading-relaxed text-sm md:text-md lg:text-lg ">
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  className="w-full lg:w-[60%] tracking-wide font-normal leading-relaxed text-sm md:text-md lg:text-lg "
+                >
                   We are event and production management whose entire team works
                   together to accomplish one mission, to create the equation
                   through quality, trust and ease.
                 </p>
               </div>
-              <Link data-aos="fade-up" data-aos-duration="800" passHref={true} className="px-6 py-2 rounded-full bg-gradient-to-tr from-red-600 to-orange-500 text-zinc-200 text-sm lg:text-md"  href="/about">About Us</Link>
+              <Link
+                data-aos="fade-up"
+                data-aos-duration="800"
+                passHref={true}
+                className="px-6 py-2 rounded-full bg-gradient-to-tr from-red-600 to-orange-500 text-zinc-200 text-sm lg:text-md"
+                href="/about"
+              >
+                About Us
+              </Link>
             </div>
             <div className="col-span-1 lg:col-span-2 flex flex-col items-center justify-center text-white">
               <p className="text-sm block lg:hidden text-center py-6">
@@ -44,25 +62,29 @@ export default function Home() {
               <div className="flex flex-row lg:flex-col gap-8 items-center justify-center">
                 <Link
                   data-aos="fade-left"
-
-                  href="https://web.facebook.com/people/Aplus-Multi/61555802003335/" target="_blink"
+                  href="https://web.facebook.com/people/Aplus-Multi/61555802003335/"
+                  target="_blink"
                   passHref={true}
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-blue-600"
                 >
                   <ImFacebook2 size={24} />
                 </Link>
-                <Link 
+                <Link
                   data-aos="fade-left"
                   data-aos-delay="0.5"
-                passHref={true} href="https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus" target='_blink'
-                  className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-green-600">
+                  passHref={true}
+                  href="https://api.whatsapp.com/send?phone=6281214707415&text=Hallo%20Aplus"
+                  target="_blink"
+                  className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-green-600"
+                >
                   <FaWhatsapp size={24} />
                 </Link>
                 <Link
-                 data-aos="fade-left"
-                 data-aos-delay="0.8"
+                  data-aos="fade-left"
+                  data-aos-delay="0.8"
                   passHref={true}
-                  href="https://www.instagram.com/aplusmultikreasi.id" target='_blink'
+                  href="https://www.instagram.com/aplusmultikreasi.id"
+                  target="_blink"
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-pink-600"
                 >
                   <GrInstagram size={24} />
@@ -71,7 +93,8 @@ export default function Home() {
                   data-aos="fade-left"
                   data-aos-delay="0.10"
                   passHref={true}
-                  href="https://www.youtube.com/@hello_aplus7424" target='_blink'
+                  href="https://www.youtube.com/@hello_aplus7424"
+                  target="_blink"
                   className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-red-500  text-zinc-100"
                 >
                   <FaYoutube size={24} />
@@ -142,15 +165,25 @@ export default function Home() {
       <section className="bg-[#000]">
         <div className="w-full h-full lg:min-h-screen px-4 lg:px-8 py-24 lg:py-32 relative z-auto">
           <div className="w-full h-full">
-            <span data-aos="fade-up" data-aos-duration="600" className="text-zinc-500 text-[18px]">— Our Projects</span>
-            <p data-aos="fade-up" data-aos-duration="800" className=" text-[24px] md:text-[28px] lg:text-[36px] text-zinc-500 w-full lg:w-[75%] pt-4">
+            <span
+              data-aos="fade-up"
+              data-aos-duration="600"
+              className="text-zinc-500 text-[18px]"
+            >
+              — Our Projects
+            </span>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="800"
+              className=" text-[24px] md:text-[28px] lg:text-[36px] text-zinc-500 w-full lg:w-[75%] pt-4"
+            >
               As a tight-knit team of experts, we create memorable and emotional
               event, production, and branding.
             </p>
           </div>
-          <div className="w-full lg:w-[80%] grid grid-cols-1 text-center gap-10 lg:gap-20  justify-center items-center mx-auto py-10 ">
+          <div className="w-full lg:w-[80%] grid-cols-1 grid text-center gap-10 lg:gap-20  justify-center items-center mx-auto py-10 ">
             {/* Event Management */}
-            <Link passHref={true} href={`/projects/events`} >
+            <Link passHref={true} href={`/projects/events`}>
               <div className="group  cursor-pointer transition border-b border-b-zinc-600 pb-4 lg:pb-6 duration-700 ease-linear mb-6 lg:mb-0">
                 <div className="overflow-hidden w-full h-full  relative group">
                   <Image
@@ -188,7 +221,7 @@ export default function Home() {
               </div>
             </Link>
             {/* Production */}
-            <Link passHref={true} href={`/projects/production`} >
+            <Link passHref={true} href={`/projects/production`}>
               <div className="group cursor-pointer transition border-b border-b-zinc-600 pb-4 lg:pb-6 duration-700 ease-linear mb-6 lg:mb-0">
                 <div className="overflow-hidden w-full h-full relative group">
                   <Image
@@ -227,7 +260,7 @@ export default function Home() {
             </Link>
 
             {/* Branding */}
-            <Link passHref={true} href={`/projects/branding`} >
+            <Link passHref={true} href={`/projects/branding`}>
               <div className="group cursor-pointer transition border-b border-b-zinc-600 pb-4 lg:pb-6 duration-700 ease-linear mb-6 lg:mb-0">
                 <div className="overflow-hidden w-full h-full relative group">
                   <Image
@@ -265,14 +298,20 @@ export default function Home() {
               </div>
             </Link>
           </div>
-          <div data-aos="fade-up" data-aos-duration="800"  className="text-zinc-500 text-right  relative right-4 ">
-            <Link href="/about" passhref={true} className="text-5xl lg:text-7xl text-transparent font-outline-2 transition-all duration-300 ease-linear">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="800"
+            className="text-zinc-500 text-right  relative right-4 "
+          >
+            <Link
+              href="/about"
+              passhref={true}
+              className="text-5xl lg:text-7xl text-transparent font-outline-2 transition-all duration-300 ease-linear"
+            >
               About Us -
             </Link>
           </div>
         </div>
-
-
       </section>
     </>
   );
