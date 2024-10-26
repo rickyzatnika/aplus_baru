@@ -64,7 +64,7 @@ import { compare } from "bcryptjs";
 // const handler = NextAuth(authOptions);
 
 const handler = NextAuth({
-  poviders: [
+  providers: [
     CredentialsProvider({
       type: "credentials",
 
