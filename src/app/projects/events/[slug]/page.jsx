@@ -61,7 +61,7 @@ const ServiceDetails = async ({ params }) => {
           height={400}
           className="object-cover py-8"
         />
-        <p className="text-md md:text-lg leading-relaxed text-justify text-gray-500">
+        <p className="text-sm md:text-md leading-relaxed text-justify text-gray-600">
           {event?.content}
         </p>
       </div>

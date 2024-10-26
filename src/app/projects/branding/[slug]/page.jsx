@@ -64,10 +64,10 @@ const BrandingDetails = async ({ params }) => {
           height={400}
           className="object-cover py-8"
         />
-        <p className="text-md md:text-lg leading-relaxed text-justify text-gray-500">
+        <p className="text-sm md:text-md leading-relaxed text-justify text-gray-600">
           {branding?.content}
         </p>
-        <p className="text-gray-500 text-md italic pt-6">
+        <p className="text-gray-600 text-md italic pt-6">
           Berikut adalah beberapa foto project{" "}
           <span className="text-gray-400 text-sm md:text-md capitalize font-semibold not-italic">
             {" "}
