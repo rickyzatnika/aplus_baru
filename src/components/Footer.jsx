@@ -14,7 +14,7 @@ import { AiOutlineMail } from "react-icons/ai";
 const Footer = () => {
   return (
     <footer className="w-full relative z-50 flex flex-col text-sm  gap-0  items-center justify-between ">
-      <div className="footer bg-[#080808] py-12 lg:py-18 p-8 text-base-content">
+      <div className="footer bg-[#111] py-12 lg:py-18 p-8 text-base-content">
         <div className="flex flex-col">
           <Image
             src="/logo_merah.png"
@@ -24,22 +24,22 @@ const Footer = () => {
             priority={true}
             className="object-cover"
           />
-          <p className="w-full max-w-sm text-justify text-zinc-400 pt-2 leading-relaxed">
-            Aplus Multi Kreasi are a creative agency in the marketing sphere
+          <p className="w-full max-w-sm  text-gray-300 pt-2 leading-relaxed">
+            Aplus Multi Kreasi is a creative agency in the marketing sphere
             that focuses on Event, Production and Branding.
           </p>
         </div>
         <div className="">
-          <span className=" text-zinc-200 font-semibold mb-2">Support</span>
-          <div className="flex gap-2 items-center text-zinc-400">
+          <span className=" text-gray-200 font-semibold mb-2">Support</span>
+          <div className="flex gap-2 items-center text-gray-400">
             <FaPhoneSquareAlt size={20} />
             <span>0858-7238-1882</span>
           </div>
-          <div className="flex gap-2 items-center text-zinc-400">
+          <div className="flex gap-2 items-center text-gray-400">
             <AiOutlineMail size={20} />
             <span>sayhi@aplusmultikreasi@gmail.com</span>
           </div>
-          <div className="flex items-start text-zinc-400">
+          <div className="flex items-start text-gray-400">
             <div className="flex gap-1 items-center">
               <FaMapMarkerAlt size={20} />
               <span>1:</span>
@@ -49,7 +49,7 @@ const Footer = () => {
               40559
             </span>
           </div>
-          <div className="flex items-start text-zinc-400">
+          <div className="flex items-start text-gray-400">
             <div className="flex gap-1 items-center">
               <FaMapMarkerAlt size={20} />
               <span>2:</span>
@@ -61,64 +61,64 @@ const Footer = () => {
           </div>
         </div>
         <nav>
-          <span className=" text-zinc-200 font-semibold">Menu</span>
-          <Link href="/" passHref className="text-zinc-400 link link-hover">
+          <span className=" text-gray-200 font-semibold">Menu</span>
+          <Link href="/" passHref className="text-gray-400 link link-hover">
             Home
           </Link>
           <Link
             href="/about"
             passHref
-            className="text-zinc-400 link link-hover"
+            className="text-gray-400 link link-hover"
           >
             About Us
           </Link>
           <Link
             href="/projects"
             passHref
-            className="text-zinc-400 link link-hover"
+            className="text-gray-400 link link-hover"
           >
             Projects
           </Link>
           <Link
             href="/gallery"
             passHref
-            className="text-zinc-400 link link-hover"
+            className="text-gray-400 link link-hover"
           >
             Gallery
           </Link>
           <Link
             href="/login"
             passHref
-            className="text-zinc-400 link link-hover"
+            className="text-gray-400 link link-hover"
           >
             Admin
           </Link>
         </nav>
         <nav>
-          <span className=" text-zinc-200 font-semibold">Legal</span>
+          <span className=" text-gray-200 font-semibold">Legal</span>
           <Link
             passHref
             href="/terms&conditions"
-            className="text-zinc-400 link link-hover"
+            className="text-gray-400 link link-hover"
           >
             Terms and Conditions
           </Link>
           <Link
             passHref
             href="/privacypolicy"
-            className="text-zinc-400 link link-hover"
+            className="text-gray-400 link link-hover"
           >
             Privacy Policy
           </Link>
         </nav>
       </div>
-      <div className="w-full bg-[#000000] gap-5 py-2 px-6 flex items-center justify-center md:justify-between flex-col-reverse md:flex-row">
-        <div className="text-xs text-center text-zinc-400 ">
+      <div className="w-full bg-[#0a0a0a] gap-5 py-2 px-6 flex items-center justify-center md:justify-between flex-col-reverse md:flex-row">
+        <div className="text-xs text-center text-gray-300 ">
           <span className="flex items-center gap-1">
             PT. APLUS MULTI KREASI © 2016
           </span>
         </div>
-        <div className="flex gap-5 items-center text-zinc-400 py-2 px-4">
+        <div className="flex gap-5 items-center text-gray-400 py-2 px-4">
           <Link
             passHref
             href="https://web.facebook.com/people/Aplus-Multi/61555802003335/"

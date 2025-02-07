@@ -30,7 +30,6 @@ const NavDashboard = () => {
   const router = useRouter();
 
   useEffect(() => {
-    console.log(status);
     return;
   }, [session, router, status]);
 

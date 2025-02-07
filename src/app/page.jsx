@@ -20,11 +20,11 @@ export default function Home() {
           <div className="absolute z-20 w-full h-full bottom-0 bg-gradient-to-tr from-black to-transparent " />
           <div className="w-full relative z-30 grid grid-cols-1 lg:grid-cols-12 ">
             <div className="col-span-1 lg:col-span-10 py-20 px-4 lg:py-32 lg:px-12">
-              <div className="flex pb-8 leading-loose flex-col w-full  item-center justify-center gap-3 text-zinc-100">
+              <div className="flex pb-8 leading-loose flex-col w-full  item-center justify-center gap-3 text-gray-100">
                 <h1
                   data-aos="fade-up"
                   data-aos-duration="600"
-                  className="text-lg md:text-xl"
+                  className="text-lg md:text-3xl lg:5xl font-bold uppercase"
                 >
                   APLUS MULTI KREASI
                 </h1>
@@ -38,19 +38,18 @@ export default function Home() {
                 <p
                   data-aos="fade-up"
                   data-aos-duration="800"
-                  className="w-full lg:w-[60%] tracking-wide font-normal leading-relaxed text-sm md:text-md lg:text-lg "
+                  className="w-full lg:w-[60%] tracking-wide font-normal text-gray-300 leading-relaxed text-sm md:text-md lg:text-lg "
                 >
                   We are event and production management whose entire team works
                   together to accomplish one mission, to create the equation
                   through quality, trust and ease.
                 </p>
               </div>
-              <Link
-                data-aos="fade-up"
+              <Link data-aos="fade-up"
                 data-aos-duration="800"
-                className="px-6 py-2 rounded-full bg-gradient-to-tr from-red-600 to-orange-500 text-zinc-200 text-sm lg:text-md"
-                href="/about"
-              >
+                type="button"
+                className="px-6 py-2  rounded-full bg-gradient-to-tr from-red-600 to-orange-500 text-gray-300 text-sm lg:text-md shadow-md transition-all duration-200 ease-linear hover:text-gray-100" href="/about">
+
                 About Us
               </Link>
             </div>
@@ -90,7 +89,7 @@ export default function Home() {
                   data-aos-delay="0.10"
                   href="https://www.youtube.com/@hello_aplus7424"
                   target="_blink"
-                  className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-red-500  text-zinc-100"
+                  className="relative hover:-rotate-12 transition-all duration-300 ease-in-out hover:text-red-500  text-gray-100"
                 >
                   <FaYoutube size={24} />
                 </Link>
@@ -163,14 +162,14 @@ export default function Home() {
             <span
               data-aos="fade-up"
               data-aos-duration="600"
-              className="text-zinc-500 text-[18px]"
+              className="text-gray-300 text-md lg:text-xl"
             >
               — Our Projects
             </span>
             <p
               data-aos="fade-up"
               data-aos-duration="800"
-              className=" text-[24px] md:text-[28px] lg:text-[36px] text-zinc-500 w-full lg:w-[75%] pt-4"
+              className=" text-[24px] md:text-[28px] lg:text-[36px] text-gray-500 w-full lg:w-[75%] pt-4"
             >
               As a tight-knit team of experts, we create memorable and emotional
               event, production, and branding.
@@ -207,10 +206,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
+                <h3 className="pt-3 text-gray-400 font-semibold text-xl">
                   Event Management
                 </h3>
-                <p className="text-zinc-500 capitalize">
+                <p className="text-gray-500 capitalize">
                   Take a Look at our inspiring event
                 </p>
               </div>
@@ -245,10 +244,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
+                <h3 className="pt-3 text-gray-400 font-semibold text-xl">
                   Production
                 </h3>
-                <p className="text-zinc-500 capitalize">
+                <p className="text-gray-500 capitalize">
                   see closer to our production built
                 </p>
               </div>
@@ -284,10 +283,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <h3 className="pt-3 text-zinc-400 font-semibold text-xl">
+                <h3 className="pt-3 text-gray-400 font-semibold text-xl">
                   Branding
                 </h3>
-                <p className="text-zinc-500 capitalize">
+                <p className="text-gray-500 capitalize">
                   Is a story unfolding across all customer touch points
                 </p>
               </div>
@@ -296,7 +295,7 @@ export default function Home() {
           <div
             data-aos="fade-up"
             data-aos-duration="800"
-            className="text-zinc-500 text-right  relative right-4 "
+            className="text-gray-500 text-right  relative right-4 "
           >
             <Link
               href="/about"
