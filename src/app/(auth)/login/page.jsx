@@ -7,13 +7,9 @@ import React from "react";
 import Link from "next/link";
 
 const LoginPage = () => {
-  const { data: session } = useSession();
-  const router = useRouter();
 
-  if (session) {
-    router.push("/dashboard");
-    return;
-  }
+
+
 
   return (
     <div className='w-full bg-[url("/bg.jpg")] bg-cover min-h-screen flex items-center justify-center px-4'>

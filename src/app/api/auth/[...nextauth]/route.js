@@ -37,6 +37,7 @@ const handler = NextAuth({
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
+        token.username = user.username;
         token.accessToken = user.accessToken;
         token._id = user._id;
         token.role = user.role;
@@ -47,6 +48,7 @@ const handler = NextAuth({
     async session({ session, token }) {
       if (token) {
         session.user._id = token._id;
+        session.user.username = token.username;
         session.user.accessToken = token.accessToken;
         session.user.isAdmin = token.isAdmin;
         session.user.role = token.role || "user";
@@ -55,7 +57,7 @@ const handler = NextAuth({
     },
   },
   pages: {
-    signIn: "/login",
+    signIn: "/dashboard",
     signOut: "/login",
   },
 });

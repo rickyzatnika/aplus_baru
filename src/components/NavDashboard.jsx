@@ -29,10 +29,6 @@ const NavDashboard = () => {
 
   const router = useRouter();
 
-  const handleLogout = async () => {
-    await signOut({ redirect: false }); // Jangan redirect otomatis
-    router.push('/login'); // Redirect secara manual ke halaman login
-  };
 
 
   useEffect(() => {
@@ -41,13 +37,19 @@ const NavDashboard = () => {
 
   return (
     <>
-      <div className="col-span-1 lg:col-span-2 flex flex-col items-start gap-8 w-full h-full md:min-h-screen bg-red-600 text-zinc-100 px-4 pb-14 pt-32 lg:pt-44">
-        {links?.map((link, i) => (
-          <Link key={i} href={link?.url}>
-            {link?.title}
-          </Link>
-        ))}
-        <button type="button" onClick={handleLogout}>Logout</button>
+      <div className="col-span-1 lg:col-span-2 flex flex-col items-start gap-8 w-full h-full  bg-red-600 text-zinc-100 px-4 pt-24 ">
+
+        <div className="w-full flex flex-col gap-4">
+          <h1 className="text-gray-50">Action</h1>
+          <div className="flex flex-col gap-4 px-4 text-gray-200">
+            {links?.map((link, i) => (
+              <Link key={i} href={link?.url}>
+                {link?.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <button type="button" onClick={() => signOut({ redirect: false }, router.push("/login"))}>Logout</button>
       </div>
     </>
   );

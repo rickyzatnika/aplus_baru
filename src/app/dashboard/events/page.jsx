@@ -34,7 +34,7 @@ const AddEventPages = () => {
     setSlug(newSlug);
   }, [title]); // Bergantung pada perubahan nilai title
 
- 
+
 
   const CLOUD_NAME = "inkara-id";
   const UPLOAD_PRESET = "myBlog_project_nextjs";
@@ -112,7 +112,7 @@ const AddEventPages = () => {
   return (
     <div>
       <div className='text-left text-2xl pb-8'>
-        <h3>Event Management</h3>
+        <h3>Add Event</h3>
       </div>
       <form onSubmit={handleSubmit} className='w-full lg:w-[75%]'>
         <div className='flex items-start flex-col gap-2 mb-5'>
@@ -144,7 +144,7 @@ const AddEventPages = () => {
           <input value={category} onChange={(e) => setCategory(e.target.value)} placeholder='Event Management / Production / Branding' type="text" className=' placeholder:text-sm  w-full text-zinc-800 py-2 px-2 placeholder:text-zinc-400 border border-zinc-400 focus:outline-none focus:border-zinc-600' />
         </div>
         {/* File */}
-        
+
         <div className="form-control w-full max-w-xs mb-5">
           <label className="label">
             <span className="label-text">Image Cover</span>

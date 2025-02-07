@@ -11,6 +11,7 @@ const LoginForm = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const username = e.target[0].value;
     const password = e.target[1].value;
@@ -19,18 +20,20 @@ const LoginForm = () => {
       return toast.error("Username and password is required!");
     }
     try {
-      setLoading(true);
 
       const res = await signIn("credentials", {
         username: username,
         password: password,
         redirect: false,
       });
-      if (res.error) {
+      if (res.ok) {
+        setLoading(false);
+        router.push("/dashboard");
+      } else {
         toast.error("Invalid Credentials");
         setLoading(false);
       }
-      router.push("/dashboard");
+      return;
     } catch (error) {
       setLoading(false);
       return toast.error(error.message);
