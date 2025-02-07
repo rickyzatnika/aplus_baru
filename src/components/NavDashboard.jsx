@@ -29,6 +29,12 @@ const NavDashboard = () => {
 
   const router = useRouter();
 
+  const handleLogout = async () => {
+    await signOut({ redirect: false }); // Jangan redirect otomatis
+    router.push('/login'); // Redirect secara manual ke halaman login
+  };
+
+
   useEffect(() => {
     return;
   }, [session, router, status]);
@@ -41,7 +47,7 @@ const NavDashboard = () => {
             {link?.title}
           </Link>
         ))}
-        <button onClick={() => signOut()}>Logout</button>
+        <button type="button" onClick={handleLogout}>Logout</button>
       </div>
     </>
   );
