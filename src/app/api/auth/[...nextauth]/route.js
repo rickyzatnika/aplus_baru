@@ -40,6 +40,7 @@ const handler = NextAuth({
         token.accessToken = user.accessToken;
         token._id = user._id;
         token.role = user.role;
+        token.isAdmin = user.isAdmin;
       }
       return token;
     },
@@ -47,6 +48,7 @@ const handler = NextAuth({
       if (token) {
         session.user._id = token._id;
         session.user.accessToken = token.accessToken;
+        session.user.isAdmin = token.isAdmin;
         session.user.role = token.role || "user";
       }
       return session;
@@ -54,7 +56,7 @@ const handler = NextAuth({
   },
   pages: {
     signIn: "/",
-    signOut: "/",
+    signOut: "/login",
   },
 });
 
