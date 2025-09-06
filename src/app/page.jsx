@@ -187,7 +187,7 @@ export default function Home() {
                     width={1200}
                     height={800}
                     priority={true}
-                    className="group object-cover group-hover:scale-110 transition duration-700 ease-linear"
+                    className="group w-full object-cover group-hover:scale-110 transition duration-700 ease-linear"
                   />
                   <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-lime-300/50 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
                     <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center pt-5 pb-5 w-full  ">
@@ -225,7 +225,7 @@ export default function Home() {
                     width={1200}
                     height={800}
                     priority={true}
-                    className="group object-cover group-hover:scale-110 transition duration-700 ease-linear"
+                    className="group w-full object-cover group-hover:scale-110 transition duration-700 ease-linear"
                   />
                   <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-orange-300/50  absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
                     <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center pt-5 pb-5 w-full  ">
@@ -264,7 +264,7 @@ export default function Home() {
                     width={1200}
                     height={800}
                     priority={true}
-                    className="group object-cover group-hover:scale-110 transition duration-700 ease-linear"
+                    className="group w-full object-cover group-hover:scale-110 transition duration-700 ease-linear"
                   />
                   <div className="group opacity-0 group-hover:opacity-100 transition-all group-hover:delay-75 delay-500 duration-300  ease-linear bg-red-500/50 absolute top-0 left-0 right-0 overflow-hidden h-full bottom-0 z-10 flex items-center justify-center">
                     <div className="group target1 block  relative text-4xl lg:text-9xl -tracking-wide font-semibold text-center  pt-5 pb-5 w-full  ">

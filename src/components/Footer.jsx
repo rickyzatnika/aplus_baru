@@ -33,7 +33,7 @@ const Footer = () => {
           <span className=" text-gray-200 font-semibold mb-2">Support</span>
           <div className="flex gap-2 items-center text-gray-400">
             <FaPhoneSquareAlt size={20} />
-            <span>0858-7238-1882</span>
+            <span>0812-1470-7415</span>
           </div>
           <div className="flex gap-2 items-center text-gray-400">
             <AiOutlineMail size={20} />
