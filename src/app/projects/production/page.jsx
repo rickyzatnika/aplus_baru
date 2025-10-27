@@ -66,9 +66,9 @@ const Production = () => {
       </div>
 
       <div className="w-full px-4 md:px-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 py-6 md:py-14 md:px-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 py-6 md:py-14 md:px-20">
           {data?.map((production, i) => (
-            <div key={i} className="w-full  text-white text-center ">
+            <div key={i} className="w-full relative text-white text-center ">
               <Link
                 href={`/projects/production/${production?.slug}`}
                 passHref
@@ -76,22 +76,22 @@ const Production = () => {
                 className="group"
               >
                 <div
-                  className={`relative py-6  bg-cover w-full h-[350px] rounded-lg flex flex-col items-center justify-between `}
+                  className={`relative py-6 bg-cover w-full h-[350px] rounded-lg flex flex-col items-center justify-between `}
                 >
                   <Image
                     src={production?.imageUrl}
                     alt="images"
                     width={1200}
                     height={950}
-                    layout="responsive"
-                    className="object-cover w-full h-full absolute left-0 top-0 z-0"
+                    priority={true}
+                    className="object-cover w-full h-full absolute bottom-0 left-0 top-0 z-0"
                   />
                   <div className="absolute left-0 top-0 w-full h-full bg-gradient-to-b from-black/80 to-transparent z-5" />
                   <div>
                     <h3 className="relative text-xl">{production?.title}</h3>
                   </div>
                   <div></div>
-                  <div className="w-full py-4 flex flex-col gap-2 backdrop-blur-sm">
+                  <div className="w-full  flex flex-col p-2 backdrop-blur-sm absolute bottom-0">
                     <p className="text-sm leading-relaxed relative text-center border-b pb-4">
                       {production?.desc}
                     </p>
@@ -99,7 +99,7 @@ const Production = () => {
                       <button className="text-zinc-100 py-2 px-6 ">
                         Details
                       </button>
-                      <span className="opacity-0 group-hover:opacity-100 relative left-0 group-hover:left-6 transition-all duration-300 ease-linear text-zinc-400">
+                      <span className="opacity-0 group-hover:opacity-100 relative left-0 group-hover:left-6 transition-all duration-300 ease-linear text-zinc-100">
                         <BsArrowRight size={20} />
                       </span>
                     </div>

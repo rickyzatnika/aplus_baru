@@ -85,7 +85,7 @@ const Events = () => {
                     alt="images"
                     width={1200}
                     height={950}
-                    layout="responsive"
+                    priority={true}
                     className="object-cover w-full h-full absolute bottom-0 left-0 top-0 z-0"
                   />
                   <div className="absolute left-0 top-0 w-full h-full bg-gradient-to-b from-black/80 to-transparent z-5" />
@@ -101,7 +101,7 @@ const Events = () => {
                       <button className="text-zinc-100 py-2 ">
                         Details
                       </button>
-                      <span className="opacity-0 group-hover:opacity-100 relative left-0 group-hover:left-6 transition-all duration-300 ease-linear text-zinc-400">
+                      <span className="opacity-0 group-hover:opacity-100 relative left-0 group-hover:left-6 transition-all duration-300 ease-linear text-zinc-100">
                         <BsArrowRight size={20} />
                       </span>
                     </div>
