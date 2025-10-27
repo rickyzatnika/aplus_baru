@@ -69,7 +69,7 @@ const BrandingDetails = async ({ params }) => {
         </p>
         <p className="text-gray-600 text-md italic pt-6">
           Berikut adalah beberapa foto project{" "}
-          <span className="text-gray-400 text-sm md:text-md capitalize font-semibold not-italic">
+          <span className="text-black font-bold text-sm md:text-md capitalize  not-italic">
             {" "}
             {branding?.title}
           </span>{" "}
@@ -77,7 +77,7 @@ const BrandingDetails = async ({ params }) => {
         </p>
       </div>
 
-      <div className="w-full relative z-10 h-full columns-1 md:columns-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20">
+      <div className="w-full relative z-10 h-full grid grid-cols-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20">
         {images?.resources?.map((image, i) => (
           <div key={i}>
             <Image
