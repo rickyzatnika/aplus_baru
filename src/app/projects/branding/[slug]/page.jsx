@@ -77,11 +77,11 @@ const BrandingDetails = async ({ params }) => {
         </p>
       </div>
 
-      <div className="w-full relative z-10 h-full grid grid-cols-3 gap-1 md:gap-3 px-1 md:px-12 py-8 md:py-20">
+      <div className="w-full relative z-10 h-full columns-1 md:columns-2 gap-1 md:gap-3 px-1 md:px-20 py-8 md:py-20">
         {images?.resources?.map((image, i) => (
           <div key={i}>
             <Image
-              className="w-full md:w-96 h-auto object-cover mb-[4px] md:mb-3 mx-auto"
+              className="w-full object-cover mb-[4px] md:mb-3"
               src={image?.secure_url}
               alt=""
               placeholder="blur"
@@ -93,11 +93,11 @@ const BrandingDetails = async ({ params }) => {
           </div>
         ))}
       </div>
-      <div className="w-fit mx-auto">
+      <div className="w-fit group mx-auto">
         <Link href="/projects/branding" className="group" passHref>
           <button
             type="button"
-            className="group text-gray-500 flex items-center justify-center gap-2 px-5 py-2 group-hover:text-zinc-600  transition-all duration-300 ease-linear"
+            className="group text-gray-500 flex items-center justify-center gap-2 px-5 py-2 group-hover:text-zinc-600  group-hover:transition-all group-hover:duration-300 group-hover:ease-linear"
           >
             <span className="relative group-hover:-left-3 ">
               <FaArrowLeftLong />
