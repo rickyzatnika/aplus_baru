@@ -20,7 +20,7 @@ const About = () => {
   return (
     <section className="overflow-hidden bg-black">
       <div className="w-full h-full md:min-h-screen relative px-4 lg:px-14 py-24 lg:py-40   ">
-        <div data-aos="fade-up" data-aos-duration="900"  className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
+        <div data-aos="fade-up" data-aos-duration="900" className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
           <Image src="/logo.png" alt="logo" width={350} height={350} className="opacity-5 " />
         </div>
         <div className="bg-path z-5" />
@@ -50,7 +50,7 @@ const About = () => {
           <div className="w-0.5 h-full rounded-full hidden lg:block bg-red-600/30 absolute -left-8 top-0 z-0" />
           <div className="scale-95 text-sm leading-relaxed md:text-lg text-[#636262]">
             <p data-aos="fade-up" data-aos-duration="600">We are event and production management whose entire team works together  to accomplish one mission, to create the equation through quality, trust and ease.
-            We understand that planning an event can be extremely stressful, confusing, and upredictable.</p>
+              We understand that planning an event can be extremely stressful, confusing, and upredictable.</p>
             <br />
             <p data-aos="fade-up" data-aos-duration="700">We promise where things might be stressful, we will make it easy. We pride ourselves on the quality of our integrated event service and the event management we deliver to create the ultimate live event for our clients. </p>
             <br />
@@ -60,12 +60,12 @@ const About = () => {
         <div data-aos="zoom-in" data-aos-duration="600" className="col-span-1 lg:col-span-7 relative">
           <div className="p-4 z-5 bg-black/20 absolute rounded-bl-xl left-2 top-2 w-full h-[97%]" />
           <Image
-            priority
-            src="/event.jpg"
+            src="/owner.png"
             alt="about us"
-            width={1200}
+            width={3080}
             height={800}
-            className="z-10 relative rounded-bl-xl"
+            priority={true}
+            className="z-10 relative rounded-bl-xl object-cover"
           />
         </div>
       </div>
