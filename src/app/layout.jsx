@@ -9,6 +9,7 @@ import { ToastContainer } from "react-toastify";
 import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
 import AOSInit from "@/components/AOSInit";
+import ChatOnWhatsapp from "@/components/ChatOnWhatsapp";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400", display: "swap" });
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children, session }) {
           <Navbar />
           {children}
           <Footer />
+          <ChatOnWhatsapp />
         </SessionProvider>
 
         <noscript
