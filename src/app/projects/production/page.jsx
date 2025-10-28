@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,6 +9,10 @@ import { BsArrowRight } from "react-icons/bs";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Production = () => {
+
+
+  const [sortedData, setSortedData] = useState([]);
+
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
   const { data, error } = useSWR(
@@ -16,7 +20,14 @@ const Production = () => {
     fetcher
   );
 
-  useEffect(() => {}, [data]);
+  useEffect(() => {
+    if (data) {
+      const sorted = [...data].sort(
+        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+      );
+      setSortedData(sorted);
+    }
+  }, [data]);
 
   if (error)
     return (
@@ -67,7 +78,7 @@ const Production = () => {
 
       <div className="w-full px-4 md:px-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 py-6 md:py-14 md:px-20">
-          {data?.map((production, i) => (
+          {sortedData?.map((production, i) => (
             <div key={i} className="w-full relative text-white text-center ">
               <Link
                 href={`/projects/production/${production?.slug}`}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,6 +9,9 @@ import { BsArrowRight } from "react-icons/bs";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Branding = () => {
+
+  const [sortedData, setSortedData] = useState([]);
+
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
   const { data, error } = useSWR(
@@ -16,7 +19,15 @@ const Branding = () => {
     fetcher
   );
 
-  useEffect(() => {}, [data]);
+
+  useEffect(() => {
+    if (data) {
+      const sorted = [...data].sort(
+        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+      );
+      setSortedData(sorted);
+    }
+  }, [data]);
 
   if (error)
     return (
@@ -67,7 +78,7 @@ const Branding = () => {
 
       <div className="w-full px-4 md:px-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 py-6 md:py-14 md:px-20 ">
-          {data?.map((branding, i) => (
+          {sortedData?.map((branding, i) => (
             <div key={i} className="w-full relative text-white text-center ">
               <Link
                 href={`/projects/branding/${branding?.slug}`}
@@ -83,7 +94,7 @@ const Branding = () => {
                     alt="images"
                     width={1200}
                     height={950}
-                    
+
                     className="object-cover w-full h-full absolute left-0 top-0 z-0"
                   />
                   <div className="absolute left-0 top-0 w-full h-full bg-gradient-to-b from-black/80 to-transparent z-5" />
