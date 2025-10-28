@@ -12,3 +12,15 @@ export async function GET(req = NextRequest, { params: { slug } }) {
     return new NextResponse(JSON.stringify(error.message), { status: 500 });
   }
 }
+
+
+export async function DELETE(req = NextRequest, { params: { slug } }) {
+  await connect();
+
+  try {
+    await Events.findOneAndDelete({slug});
+    return new NextResponse("Event deleted successfully", { status: 200 });
+  } catch (error) {
+    return new NextResponse(JSON.stringify(error.message), { status: 500 });
+  }
+}

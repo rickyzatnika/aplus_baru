@@ -2,13 +2,19 @@
 
 import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react'
+import useSWR, { mutate } from "swr";
+import axios from 'axios';
 
 const AddBranding = () => {
 
 
+   const fetcher = (url) => fetch(url).then((res) => res.json());
+
+  // Penggunaan SWR untuk mengambil data dengan mem-passing URL ke dalam useSWR hook
+  const { data, error } = useSWR(`${process.env.NEXT_PUBLIC_API}/api/branding`, fetcher);
+
+
   const router = useRouter();
-
-
   const [date, setDate] = useState("");
   const [content, setContent] = useState("");
   const [desc, setDesc] = useState("");
@@ -17,8 +23,13 @@ const AddBranding = () => {
   const [category, setCategory] = useState("");
   const [photo, setPhoto] = useState("");
   const [loading, setLoading] = useState(false);
-
   const [title, setTitle] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  
+  
+      useEffect(() => {
+      
+    }, [data]);
 
   useEffect(() => {
     // Fungsi untuk mengubah title menjadi slug
@@ -109,12 +120,29 @@ const AddBranding = () => {
   };
 
 
+  
+    // Delete Client
+
+  const deleteClient = async (slug) => {
+    await axios.delete(`${process.env.NEXT_PUBLIC_API}/api/branding/${slug}`);
+
+    mutate(`${process.env.NEXT_PUBLIC_API}/api/branding`);
+    
+  };
+
+
+    const toggleModal = () => {
+    setShowModal(!showModal);
+  }
+
+
   return (
-    <div>
-      <div className='text-left text-2xl pb-8'>
-        <h3>Add Branding</h3>
+      <div className='relative w-full'>
+      <div className='text-left  pb-8'>
+        <button onClick={toggleModal} className='cursor-pointer py-2 px-3 rounded-3xl bg-black text-white' >Add Branding</button>
       </div>
-      <form onSubmit={handleSubmit} className='w-full lg:w-[75%]'>
+      {showModal ? (
+          <form onSubmit={handleSubmit} className='w-full lg:w-[75%]'>
         <div className='flex items-start flex-col gap-2 mb-5'>
           <label>Title</label>
           <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder='Masukkan Judul' type="text" className=' placeholder:text-sm w-full text-zinc-800 py-2 px-2 placeholder:text-zinc-400 border border-zinc-400 focus:outline-none focus:border-zinc-600' />
@@ -159,7 +187,27 @@ const AddBranding = () => {
           {loading ? <div className="flex items-center gap-1"><span>Loading...</span> <span className="loading loading-spinner loading-xs"></span></div> : <div>Publish</div>}
         </button>
       </form>
+      ) : (
+       <>
+
+       {data?.map((item) => (
+         <div key={item.id} className=' group border-b w-full  '>
+           <div className='py-2 px-4 flex group-hover:bg-zinc-200/50 w-9/12 items-center justify-between group '>
+            <h1>{item.title}</h1>
+           <button className='py-1.5 px-3 bg-red-400 text-white rounded-xl hover:bg-red-600 ' onClick={() => deleteClient(item.slug)}>Delete</button>
+           
+           </div>
+         </div>
+       ))}
+
+     </>
+      )
+        
+      }
     </div>
+
+
+    
   )
 }
 

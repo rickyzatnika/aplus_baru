@@ -9,17 +9,17 @@ import { useSession } from "next-auth/react";
 const links = [
   {
     id: "1",
-    title: "Add Event",
+    title: "Event",
     url: "/dashboard/events",
   },
   {
     id: "2",
-    title: "Add Production",
+    title: "Production",
     url: "/dashboard/production",
   },
   {
     id: "3",
-    title: "Add Branding",
+    title: "Branding",
     url: "/dashboard/branding",
   },
 ];
